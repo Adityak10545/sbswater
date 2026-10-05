@@ -1,0 +1,132 @@
+.theme-btn,
+.theme-btn-s2,
+.theme-btn-s3,
+.theme-btn-s4 {
+	display: inline-block;
+	padding: 20px 25px;
+	-webkit-backface-visibility: hidden;
+	z-index: 1;
+	position: relative;
+	color: $white;
+	background: $theme-primary-color;
+	border-radius: 12px;
+	transition: all .5s ease-in-out;
+	overflow: hidden;
+	padding-right: 65px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 100%;
+
+	&::before {
+		position: absolute;
+		content: "\e628";
+		font-family: 'themify';
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $white;
+		color: $theme-primary-color;
+		top: 50%;
+		right: 4px;
+		width: 48px;
+		height: 48px;
+		border-radius: 8px;
+		font-size: 15px;
+		transform: translateY(-50%);
+		transition: all 0.4s ease-in-out;
+
+		@include media-query(991px) {
+			width: 40px;
+			height: 40px;
+		}
+
+		@include media-query(767px) {
+			width: 35px;
+			height: 35px;
+			font-size: 13px;
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		right: 50%;
+		width: 0;
+		height: 100%;
+		opacity: 0;
+		background-color: darken($theme-primary-color, 6);
+		transition: all 0.4s ease-in-out;
+		z-index: -1;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: transparent;
+		background-color: $theme-primary-color;
+		color: $white;
+
+		&::after {
+			width: 100%;
+			left: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+
+	@include media-query(991px) {
+		padding: 15px 20px;
+		padding-right: 60px;
+	}
+
+	@include media-query(767px) {
+		padding: 14px 20px;
+		padding-right: 50px;
+		font-size: 14px;
+	}
+}
+
+.theme-btn-s2 {
+	background-color: $heading-color;
+	color: $theme-primary-color;
+
+	&::before {
+		color: $heading-color;
+	}
+}
+
+.theme-btn-s3 {
+	border-radius: 75px;
+	border: 0;
+
+	&::before {
+		border-radius: 64px;
+	}
+}
+
+
+.view-cart-btn {
+	display: block;
+	margin-top: 15px;
+	border-radius: 5px;
+	padding: 10px 45px;
+	background: $theme-primary-color-s2;
+	color: $dark-gray;
+	text-transform: capitalize;
+
+	&::before {
+		display: none;
+	}
+
+	&:hover {
+		color: $dark-gray;
+		background-color: darken($theme-primary-color-s2, 5);
+	}
+
+	&.s1 {
+		background: $heading-color;
+	}
+}

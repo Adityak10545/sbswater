@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------
+13.0 404 Error Page
+--------------------------------------------------------------*/
+.error-404-section {
+    text-align: center;
+
+    .error {
+        img {
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+
+    .error-message {
+        margin-top: 50px;
+        padding: 0 200px;
+
+        @include media-query(1199px) {
+            padding: 0 100px;
+        }
+
+        @include media-query(991px) {
+            padding: 0 15px;
+            margin-top: 30px;
+        }
+
+        @include media-query(767px) {
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 45px;
+            font-weight: 500;
+            font-size: calc-rem-value(45);
+            margin: 0 0 0.8em;
+            color: $black;
+            text-transform: capitalize;
+            font-family: $base-font;
+
+            @include media-query(991px) {
+                font-size: 40px;
+                font-size: calc-rem-value(40);
+            }
+
+            @include media-query(767px) {
+                font-size: 30px;
+                font-size: calc-rem-value(30);
+            }
+        }
+
+        .theme-btn {
+            display: inline-flex;
+        }
+    }
+}

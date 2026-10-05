@@ -1,0 +1,73 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+
+@font-face {
+	font-family: 'Inter Display';
+	font-weight: 300;
+	font-style: normal;
+	src: url('../fonts/InterDisplay-Light.woff2') format('woff2'),
+		url('../fonts/InterDisplay-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Inter Display';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../fonts/InterDisplay-Regular.woff2') format('woff2'),
+		url('../fonts/InterDisplay-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Inter Display';
+	font-weight: 500;
+	font-style: normal;
+	src: url('../fonts/InterDisplay-Medium.woff2') format('woff2'),
+		url('../fonts/InterDisplay-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Inter Display';
+	font-weight: 600;
+	font-style: normal;
+	src: url('../fonts/InterDisplay-SemiBold.woff2') format('woff2'),
+		url('../fonts/InterDisplay-SemiBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Inter Display';
+	font-weight: 700;
+	font-style: normal;
+	src: url('../fonts/InterDisplay-Bold.woff2') format('woff2'),
+		url('../fonts/InterDisplay-Bold.woff') format('woff');
+}
+
+
+// fonts
+$base-font-size: 18;
+$base-font: "Inter Display";
+$heading-font: "Inter Display";
+
+// color
+
+$body-color: #374324; //
+$dark-gray: #131907; //
+$white-gray: #CCCEC6; //
+$funky-gray: #787878; //
+
+$white: #fff; //
+$black: #000; //
+$small-black: #9A9F8F; //
+$small-white: #9EB962; //
+$small-white-s2: #637D33; //
+
+$theme-primary-color: #556B2F; //
+$theme-primary-color-s2: #61BC61; //
+$body-bg-color: #F5F8ED; //
+$card-bg-color: #E9F0D7; //
+$card-bg-color-s2: #192112; //
+$card-bg-color-s3: #212C18; //
+$text-color: #374324; //
+$text-color-s2: #F5F8ED; //
+$heading-color: #1B240F; //
+$border-color: #E8E8E8; //

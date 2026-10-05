@@ -1,0 +1,105 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Theme Name:   Framehaus - Architecture Construction HTML Template
+Version:      1.0.0
+Author:       wpoceans
+-------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+1.0 General
+   1.1 Theme Reset Style
+   1.2 Global Elements
+
+2.0 Header
+   2.1 Navigation 
+
+3.0 Home Page One
+    3.1 Hero Static Section
+    3.2 About Section
+    3.3 Service Section
+    3.4 Portfolio Section
+    3.5 Testimonial Section
+    3.6 Cta Section
+    3.7 Team Section
+    3.8 Blog Section
+
+4.0 Footer
+
+5.0 Home Page Two
+    5.1 About Section Style 2
+    5.2 Partner Section
+    5.3 Service Section Style 2
+    5.4 Portfolio Section Style 2
+    5.5 Why Choose Section
+    5.6 Performance Section
+    5.7 Testimonial Section Style 2
+    5.8 Team Section Style 2
+    5.9 Blog Section Style 2
+    5.10 Contact Section
+
+6.0 About Page
+
+7.0 Blog Page
+
+8.0 Blog Single Page
+
+9.0 Portfolio Single Page
+
+10.0 Service Single Page
+
+11.0 Team Single Page
+
+12.0 Contact Page
+
+13.0 404 Error Page
+
+
+
+----------------------------------------------------------------*/
+
+/*---------------------------------------------------------------
+1.0 General
+----------------------------------------------------------------*/
+
+// helpers
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/mixins";
+
+// base
+@import "base/base";
+
+
+// components
+@import "components/section-title";
+@import "components/blog-sidebar";
+@import "components/buttons";
+@import "components/form";
+@import "components/social-links";
+@import "components/page-title";
+@import "components/preloader";
+@import "components/pagination";
+
+// layout
+@import "layout/header";
+@import "layout/hero-slider";
+@import "layout/footer";
+
+// components
+@import "components/sticky-header";
+
+
+// page
+@import "page/home-default";
+@import "page/home-style2";
+@import "page/_about-page";
+@import "page/_service-single";
+@import "page/_portfolio-single";
+@import "page/_team-single";
+@import "page/_blog";
+@import "page/_blog-single";
+@import "page/_contact";
+@import "page/_error-404";

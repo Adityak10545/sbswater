@@ -1,0 +1,327 @@
+/*==========================================
+11.0 Team Single Page
+===========================================*/
+
+.team-pg-area {
+
+    .container {
+        max-width: 1500px;
+
+        @media (max-width:991px) {
+            max-width: 697px;
+            margin: 0 auto;
+        }
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 55px;
+        line-height: 100%;
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        @media(max-width:1399px) {
+            font-size: 50px;
+        }
+
+        @media(max-width:1199px) {
+            font-size: 45px;
+        }
+
+        @media(max-width:991px) {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        @media(max-width:575px) {
+            font-size: 30px;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        color: $text-color;
+
+        @media(max-width:991px) {
+            font-size: 18px;
+            line-height: 150%;
+        }
+
+        @media(max-width:575px) {
+            font-size: 16px;
+            line-height: 140%;
+        }
+    }
+
+
+    .wpo-contact-area {
+        padding-top: 100px;
+
+        @media(max-width:991px) {
+            padding-top: 80px;
+        }
+
+        @media(max-width:575px) {
+            padding-top: 60px;
+        }
+
+        .wpo-contact-title {
+            margin-bottom: 40px;
+            text-align: start;
+
+            @media(max-width:991px) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .theme-btn {
+            outline: 0;
+            border: 0;
+        }
+    }
+
+    .wpo-contact-area .quote-form .form-control {
+        height: 60px;
+        padding: 15px;
+        background: transparent;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(223, 222, 219, 1);
+        border-radius: 8px;
+        color: $text-color;
+
+        @media(max-width:767px) {
+            height: 48px;
+            font-size: 15px;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .wpo-contact-area .quote-form textarea.form-control {
+        height: 170px;
+    }
+
+    .wpo-contact-area .quote-form select.form-control {
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        -moz-appearance: none;
+        background: transparent url(../images/select-icon.png) no-repeat calc(100% - 15px) center;
+        position: relative;
+        color: $text-color;
+    }
+
+    .quote-form {
+
+        .form-control {
+            &::-webkit-input-placeholder {
+                /* Edge */
+                color: $text-color;
+            }
+
+            &:-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: $text-color;
+            }
+
+            &::placeholder {
+                color: $text-color;
+            }
+        }
+    }
+
+    option {
+        background-color: #000;
+    }
+
+    .half-col {
+        float: left;
+        width: 50%;
+        padding: 0 15px 5px;
+        padding-left: 0;
+
+        @media(max-width:575px) {
+            width: 100%;
+        }
+    }
+
+    .full-col {
+        padding: 0 15px 5px;
+        padding-left: 0;
+    }
+
+    .exprience-area {
+        padding-top: 60px;
+    }
+}
+
+.team-info-img {
+
+    min-height: 100%;
+
+    .team-info-img-sticky {
+        position: sticky;
+        top: 10px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.team-info-all-text {
+    padding-left: 70px;
+
+    @media(max-width:1399px) {
+        padding-left: 30px;
+    }
+
+    @media(max-width:991px) {
+        padding-left: 0;
+    }
+}
+
+.team-info-text {
+    padding-top: 80px;
+
+    @media(max-width:575px) {
+        padding-top: 40px;
+    }
+
+    ul {
+        max-width: 720px;
+        padding-top: 20px;
+
+        @media(max-width:767px) {
+            padding-top: 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: normal;
+            color: $text-color;
+            margin-bottom: 30px;
+            list-style: none;
+
+            @media(max-width:767px) {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            @media(max-width:425px) {
+                display: block;
+                font-size: 16px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            span {
+                color: $funky-gray;
+                display: inline-block;
+                position: relative;
+                flex-basis: 62%;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.team-widget {
+    padding-top: 80px;
+
+    @media(max-width:575px) {
+        padding-top: 60px;
+    }
+}
+
+.skills-area {
+    padding-top: 70px;
+
+    @media(max-width:991px) {
+        padding-top: 60px;
+    }
+
+    @media(max-width:575px) {
+        padding-top: 40px;
+    }
+
+    .wpo-skill-progress {
+
+        .wpo-progress-single {
+            margin-bottom: 30px;
+            position: relative;
+
+            @media(max-width:767px) {
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 32px;
+                color: $text-color;
+
+                @media(max-width:767px) {
+                    font-size: 18px;
+                }
+
+                @media(max-width:425px) {
+                    font-size: 16px;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .progress {
+                background: #E8E8E8;
+                height: 10px;
+                width: 100%;
+                border-radius: 40px;
+                position: relative;
+
+                .progress-bar {
+                    background: $theme-primary-color;
+                    border-radius: 56px;
+                }
+            }
+        }
+
+        .progress-number {
+            position: absolute;
+            right: 0;
+            top: -10px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+            color: $text-color;
+
+            @media(max-width:767px) {
+                font-size: 18px;
+                top: -5px;
+            }
+
+            @media(max-width:425px) {
+                font-size: 16px;
+                top: 0;
+            }
+        }
+    }
+}
