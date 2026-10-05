@@ -40,7 +40,7 @@
                 height: 135px;
                 position: relative;
                 border-radius: 100%;
-                font-weight: 400;
+                font-weight: $fw-regular;
                 font-size: 7px;
                 line-height: 100%;
                 text-transform: uppercase;
@@ -104,7 +104,7 @@
         z-index: 1;
         padding: 35px 0;
         margin-right: -280px;
-        background: linear-gradient(90deg, #F5F8ED 0%, rgba(255, 255, 255, 0.85) 100%);
+        background: linear-gradient(90deg, $body-bg-color 0%, rgba(255, 255, 255, 0.85) 100%);
         backdrop-filter: blur(6px);
 
         @media(max-width:1399px) {
@@ -150,7 +150,7 @@
                 margin: 0;
                 display: flex;
                 align-items: center;
-                font-weight: 500;
+                font-weight: $fw-medium;
                 font-size: 72px;
                 line-height: 87%;
                 letter-spacing: -0.64px;
@@ -180,7 +180,7 @@
             p {
                 margin: 0;
                 color: $text-color;
-                font-weight: 500;
+                font-weight: $fw-medium;
                 font-size: 18px;
                 line-height: 145%;
 
@@ -219,7 +219,7 @@
 
         .service-item {
             padding-left: 40px;
-            border-right: 1px dashed #D5E2B4;
+            border-right: 1px dashed $brand-line-tint;
             padding: 50px 0 50px 40px;
             padding: 50px 40px;
             transition: all ease-in-out .3s;
@@ -256,7 +256,7 @@
 
                 span {
                     margin: 0;
-                    font-weight: 600;
+                    font-weight: $fw-bold;
                     font-size: 32px;
                     line-height: 122%;
                     letter-spacing: -0.64px;
@@ -288,7 +288,7 @@
 
                 p {
                     margin: 0;
-                    font-weight: 400;
+                    font-weight: $fw-regular;
                     font-size: 18px;
                     line-height: 145%;
                     color: $text-color;
@@ -361,7 +361,7 @@
                 border-right: 0;
 
                 @media(max-width:991px) {
-                    border-right: 1px dashed #D5E2B4;
+                    border-right: 1px dashed $brand-line-tint;
                 }
             }
         }
@@ -540,7 +540,7 @@
                         backdrop-filter: blur(5px);
                         color: $text-color-s2;
                         font-size: 14px;
-                        font-weight: 500;
+                        font-weight: $fw-medium;
 
                         @media (max-width:1199px) {
                             margin-bottom: 20px;
@@ -552,7 +552,7 @@
                         display: block;
                         color: $text-color-s2;
                         font-size: 32px;
-                        font-weight: 600;
+                        font-weight: $fw-bold;
                         line-height: 1.37;
                         letter-spacing: -.64px;
 
@@ -577,7 +577,7 @@
 
                     p {
                         margin: 5px 0 0;
-                        color: rgba(245, 248, 237, .78);
+                        color: rgba($text-color-s2, .78);
                         font-size: 16px;
                         line-height: 26px;
 
@@ -591,9 +591,9 @@
                         align-items: center;
                         gap: 10px;
                         margin-top: 35px;
-                        color: #9EB962;
+                        color: $small-white;
                         font-size: 16px;
-                        font-weight: 600;
+                        font-weight: $fw-bold;
                         transition: .3s;
 
                         @media (max-width:1199px) {
@@ -603,7 +603,7 @@
 
                         i {
                             font-size: 16px;
-                            font-weight: 700;
+                            font-weight: $fw-bold;
                         }
                     }
                 }
@@ -778,7 +778,7 @@
             p {
                 margin: 0;
                 color: $dark-gray;
-                font-weight: 500;
+                font-weight: $fw-medium;
                 font-size: 24px;
                 line-height: 139%;
                 letter-spacing: -0.48px;
@@ -798,7 +798,7 @@
             span {
                 margin: 0;
                 color: $dark-gray;
-                font-weight: 600;
+                font-weight: $fw-bold;
                 font-size: 16px;
                 line-height: 135%;
                 letter-spacing: 0.32px;
@@ -810,8 +810,8 @@
             }
 
             small {
-                color: #5F5F62;
-                font-weight: 400;
+                color: $funky-gray;
+                font-weight: $fw-regular;
                 font-size: 16px;
                 line-height: 140%;
                 letter-spacing: -0.48px;
@@ -961,7 +961,7 @@
 
                 span {
                     margin: 0;
-                    font-weight: 600;
+                    font-weight: $fw-bold;
                     font-size: 32px;
                     line-height: 105%;
                     letter-spacing: -0.48px;
@@ -988,7 +988,7 @@
                 p {
                     margin: 0;
                     color: $heading-color;
-                    font-weight: 400;
+                    font-weight: $fw-regular;
                     font-size: 16px;
                     line-height: 135%;
                     letter-spacing: -0.48px;
@@ -1084,7 +1084,7 @@
 
                     letter-spacing: -0.48px;
                     color: $funky-gray;
-                    font-weight: 500;
+                    font-weight: $fw-medium;
                     font-size: 16px;
                     line-height: 124%;
 
@@ -1101,7 +1101,7 @@
             }
 
             span {
-                font-weight: 600;
+                font-weight: $fw-bold;
                 font-size: 24px;
                 line-height: 120%;
                 letter-spacing: -0.64px;
@@ -1135,7 +1135,7 @@
                 gap: 10px;
                 transition: all ease-in-out 0.3s;
                 max-width: 120px;
-                font-weight: 600;
+                font-weight: $fw-bold;
                 font-size: 16px;
                 line-height: 100%;
 
@@ -1144,7 +1144,7 @@
                 }
 
                 i {
-                    font-weight: 700;
+                    font-weight: $fw-bold;
                     font-size: 16px;
                 }
             }

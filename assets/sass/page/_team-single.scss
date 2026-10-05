@@ -14,7 +14,7 @@
     }
 
     h2 {
-        font-weight: 600;
+        font-weight: $fw-bold;
         font-size: 55px;
         line-height: 100%;
         margin-top: 0;
@@ -39,7 +39,7 @@
     }
 
     p {
-        font-weight: 400;
+        font-weight: $fw-regular;
         font-size: 20px;
         line-height: 160%;
         color: $text-color;
@@ -88,7 +88,7 @@
         background: transparent;
         font-size: 16px;
         margin-bottom: 20px;
-        border: 1px solid rgba(223, 222, 219, 1);
+        border: 1px solid $border-color;
         border-radius: 8px;
         color: $text-color;
 
@@ -207,7 +207,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-weight: 400;
+            font-weight: $fw-regular;
             font-size: 20px;
             line-height: normal;
             color: $text-color;
@@ -272,7 +272,7 @@
             }
 
             h3 {
-                font-weight: 400;
+                font-weight: $fw-regular;
                 font-size: 20px;
                 line-height: 32px;
                 color: $text-color;
@@ -291,7 +291,7 @@
             }
 
             .progress {
-                background: #E8E8E8;
+                background: $border-color;
                 height: 10px;
                 width: 100%;
                 border-radius: 40px;
@@ -308,7 +308,7 @@
             position: absolute;
             right: 0;
             top: -10px;
-            font-weight: 500;
+            font-weight: $fw-medium;
             font-size: 20px;
             line-height: 32px;
             color: $text-color;

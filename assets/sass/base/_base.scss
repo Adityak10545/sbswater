@@ -20,11 +20,12 @@ body {
     }
 }
 
+// Body text — Pangram Regular, #666666 (Brand Book p.12)
 p {
     font-size: 18px;
-    color: $body-color;
+    color: $muted-color;
     line-height: 1.8em;
-    font-weight: 400;
+    font-weight: $fw-regular;
 
     @include media-query(767px) {
         font-size: 16px;
@@ -39,7 +40,56 @@ h5,
 h6 {
     color: $heading-color;
     font-family: $heading-font;
-    font-weight: 500;
+    font-weight: $fw-bold;
+}
+
+// Titles — Pangram Bold, navy; sub-headings — Pangram Medium
+h1,
+h2 {
+    color: $title-color;
+    font-weight: $fw-bold;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $fw-medium;
+}
+
+// Important text — Pangram Bold, #1A1A1A
+strong,
+b {
+    font-weight: $fw-bold;
+    color: $important-color;
+}
+
+// Brand typography helpers for new content (Brand Book p.12)
+.sbs-title {
+    font-family: $heading-font;
+    font-weight: $fw-bold;
+    color: $title-color;
+}
+
+.sbs-subtitle {
+    font-family: $heading-font;
+    font-weight: $fw-medium;
+    color: $subtitle-color;
+}
+
+.sbs-important {
+    font-weight: $fw-bold;
+    color: $important-color;
+}
+
+.sbs-lead {
+    font-weight: $fw-medium;
+    color: $lead-color;
+}
+
+.sbs-text {
+    font-weight: $fw-regular;
+    color: $muted-color;
 }
 
 ul {
@@ -117,7 +167,7 @@ img {
     label.error2 {
         color: red;
         font-size: calc-rem-value(14);
-        font-weight: normal;
+        font-weight: $fw-regular;
         margin: 5px 0 0 0;
         text-align: left;
         display: block;

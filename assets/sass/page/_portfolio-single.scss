@@ -15,7 +15,7 @@
     .wpo-portfolio-single-wrap {
         .wpo-portfolio-single-title {
             h2 {
-                font-weight: 500;
+                font-weight: $fw-medium;
                 font-size: 45px;
                 line-height: 110%;
                 margin-bottom: 20px;
@@ -155,15 +155,15 @@
                         padding: 10px 0;
                         font-size: 16px;
                         color: $dark-gray;
-                        font-weight: 600;
+                        font-weight: $fw-bold;
                         position: relative;
                         justify-content: space-between;
-                        font-weight: 600;
+                        font-weight: $fw-bold;
 
                         span {
                             flex-basis: 60%;
                             color: $text-color;
-                            font-weight: 400;
+                            font-weight: $fw-regular;
                         }
 
                         &:last-child {
@@ -251,7 +251,7 @@
 
             span {
                 font-size: 22px;
-                font-weight: 600;
+                font-weight: $fw-bold;
                 color: $dark-gray;
 
                 @media(max-width:991px) {
@@ -260,7 +260,7 @@
 
                 span {
                     color: $theme-primary-color;
-                    font-weight: 400;
+                    font-weight: $fw-regular;
                 }
             }
         }
@@ -293,7 +293,7 @@
                 h3 {
                     font-size: 35px;
                     line-height: 105%;
-                    font-weight: 600;
+                    font-weight: $fw-bold;
 
                     @media(max-width:767px) {
                         font-size: 28px;
@@ -339,7 +339,7 @@
         }
 
         .portfolio-single {
-            background: #f5f5f5;
+            background: $body-bg-color;
             transition: all .4s ease-in-out;
             padding: 35px;
 

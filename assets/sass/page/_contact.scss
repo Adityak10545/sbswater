@@ -25,7 +25,7 @@
 
         h2 {
             margin: 0;
-            font-weight: 600;
+            font-weight: $fw-bold;
             font-size: 80px;
             line-height: 98%;
             letter-spacing: -0.48px;
@@ -52,7 +52,7 @@
 
         p {
             margin: 0;
-            font-weight: 400;
+            font-weight: $fw-regular;
             font-size: 24px;
             line-height: 145%;
             letter-spacing: -0.32px;
@@ -88,7 +88,7 @@
     .contact-form-area .form-control,
     form textarea {
         color: #969696;
-        font-weight: 400;
+        font-weight: $fw-regular;
         font-size: 16px;
         line-height: 145%;
         margin-bottom: 30px;
@@ -104,7 +104,7 @@
     .input-item {
         label {
             color: $heading-color;
-            font-weight: 400;
+            font-weight: $fw-regular;
             font-size: 16px;
             line-height: 145%;
         }
@@ -185,7 +185,7 @@
                     margin: 0;
                     margin-top: 10px;
                     color: $dark-gray;
-                    font-weight: 600;
+                    font-weight: $fw-bold;
                     font-size: 24px;
                     line-height: 122%;
                     letter-spacing: -0.64px;
@@ -197,9 +197,9 @@
 
                 span {
                     margin-bottom: 0;
-                    color: #3F4E26;
+                    color: $heading-color;
                     font-size: 18px;
-                    font-weight: 400;
+                    font-weight: $fw-regular;
                     line-height: 110%;
                     letter-spacing: -0.32px;
 
@@ -253,7 +253,7 @@
     }
 
     .feature-card {
-        background: rgba(85, 107, 47, 0.66);
+        background: rgba($theme-primary-color, 0.66);
         backdrop-filter: blur(30px);
         padding: 8px;
         border-radius: 12px;
@@ -293,16 +293,16 @@
                 margin: 0;
                 color: $dark-gray;
                 font-size: 24px;
-                font-weight: 500;
+                font-weight: $fw-medium;
                 line-height: 105%;
-                font-weight: 600;
+                font-weight: $fw-bold;
                 letter-spacing: -0.64px;
             }
 
             p {
                 margin: 0;
                 color: $heading-color;
-                font-weight: 400;
+                font-weight: $fw-regular;
                 font-size: 18px;
                 line-height: 145%;
                 letter-spacing: -0.32px;
@@ -331,7 +331,7 @@
 
                 h3 {
                     margin: 0;
-                    font-weight: 600;
+                    font-weight: $fw-bold;
                     font-size: 16px;
                     line-height: 135%;
                     letter-spacing: 0.32px;
@@ -340,8 +340,8 @@
                 }
 
                 span {
-                    color: #5F5F62;
-                    font-weight: 400;
+                    color: $funky-gray;
+                    font-weight: $fw-regular;
                     font-size: 16px;
                     line-height: 140%;
                     letter-spacing: -0.48px;
@@ -357,7 +357,7 @@
 
             span {
                 color: $text-color-s2;
-                font-weight: 400;
+                font-weight: $fw-regular;
                 font-size: 14px;
                 line-height: 134%;
                 letter-spacing: 0.48px;

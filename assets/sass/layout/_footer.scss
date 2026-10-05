@@ -55,7 +55,7 @@
         h3 {
             margin: 0;
             color: $text-color-s2;
-            font-weight: 500;
+            font-weight: $fw-medium;
             font-size: 18px;
             line-height: 110%;
         }
@@ -71,7 +71,7 @@
             left: 440px;
             width: 1px;
             height: 903px;
-            background-color: rgba(55, 67, 36, 0.5);
+            background-color: rgba($white, 0.12);
             z-index: -1;
 
             @media(max-width:1600px) {
@@ -115,7 +115,7 @@
                 h2 {
                     margin: 0;
                     color: $text-color-s2;
-                    font-weight: 600;
+                    font-weight: $fw-bold;
                     font-size: 64px;
                     line-height: 94%;
                     letter-spacing: -0.64px;
@@ -141,7 +141,7 @@
 
                 p {
                     margin: 0;
-                    font-weight: 400;
+                    font-weight: $fw-regular;
                     font-size: 18px;
                     line-height: 145%;
 
@@ -183,10 +183,10 @@
                         background: transparent;
                         padding: 25px 25px;
                         width: 100%;
-                        color: #ACACAC;
+                        color: $white-gray;
                         border: 1px solid rgba(255, 255, 255, 0.08);
                         background: rgba(255, 255, 255, 0.06);
-                        font-weight: 400;
+                        font-weight: $fw-regular;
                         font-size: 15px;
                         line-height: 136%;
                         transition: all .3s ease-in-out;
@@ -233,38 +233,40 @@
 
         .footer-middle {
             span {
-                font-weight: 700;
-                font-size: 166px;
-                line-height: 87%;
+                // company-name wordmark (sized for the full 42-character name)
+                display: block;
+                font-weight: $fw-bold;
+                font-size: 96px;
+                line-height: 95%;
                 letter-spacing: -0.64px;
                 color: rgba(255, 255, 255, 0.06);
 
                 @media (max-width:1600px) {
-                    font-size: 140px;
+                    font-size: 84px;
                 }
 
                 @media (max-width:1399px) {
-                    font-size: 120px;
+                    font-size: 72px;
                 }
 
                 @media (max-width:1199px) {
-                    font-size: 90px;
-                }
-
-                @media (max-width:991px) {
-                    font-size: 75px;
-                }
-
-                @media (max-width:767px) {
                     font-size: 60px;
                 }
 
+                @media (max-width:991px) {
+                    font-size: 52px;
+                }
+
+                @media (max-width:767px) {
+                    font-size: 42px;
+                }
+
                 @media (max-width:575px) {
-                    font-size: 50px;
+                    font-size: 34px;
                 }
 
                 @media (max-width:425px) {
-                    font-size: 40px;
+                    font-size: 28px;
                 }
             }
         }
@@ -284,7 +286,7 @@
             left: 0;
             width: 1px;
             height: 903px;
-            background-color: rgba(55, 67, 36, 0.5);
+            background-color: rgba($white, 0.12);
             z-index: -1;
 
             @media (max-width:991px) {
@@ -345,7 +347,7 @@
                 .contact-info {
 
                     li {
-                        font-weight: 500;
+                        font-weight: $fw-medium;
                         font-size: 24px;
                         line-height: 135%;
                         color: $text-color-s2;
@@ -365,8 +367,8 @@
     }
 
     .text-link {
-        border-top: 1px solid rgba(55, 67, 36, 0.5);
-        border-bottom: 1px solid rgba(55, 67, 36, 0.5);
+        border-top: 1px solid rgba($white, 0.12);
+        border-bottom: 1px solid rgba($white, 0.12);
 
         @media (max-width:991px) {
             border-bottom: 0;
@@ -400,7 +402,7 @@
                 padding: 0;
                 padding: 30px 0;
                 color: $small-black;
-                font-weight: 500;
+                font-weight: $fw-medium;
                 font-size: 16px;
                 line-height: 110%;
 
@@ -417,7 +419,7 @@
 
     .wpo-lower-footer {
         margin-top: 40px;
-        border-top: 1px solid rgba(55, 67, 36, 0.5);
+        border-top: 1px solid rgba($white, 0.12);
         padding: 35px 0;
         margin-left: 75px;
 
@@ -452,7 +454,7 @@
             margin: 0;
             color: $small-black;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: $fw-medium;
 
             @media (max-width:991px) {
                 text-align: center;

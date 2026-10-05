@@ -2,72 +2,149 @@
 	Fonts
 ----------------------------*/
 
-@font-face {
-	font-family: 'Inter Display';
-	font-weight: 300;
-	font-style: normal;
-	src: url('../fonts/InterDisplay-Light.woff2') format('woff2'),
-		url('../fonts/InterDisplay-Light.woff') format('woff');
+// Brand font (SBS Brand Book p.12): Pangram, in three weights only —
+//   Bold (700)    titles + important text
+//   Medium (500)  subtitles + lead text
+//   Regular (400) body text
+// Files: assets/fonts/Pangram-{Regular,Medium,Bold}.woff2, converted from the
+// "Pangram-FullFamily-FreeForPersonalUse" package. LICENSE: that package is
+// for personal use only — buy a Pangram web license (pangrampangram.com)
+// before this site goes live, and replace these files with the licensed ones.
+//
+// Plus Jakarta Sans (SIL OFL, self-hosted) is the fallback; set
+// $use-pangram: false to render the site with it instead.
+$use-pangram: true !default;
+
+@if $use-pangram {
+	@font-face {
+		font-family: 'Pangram';
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+		src: url('../fonts/Pangram-Regular.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Pangram';
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+		src: url('../fonts/Pangram-Medium.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Pangram';
+		font-weight: 700;
+		font-style: normal;
+		font-display: swap;
+		src: url('../fonts/Pangram-Bold.woff2') format('woff2');
+	}
 }
 
 @font-face {
-	font-family: 'Inter Display';
+	font-family: 'Plus Jakarta Sans';
 	font-weight: 400;
 	font-style: normal;
-	src: url('../fonts/InterDisplay-Regular.woff2') format('woff2'),
-		url('../fonts/InterDisplay-Regular.woff') format('woff');
+	font-display: swap;
+	src: url('../fonts/PlusJakartaSans-400.woff2') format('woff2'),
+		url('../fonts/PlusJakartaSans-400.woff') format('woff');
 }
 
 @font-face {
-	font-family: 'Inter Display';
+	font-family: 'Plus Jakarta Sans';
 	font-weight: 500;
 	font-style: normal;
-	src: url('../fonts/InterDisplay-Medium.woff2') format('woff2'),
-		url('../fonts/InterDisplay-Medium.woff') format('woff');
+	font-display: swap;
+	src: url('../fonts/PlusJakartaSans-500.woff2') format('woff2'),
+		url('../fonts/PlusJakartaSans-500.woff') format('woff');
 }
 
 @font-face {
-	font-family: 'Inter Display';
-	font-weight: 600;
-	font-style: normal;
-	src: url('../fonts/InterDisplay-SemiBold.woff2') format('woff2'),
-		url('../fonts/InterDisplay-SemiBold.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Inter Display';
+	font-family: 'Plus Jakarta Sans';
 	font-weight: 700;
 	font-style: normal;
-	src: url('../fonts/InterDisplay-Bold.woff2') format('woff2'),
-		url('../fonts/InterDisplay-Bold.woff') format('woff');
+	font-display: swap;
+	src: url('../fonts/PlusJakartaSans-700.woff2') format('woff2'),
+		url('../fonts/PlusJakartaSans-700.woff') format('woff');
 }
 
 
 // fonts
+$brand-font-fallback: "Plus Jakarta Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$brand-font-stack: $brand-font-fallback;
+
+@if $use-pangram {
+	$brand-font-stack: join("Pangram", $brand-font-fallback, $separator: comma);
+}
 $base-font-size: 18;
-$base-font: "Inter Display";
-$heading-font: "Inter Display";
+$base-font: $brand-font-stack;
+$heading-font: $brand-font-stack;
+
+// brand font weights — the only three Pangram weights the brand uses
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+/*---------------------------
+	SBS brand palette (Brand Book p.11)
+----------------------------*/
+
+// primary
+$brand-teal: #0B7A8F;
+$brand-navy: #2E4673;
+
+// secondary
+$brand-sky: #2896D3;
+$brand-cyan: #0088A7;
+$brand-yellow: #F3A70A;
+$brand-green: #87AD32;
+
+// text greys (Brand Book p.12)
+$brand-ink: #1A1A1A;
+$brand-gray-dark: #4D4D4D;
+$brand-gray: #666666;
+$brand-gray-light: #E7E7E7;
+
+// derived surfaces (tints/shades of the brand colours, for web use)
+$brand-navy-deep: #1F3050;
+$brand-overlay: #0E1A2E;
+$brand-surface: #F5F8FA;
+$brand-surface-tint: #E5F1F4;
+$brand-line-tint: #C9E1E7;
+
+/*---------------------------
+	Theme tokens (template names kept — used across all partials)
+----------------------------*/
 
 // color
+$body-color: $brand-gray-dark;
+$dark-gray: $brand-ink;
+$white-gray: #D5DCE5; // light text on dark navy surfaces
+$funky-gray: $brand-gray;
 
-$body-color: #374324; //
-$dark-gray: #131907; //
-$white-gray: #CCCEC6; //
-$funky-gray: #787878; //
+$white: #fff;
+$black: #000;
+$small-black: #8C8C8C; // muted meta text / inactive dots
+$small-white: $brand-yellow; // accent labels on dark surfaces
+$small-white-s2: $brand-cyan; // meta accents on light surfaces
 
-$white: #fff; //
-$black: #000; //
-$small-black: #9A9F8F; //
-$small-white: #9EB962; //
-$small-white-s2: #637D33; //
+$theme-primary-color: $brand-teal;
+$theme-primary-color-s2: $brand-green;
+$body-bg-color: $brand-surface;
+$card-bg-color: $brand-surface-tint;
+$card-bg-color-s2: $brand-navy-deep;
+$card-bg-color-s3: $brand-navy;
+$text-color: $brand-gray-dark;
+$text-color-s2: $brand-surface;
+$heading-color: $brand-navy;
+$border-color: $brand-gray-light;
 
-$theme-primary-color: #556B2F; //
-$theme-primary-color-s2: #61BC61; //
-$body-bg-color: #F5F8ED; //
-$card-bg-color: #E9F0D7; //
-$card-bg-color-s2: #192112; //
-$card-bg-color-s3: #212C18; //
-$text-color: #374324; //
-$text-color-s2: #F5F8ED; //
-$heading-color: #1B240F; //
-$border-color: #E8E8E8; //
+/*---------------------------
+	Brand text roles (Brand Book p.12)
+----------------------------*/
+
+$title-color: $brand-navy; // Title — Pangram Bold
+$subtitle-color: $brand-teal; // Subtitle — Pangram Medium
+$important-color: $brand-ink; // Important text — Pangram Bold
+$lead-color: $brand-gray-dark; // Lead / body — Pangram Medium
+$muted-color: $brand-gray; // Secondary body — Pangram Regular

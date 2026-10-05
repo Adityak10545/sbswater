@@ -7,7 +7,7 @@
     position: relative;
     padding-left: 80px;
     overflow: hidden;
-    background: #f7f5eb;
+    background: $body-bg-color;
     height: 800px;
 
     @media (max-width:1199px) {
@@ -39,7 +39,7 @@
                 top: 0;
                 width: 560px;
                 height: 100%;
-                background: linear-gradient(269.18deg, rgba(11, 17, 2, 0) 2.47%, rgba(11, 17, 2, 0.65) 31.07%);
+                background: linear-gradient(269.18deg, rgba($brand-overlay, 0) 2.47%, rgba($brand-overlay, 0.65) 31.07%);
                 content: "";
                 z-index: 1;
             }
@@ -98,7 +98,7 @@
             h1 {
                 margin: 0;
                 color: $text-color-s2;
-                font-weight: 600;
+                font-weight: $fw-bold;
                 font-size: 284px;
                 line-height: 117%;
 
@@ -174,7 +174,7 @@
                 p {
                     margin: 0;
                     color: $white;
-                    font-weight: 400;
+                    font-weight: $fw-regular;
                     font-size: 24px;
                     line-height: 126%;
                     max-width: 330px;
@@ -223,11 +223,11 @@
             width: auto;
             height: auto;
             background: none;
-            color: #1c1c1c;
+            color: $dark-gray;
             opacity: 1;
-            font-weight: 500;
+            font-weight: $fw-medium;
             position: relative;
-            font-weight: 500;
+            font-weight: $fw-medium;
             font-size: 16px;
             line-height: 110%;
 
@@ -306,7 +306,7 @@
             }
 
             span {
-                font-weight: 600;
+                font-weight: $fw-bold;
                 font-size: 48px;
                 line-height: 105%;
                 letter-spacing: -0.48px;
@@ -381,7 +381,7 @@
 
                     p {
                         margin: 0;
-                        font-weight: 500;
+                        font-weight: $fw-medium;
                         font-size: 20px;
                         line-height: 135%;
                         letter-spacing: -0.48px;
@@ -437,7 +437,7 @@
             padding: 0;
 
             h1 {
-                font-weight: 600;
+                font-weight: $fw-bold;
                 font-size: 284px;
                 line-height: 80%;
                 text-transform: uppercase;
@@ -481,6 +481,43 @@
 
                 @media(max-width:425px) {
                     font-size: 45px;
+                }
+            }
+
+            // full company name (42 characters) instead of a single short
+            // word: scaled down so it sits on about two lines
+            h1.hero-company-name {
+                font-size: 112px;
+                line-height: 92%;
+                letter-spacing: 1px;
+
+                @media(max-width:1600px) {
+                    font-size: 100px;
+                }
+
+                @media(max-width:1399px) {
+                    font-size: 86px;
+                }
+
+                @media(max-width:1199px) {
+                    font-size: 72px;
+                }
+
+                @media(max-width:991px) {
+                    font-size: 58px;
+                }
+
+                @media(max-width:767px) {
+                    font-size: 44px;
+                }
+
+                @media(max-width:575px) {
+                    font-size: 34px;
+                    letter-spacing: 0;
+                }
+
+                @media(max-width:425px) {
+                    font-size: 28px;
                 }
             }
         }
@@ -531,7 +568,7 @@
             margin: 0 -7px;
             text-align: center;
             padding: 2px;
-            background: #F4F9F7;
+            background: $body-bg-color;
 
             img {
                 width: 100%;
@@ -550,7 +587,7 @@
 
         p {
             margin: 0;
-            font-weight: 400;
+            font-weight: $fw-regular;
             font-size: 16px;
             line-height: 140%;
             letter-spacing: -0.48px;
@@ -574,7 +611,7 @@
                 span {
                     margin: 0;
                     color: $dark-gray;
-                    font-weight: 600;
+                    font-weight: $fw-bold;
                     font-size: 16px;
                     line-height: 126%;
                     letter-spacing: -0.48px;

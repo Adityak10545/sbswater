@@ -23,7 +23,7 @@
     }
 
     .entry-details {
-        border: 1px solid rgb(232, 232, 232);
+        border: 1px solid $border-color;
         background: transparent;
         padding: 15px 40px 30px;
 
@@ -73,7 +73,7 @@
             li {
                 color: $funky-gray;
                 font-size: 20px;
-                font-weight: 400;
+                font-weight: $fw-regular;
                 line-height: 50px;
                 display: inline-block;
 
@@ -139,7 +139,7 @@
         h2 {
             color: $heading-color;
             font-size: 45px;
-            font-weight: 400;
+            font-weight: $fw-regular;
             line-height: 110%;
             margin-bottom: 20px;
 
@@ -175,7 +175,7 @@
             margin-bottom: 30px;
             color: $text-color;
             font-size: 20px;
-            font-weight: 400;
+            font-weight: $fw-regular;
             line-height: 35px;
 
             @include media-query(991px) {
@@ -193,7 +193,7 @@
         a.read-more {
             color: $text-color;
             font-size: 20px;
-            font-weight: 500;
+            font-weight: $fw-medium;
             line-height: 30px;
             text-decoration: underline;
 

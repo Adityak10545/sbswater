@@ -1,5 +1,5 @@
 .preloader {
-	background-color: #344b0d;
+	background-color: $body-bg-color;
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -19,6 +19,13 @@
 		height: 100%;
 		vertical-align: middle;
 		margin-right: -0.25em;
+	}
+
+	// SBS colour symbol inside the spinning loader ring (light background)
+	.vertical-centered-box .content img {
+		display: block;
+		width: 72px;
+		height: 72px;
 	}
 
 	.vertical-centered-box .content {
@@ -45,7 +52,7 @@
 		width: 120px;
 		height: 120px;
 		border-radius: 50%;
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+		box-shadow: inset 0 0 0 2px rgba($brand-navy, 0.12);
 		margin-left: -60px;
 		margin-top: -60px;
 	}
@@ -75,7 +82,7 @@
 		width: 120px;
 		height: 120px;
 		border-radius: 50%;
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+		box-shadow: inset 0 0 0 2px $brand-teal;
 	}
 
 	#particles-background,

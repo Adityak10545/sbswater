@@ -13,7 +13,7 @@
 	transition: all .5s ease-in-out;
 	overflow: hidden;
 	padding-right: 65px;
-	font-weight: 600;
+	font-weight: $fw-bold;
 	font-size: 16px;
 	line-height: 100%;
 
@@ -57,7 +57,7 @@
 		width: 0;
 		height: 100%;
 		opacity: 0;
-		background-color: darken($theme-primary-color, 6);
+		background-color: $brand-navy;
 		transition: all 0.4s ease-in-out;
 		z-index: -1;
 	}
@@ -69,12 +69,21 @@
 		background-color: $theme-primary-color;
 		color: $white;
 
+		&::before {
+			color: $brand-navy;
+		}
+
 		&::after {
 			width: 100%;
 			left: 0;
 			right: 0;
 			opacity: 1;
 		}
+	}
+
+	&:focus-visible {
+		outline: 2px solid $brand-sky;
+		outline-offset: 3px;
 	}
 
 	@include media-query(991px) {
@@ -90,11 +99,25 @@
 }
 
 .theme-btn-s2 {
-	background-color: $heading-color;
-	color: $theme-primary-color;
+	background-color: $brand-navy;
+	color: $white;
 
 	&::before {
-		color: $heading-color;
+		color: $brand-navy;
+	}
+
+	&::after {
+		background-color: $brand-teal;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $brand-navy;
+
+		&::before {
+			color: $brand-teal;
+		}
 	}
 }
 
@@ -104,6 +127,26 @@
 
 	&::before {
 		border-radius: 64px;
+	}
+}
+
+// accent CTA (brand yellow) - for use on dark navy surfaces
+.theme-btn-s4 {
+	background-color: $brand-yellow;
+	color: $brand-ink;
+
+	&::before {
+		color: $brand-ink;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $brand-yellow;
+
+		&::before {
+			color: $brand-navy;
+		}
 	}
 }
 

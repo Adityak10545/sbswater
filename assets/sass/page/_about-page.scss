@@ -15,7 +15,7 @@
             }
 
             h2 {
-                font-weight: 600;
+                font-weight: $fw-bold;
                 font-size: 80px;
                 line-height: 98%;
                 letter-spacing: -0.48px;
@@ -56,7 +56,7 @@
                 p {
                     margin: 0;
                     color: $heading-color;
-                    font-weight: 400;
+                    font-weight: $fw-regular;
                     font-size: 24px;
                     line-height: 145%;
                     letter-spacing: -0.32px;
@@ -87,7 +87,7 @@
                     }
 
                     .client-text ul li i {
-                        color: #FF602F;
+                        color: $brand-yellow;
                     }
                 }
             }
@@ -126,7 +126,7 @@
     p {
         margin: 0;
         color: $heading-color;
-        font-weight: 400;
+        font-weight: $fw-regular;
         font-size: 18px;
         line-height: 145%;
         letter-spacing: -0.32px;
@@ -150,7 +150,7 @@
 
         h3 {
             margin: 0;
-            font-weight: 500;
+            font-weight: $fw-medium;
             font-size: 24px;
             line-height: 145%;
             letter-spacing: -0.32px;
@@ -224,23 +224,23 @@
                     width: 100%;
                     max-width: 30px;
                     height: 1px;
-                    background: rgba(63, 78, 38, 0.2);
+                    background: rgba($heading-color, 0.2);
                     margin-top: 10px;
                 }
 
                 span {
-                    font-weight: 500;
+                    font-weight: $fw-medium;
                     font-size: 24px;
                     line-height: 87%;
                     letter-spacing: -0.64px;
                     text-transform: uppercase;
-                    color: rgba(27, 36, 15, 0.2);
+                    color: rgba($heading-color, 0.2);
                     transition: all .35s ease;
                 }
 
                 .story-text {
                     span {
-                        font-weight: 600;
+                        font-weight: $fw-bold;
                         color: $heading-color;
                         display: block;
                         text-transform: capitalize;
@@ -252,7 +252,7 @@
                     }
 
                     p {
-                        font-weight: 500;
+                        font-weight: $fw-medium;
                         color: $text-color;
 
                         @media (max-width: 767px) {

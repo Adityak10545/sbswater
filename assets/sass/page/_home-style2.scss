@@ -32,7 +32,7 @@
             h2 {
                 margin: 0;
                 color: $heading-color;
-                font-weight: 500;
+                font-weight: $fw-medium;
                 font-size: 40px;
                 line-height: 114%;
                 letter-spacing: -0.48px;
@@ -221,7 +221,7 @@
                 .service-left {
 
                     small {
-                        font-weight: 500;
+                        font-weight: $fw-medium;
                         font-size: 16px;
                         line-height: 145%;
                         color: $small-black;
@@ -340,7 +340,7 @@
                     }
 
                     small {
-                        font-weight: 500;
+                        font-weight: $fw-medium;
                         font-size: 16px;
                         line-height: 145%;
                         color: $text-color-s2;
@@ -387,7 +387,7 @@
 
                 span {
                     a {
-                        font-weight: 600;
+                        font-weight: $fw-bold;
                         font-size: 32px;
                         line-height: 107%;
                         letter-spacing: -0.48px;
@@ -416,7 +416,7 @@
                 ul {
 
                     li {
-                        font-weight: 400;
+                        font-weight: $fw-regular;
                         font-size: 16px;
                         line-height: 145%;
                         color: $text-color-s2;
@@ -438,7 +438,7 @@
                         }
 
                         span {
-                            color: rgba(245, 248, 237, 0.51);
+                            color: rgba($text-color-s2, 0.51);
                             max-width: 65px;
                             width: 100%;
                         }
@@ -464,7 +464,7 @@
                     gap: 10px;
                     color: $text-color-s2;
                     font-size: 16px;
-                    font-weight: 600;
+                    font-weight: $fw-bold;
 
                     @media (max-width:1199px) {
                         font-size: 15px;
@@ -472,7 +472,7 @@
 
                     i {
                         font-size: 16px;
-                        font-weight: 700;
+                        font-weight: $fw-bold;
                     }
                 }
             }
@@ -530,7 +530,7 @@
         }
 
         h2 {
-            font-weight: 600;
+            font-weight: $fw-bold;
             font-size: 64px;
             line-height: 100%;
             letter-spacing: 0.8px;
@@ -561,7 +561,7 @@
 
         p {
             max-width: 600px;
-            font-weight: 400;
+            font-weight: $fw-regular;
             font-size: 24px;
             line-height: 145%;
 
@@ -671,7 +671,7 @@
 
         h3 {
             margin: 0;
-            font-weight: 600;
+            font-weight: $fw-bold;
             font-size: 24px;
             line-height: 122%;
             letter-spacing: -0.64px;
@@ -692,7 +692,7 @@
         p {
             margin: 0;
             color: $dark-gray;
-            font-weight: 400;
+            font-weight: $fw-regular;
             font-size: 18px;
             line-height: 145%;
 
@@ -713,7 +713,7 @@
 
 /* 5.6 Performance Section */
 .wpo-performance-section {
-    border-top: 1px solid #DEE9C4;
+    border-top: 1px solid $brand-line-tint;
     margin: 0 30px;
 
     @media(max-width:991px) {
@@ -752,7 +752,7 @@
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
                 span {
-                    font-weight: 500;
+                    font-weight: $fw-medium;
                     font-size: 16px;
                     line-height: 110%;
                     color: $small-white-s2;
@@ -765,7 +765,7 @@
                 h3 {
                     margin: 0;
                     color: $dark-gray;
-                    font-weight: 600;
+                    font-weight: $fw-bold;
                     font-size: 24px;
                     line-height: 122%;
                     letter-spacing: -0.64px;
@@ -851,7 +851,7 @@
                     .award-text {
                         h4 {
                             margin: 0;
-                            font-weight: 600;
+                            font-weight: $fw-bold;
                             font-size: 18px;
                             line-height: 122%;
                             letter-spacing: -0.64px;
@@ -861,10 +861,10 @@
 
                         p {
                             margin: 0;
-                            font-weight: 400;
+                            font-weight: $fw-regular;
                             font-size: 16px;
                             line-height: 145%;
-                            color: #5E5E5E;
+                            color: $funky-gray;
                         }
                     }
 
@@ -877,7 +877,7 @@
                         }
 
                         span {
-                            font-weight: 500;
+                            font-weight: $fw-medium;
                             font-size: 14px;
                             line-height: 145%;
                             color: $small-white-s2;
@@ -980,7 +980,7 @@
         h3 {
             margin: 0;
             color: $white-gray;
-            font-weight: 400;
+            font-weight: $fw-regular;
             font-size: 32px;
             line-height: 124%;
             letter-spacing: -0.64px;
@@ -1002,7 +1002,7 @@
 
         h4 {
             margin: 0;
-            font-weight: 500;
+            font-weight: $fw-medium;
             font-size: 24px;
             line-height: 124%;
             letter-spacing: -0.64px;
@@ -1023,7 +1023,7 @@
 
             span {
                 color: $text-color-s2;
-                font-weight: 500;
+                font-weight: $fw-medium;
                 font-size: 18px;
                 line-height: 122%;
                 letter-spacing: -0.64px;
@@ -1036,7 +1036,7 @@
             p {
                 margin: 0;
                 color: #BBBBBB;
-                font-weight: 400;
+                font-weight: $fw-regular;
                 font-size: 14px;
                 line-height: 145%;
             }
@@ -1156,7 +1156,7 @@
         }
 
         h2 {
-            font-weight: 600;
+            font-weight: $fw-bold;
             font-size: 64px;
             line-height: 100%;
             letter-spacing: -0.8px;
@@ -1251,7 +1251,7 @@
 
                     letter-spacing: -0.48px;
                     color: $funky-gray;
-                    font-weight: 500;
+                    font-weight: $fw-medium;
                     font-size: 16px;
                     line-height: 124%;
 
@@ -1271,7 +1271,7 @@
             }
 
             span {
-                font-weight: 600;
+                font-weight: $fw-bold;
                 font-size: 24px;
                 line-height: 120%;
                 letter-spacing: -0.64px;
@@ -1444,7 +1444,7 @@
 
         h2 {
             margin: 0;
-            font-weight: 500;
+            font-weight: $fw-medium;
             font-size: 48px;
             line-height: 98%;
             letter-spacing: -0.48px;
@@ -1471,7 +1471,7 @@
     .contact-form-area .submit-text p {
         margin: 0;
         color: $funky-gray;
-        font-weight: 500;
+        font-weight: $fw-medium;
         font-size: 16px;
         line-height: 137%;
         letter-spacing: -0.48px;
@@ -1498,10 +1498,10 @@
         border: 0;
         border-radius: 0;
         background: transparent;
-        border-bottom: 1px solid rgba(223, 222, 219, 1);
+        border-bottom: 1px solid $border-color;
         color: $text-color;
         padding: 0;
-        font-weight: 400;
+        font-weight: $fw-regular;
         font-size: 14px;
         line-height: 120%;
 

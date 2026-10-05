@@ -1,0 +1,11 @@
+{
+  "name": "SBS Water & Infra Projects Private Limited",
+  "short_name": "SBS Water",
+  "icons": [
+    { "src": "assets/images/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/images/brand/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#2E4673",
+  "background_color": "#F5F8FA",
+  "display": "browser"
+}

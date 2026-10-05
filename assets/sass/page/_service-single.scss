@@ -29,7 +29,7 @@
 
     h2 {
         font-size: 60px;
-        font-weight: 400;
+        font-weight: $fw-regular;
         line-height: 120%;
         margin-bottom: 40px;
 
@@ -61,7 +61,7 @@
     p {
         color: $text-color;
         font-size: 20px;
-        font-weight: 400;
+        font-weight: $fw-regular;
         line-height: 160%;
 
         @media (max-width:991px) {
@@ -334,9 +334,9 @@
         .accordion-button {
             font-size: 30px;
             padding: 40px;
-            color: rgb(44, 38, 38);
+            color: $dark-gray;
             background-color: transparent;
-            border: 1px solid rgb(223, 222, 219);
+            border: 1px solid $border-color;
 
             @media (max-width:1199px) {
                 font-size: 27px;
@@ -356,7 +356,7 @@
         .accordion-body {
             padding: 40px;
             background-color: transparent;
-            border: 1px solid rgb(223, 222, 219);
+            border: 1px solid $border-color;
             border-top: 0;
 
             @media (max-width:991px) {
@@ -416,7 +416,7 @@
 
 .accordion-button:not(.collapsed) {
     background-color: transparent;
-    color: rgb(44, 38, 38);
+    color: $dark-gray;
     box-shadow: none;
 }
 
@@ -435,7 +435,7 @@
 
     h3 {
         font-family: $base-font;
-        font-weight: 400;
+        font-weight: $fw-regular;
     }
 }
 

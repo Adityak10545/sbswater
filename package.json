@@ -1,0 +1,14 @@
+{
+  "name": "sbs-water-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SBS Water & Infra Projects website (static HTML, Sass-compiled theme)",
+  "scripts": {
+    "build:css": "sass --no-source-map --style=expanded --silence-deprecation=import,global-builtin,color-functions,slash-div assets/sass/style.scss assets/sass/style.css",
+    "watch:css": "sass --no-source-map --style=expanded --silence-deprecation=import,global-builtin,color-functions,slash-div --watch assets/sass/style.scss assets/sass/style.css"
+  },
+  "devDependencies": {
+    "@fontsource/plus-jakarta-sans": "5.3.0",
+    "sass": "1.105.1"
+  }
+}
