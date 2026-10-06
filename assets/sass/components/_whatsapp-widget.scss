@@ -10,12 +10,31 @@ $whatsapp-teal: #128C7E;
 	position: fixed;
 	left: 24px;
 	bottom: 24px;
-	z-index: 990; // above page content, below sticky header (1111) and mobile menu
+	// above all page content (incl. sticky header 1111, back-to-top 999);
+	// below the mobile slide-in menu (999999) and lightboxes
+	z-index: 99990;
 	font-family: $base-font;
+	// own compositing layer: stops mobile Chrome/Safari from dropping this
+	// fixed element after the page's GSAP / WOW animations repaint
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	will-change: transform;
+
+	@media(max-width:991px) {
+		left: 16px;
+		bottom: 16px;
+		// keep clear of the iPhone home indicator / notch
+		left: calc(16px + env(safe-area-inset-left));
+		bottom: calc(16px + env(safe-area-inset-bottom));
+	}
 
 	@media(max-width:575px) {
 		left: 14px;
 		bottom: 14px;
+		left: calc(14px + env(safe-area-inset-left));
+		bottom: calc(14px + env(safe-area-inset-bottom));
 	}
 }
 
@@ -24,8 +43,8 @@ $whatsapp-teal: #128C7E;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 64px;
-	height: 64px;
+	width: 52px;
+	height: 52px;
 	padding: 0;
 	border: 0;
 	border-radius: 50%;
@@ -38,8 +57,8 @@ $whatsapp-teal: #128C7E;
 	svg {
 		position: relative;
 		z-index: 1;
-		width: 34px;
-		height: 34px;
+		width: 28px;
+		height: 28px;
 		fill: currentColor;
 	}
 
@@ -85,23 +104,23 @@ $whatsapp-teal: #128C7E;
 	}
 
 	@media(max-width:575px) {
-		width: 50px;
-		height: 50px;
-		box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
-
-		svg {
-			width: 26px;
-			height: 26px;
-		}
-	}
-
-	@media(max-width:360px) {
 		width: 46px;
 		height: 46px;
+		box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 
 		svg {
 			width: 24px;
 			height: 24px;
+		}
+	}
+
+	@media(max-width:360px) {
+		width: 42px;
+		height: 42px;
+
+		svg {
+			width: 22px;
+			height: 22px;
 		}
 	}
 }
@@ -113,7 +132,7 @@ $whatsapp-teal: #128C7E;
 	}
 
 	100% {
-		transform: scale(1.6);
+		transform: scale(1.45);
 		opacity: 0;
 	}
 }
@@ -132,7 +151,7 @@ $whatsapp-teal: #128C7E;
 .sbs-wa__panel {
 	position: absolute;
 	left: 0;
-	bottom: 80px;
+	bottom: 66px;
 	width: 360px;
 	max-width: calc(100vw - 32px);
 	border-radius: 16px;
@@ -146,7 +165,7 @@ $whatsapp-teal: #128C7E;
 	transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
 
 	@media(max-width:575px) {
-		bottom: 62px;
+		bottom: 58px;
 		width: 300px;
 		max-width: calc(100vw - 28px);
 		border-radius: 14px;

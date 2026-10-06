@@ -1,0 +1,816 @@
+/*======================================
+5.11 SBS Home Page additions
+  Content blocks from the SBS homepage brief that the template's home
+  style 2 sections have no slot for. Everything reuses the theme tokens
+  and mirrors the look of the neighbouring template components.
+=======================================*/
+
+// sticky header sits over in-page anchor targets
+#home,
+#about,
+#services,
+#projects,
+#clients,
+#insights,
+#contact {
+    scroll-margin-top: 90px;
+}
+
+// header CTA: outlined button (white over the hero, navy on the sticky bar)
+.header-style-s3 .header-right .header-contact .header-cta {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 1px solid rgba($white, 0.7);
+    border-radius: 10px;
+    color: $white;
+    font-weight: $fw-bold;
+    font-size: 16px;
+    line-height: 100%;
+    white-space: nowrap;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+
+    &:hover,
+    &:focus-visible {
+        background-color: $white;
+        border-color: $white;
+        color: $heading-color;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $brand-sky;
+        outline-offset: 3px;
+    }
+
+    @media(max-width:1399px) {
+        padding: 11px 18px;
+        font-size: 15px;
+    }
+}
+
+.header-style-s3 .navigation.sticky-header .header-right .header-contact .header-cta {
+    border-color: $heading-color;
+    color: $heading-color;
+
+    &:hover,
+    &:focus-visible {
+        background-color: $heading-color;
+        color: $white;
+    }
+}
+
+// transparent header over the hero: logo variant with white text (colour
+// symbol kept); the light sticky bar switches back to the navy logo
+.header-style-s3 .navbar-brand .logo-dark {
+    display: none;
+}
+
+.header-style-s3 .navigation.sticky-header .navbar-brand {
+    .logo-light {
+        display: none;
+    }
+
+    .logo-dark {
+        display: block;
+    }
+}
+
+/* Hero: navy overlay, headline copy on the left, project card on the right */
+.wpo-hero-section-s2.hero-sbs {
+    // desktop: exactly one screen tall, so the whole hero is in the first view
+    @media(min-width:992px) {
+        height: 100vh;
+        min-height: 620px;
+    }
+
+    .hero-slider .swiper-slide:before {
+        width: 100%;
+        height: 100%;
+        // strong on the left for the headline, lighter on the right so the
+        // plant photo reads through
+        background: linear-gradient(90deg, rgba($brand-navy-deep, 0.94) 0%, rgba($brand-navy-deep, 0.8) 40%, rgba($brand-navy-deep, 0.45) 75%, rgba($brand-navy-deep, 0.3) 100%);
+
+        @media(max-width:991px) {
+            background: rgba($brand-navy-deep, 0.78);
+        }
+    }
+
+    // SBS's own ETP at Balaji Sugars (drone photo); smaller file on mobile
+    .hero-bg-balaji {
+        background-image: url(../images/plants/balaji-sugar-etp.jpg);
+
+        @media(max-width:991px) {
+            background-image: url(../images/plants/balaji-sugar-etp-1200.jpg);
+        }
+    }
+
+    // Dahod Smart City plant, Gujarat (slide 2)
+    .hero-bg-dahod {
+        background-image: url(../images/plants/dahod-smart-city-plant.jpg);
+    }
+
+    .hero-slider .hero-content {
+        justify-content: center;
+        align-items: stretch;
+        text-align: start;
+        // top padding clears the transparent header
+        padding: 100px 60px 30px;
+
+        @media(max-width:1399px) {
+            padding: 100px 30px 30px;
+        }
+
+        @media(max-width:991px) {
+            padding: 140px 0 90px;
+            text-align: center;
+        }
+    }
+
+    .hero-grid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+
+        @media(max-width:991px) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    .hero-copy {
+        max-width: 1180px;
+
+        @media(max-width:991px) {
+            margin: 0 auto;
+        }
+    }
+
+    .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        font-weight: $fw-medium;
+        font-size: 15px;
+        line-height: 110%;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        color: $brand-sky;
+
+        &::before {
+            content: "";
+            width: 32px;
+            height: 2px;
+            background-color: $brand-sky;
+        }
+
+        @media(max-width:575px) {
+            font-size: 13px;
+            letter-spacing: 1.6px;
+        }
+    }
+
+    .hero-content .hero-title {
+        margin: 0;
+        padding-top: min(25px, 2.5vh);
+        color: $white;
+        font-weight: $fw-bold;
+        font-size: min(92px, 9vh);
+        line-height: 108%;
+        letter-spacing: -1px;
+        text-transform: none;
+
+        em {
+            font-style: normal;
+            color: $brand-sky;
+        }
+
+        @media(max-width:1600px) {
+            font-size: min(84px, 8.6vh);
+        }
+
+        @media(max-width:1399px) {
+            font-size: min(70px, 8vh);
+        }
+
+        @media(max-width:1199px) {
+            font-size: min(58px, 7.2vh);
+        }
+
+        @media(max-width:991px) {
+            font-size: 52px;
+        }
+
+        @media(max-width:767px) {
+            font-size: 42px;
+            padding-top: 18px;
+        }
+
+        @media(max-width:575px) {
+            font-size: 34px;
+        }
+
+        @media(max-width:425px) {
+            font-size: 30px;
+        }
+    }
+
+    .hero-sub {
+        margin: 0;
+        padding-top: min(30px, 3vh);
+        max-width: 640px;
+        color: $white-gray;
+        font-weight: $fw-regular;
+        font-size: 20px;
+        line-height: 160%;
+
+        @media(max-width:991px) {
+            margin: 0 auto;
+            font-size: 17px;
+            padding-top: 20px;
+        }
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+        padding-top: min(40px, 4vh);
+
+        @media(max-width:991px) {
+            justify-content: center;
+            padding-top: 30px;
+        }
+    }
+
+    .hero-btn-outline {
+        display: inline-block;
+        padding: 20px 32px;
+        border: 1px solid rgba($white, 0.55);
+        border-radius: 75px;
+        color: $white;
+        font-weight: $fw-bold;
+        font-size: 16px;
+        line-height: 100%;
+        transition: all .4s ease-in-out;
+
+        &:hover,
+        &:focus {
+            background-color: $white;
+            border-color: $white;
+            color: $heading-color;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $brand-sky;
+            outline-offset: 3px;
+        }
+
+        @media(max-width:991px) {
+            padding: 15px 26px;
+        }
+
+        @media(max-width:767px) {
+            padding: 14px 22px;
+            font-size: 14px;
+        }
+    }
+}
+
+/* About: eyebrow + lead paragraph under the heading */
+.wpo-about-section-s2 .about-left-side .about-top {
+    .about-label {
+        display: inline-block;
+        font-weight: $fw-medium;
+        font-size: 16px;
+        line-height: 110%;
+        letter-spacing: 0.64px;
+        color: $theme-primary-color;
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 20px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $theme-primary-color;
+        }
+    }
+
+    p {
+        margin: 0;
+        padding: 25px 0 40px;
+        color: $lead-color;
+        font-weight: $fw-regular;
+        font-size: 18px;
+        line-height: 150%;
+
+        @media(max-width:991px) {
+            font-size: 16px;
+        }
+    }
+}
+
+/* Centered CTA under a section's grid (services, projects) */
+.section-btn {
+    text-align: center;
+    padding-top: 30px;
+
+    @media(max-width:767px) {
+        padding-top: 10px;
+    }
+}
+
+.wpo-service-section-s2 .service-all-content .service-item .service-content span a {
+    display: block;
+}
+
+// service photos: uniform 4:3 frame, gentle zoom on hover
+.wpo-service-section-s2 .service-all-content .service-item {
+    .image {
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 1s cubic-bezier(.2, .7, .2, 1);
+        }
+    }
+
+    &:hover .image img {
+        transform: scale(1.07);
+    }
+}
+
+.wpo-portfolio-section-s2 .section-btn {
+    padding-top: 60px;
+
+    @media(max-width:767px) {
+        padding-top: 40px;
+    }
+}
+
+/* Why choose: 6-step delivery process */
+.wpo-why-choose-section .why-choose-process {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    margin: 60px 0 0;
+    padding: 0;
+    list-style: none;
+
+    @media(max-width:1199px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(max-width:991px) {
+        margin-top: 30px;
+    }
+
+    @media(max-width:575px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+        background-color: $white;
+        border-radius: 12px;
+        padding: 25px;
+        position: relative;
+        transition: all .4s ease;
+
+        @media(max-width:575px) {
+            padding: 18px;
+        }
+
+        strong {
+            display: block;
+            font-weight: $fw-medium;
+            font-size: 16px;
+            line-height: 145%;
+            color: $small-white-s2;
+            padding-bottom: 25px;
+
+            @media(max-width:575px) {
+                padding-bottom: 12px;
+            }
+        }
+
+        h4 {
+            margin: 0;
+            font-weight: $fw-bold;
+            font-size: 24px;
+            line-height: 122%;
+            letter-spacing: -0.64px;
+            color: $heading-color;
+            transition: all .4s ease;
+
+            @media(max-width:1399px) {
+                font-size: 21px;
+            }
+
+            @media(max-width:575px) {
+                font-size: 18px;
+            }
+        }
+
+        &:hover {
+            background-color: $card-bg-color-s3;
+
+            strong {
+                color: $small-white;
+            }
+
+            h4 {
+                color: $white;
+            }
+        }
+    }
+}
+
+/* Journey: photo inside the category card */
+.wpo-performance-section .performance-item .category-card .category-image img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Industries we serve */
+.wpo-industries-section {
+    .wpo-industries-wrap {
+        max-width: 1555px;
+        margin: 0 auto;
+    }
+
+    .wpo-section-title-s3 h2 {
+        font-size: 96px;
+
+        @media(max-width:1600px) {
+            font-size: 85px;
+        }
+
+        @media(max-width:1399px) {
+            font-size: 70px;
+        }
+
+        @media(max-width:1199px) {
+            font-size: 60px;
+        }
+
+        @media(max-width:767px) {
+            font-size: 45px;
+        }
+
+        @media(max-width:575px) {
+            font-size: 35px;
+        }
+    }
+
+    .industry-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media(max-width:1199px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media(max-width:575px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    }
+
+    // photo cards: image fills the card, navy fade keeps the text legible
+    .industry-card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        border-radius: 16px;
+        min-height: 420px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $card-bg-color-s2;
+
+        @media(max-width:1399px) {
+            min-height: 380px;
+        }
+
+        @media(max-width:991px) {
+            min-height: 320px;
+        }
+
+        @media(max-width:575px) {
+            min-height: 230px;
+            padding: 16px;
+        }
+
+        .industry-image {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.01);
+            transition: transform 1.2s cubic-bezier(.2, .7, .2, 1);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(180deg, rgba($brand-navy-deep, 0.35) 0%, rgba($brand-navy-deep, 0.05) 35%, rgba($brand-navy-deep, 0.55) 65%, rgba($brand-navy-deep, 0.95) 100%);
+            transition: background .5s ease;
+        }
+
+        small {
+            align-self: flex-start;
+            font-weight: $fw-medium;
+            font-size: 14px;
+            line-height: 100%;
+            color: $white;
+            padding: 8px 12px;
+            border-radius: 40px;
+            border: 1px solid rgba($white, 0.35);
+            background-color: rgba($white, 0.12);
+            backdrop-filter: blur(6px);
+        }
+
+        h3 {
+            margin: 0;
+            font-weight: $fw-bold;
+            font-size: 24px;
+            line-height: 122%;
+            letter-spacing: -0.64px;
+            color: $white;
+            position: relative;
+            padding-top: 16px;
+
+            // accent rule that grows on hover
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 28px;
+                height: 3px;
+                border-radius: 3px;
+                background-color: $brand-sky;
+                transition: width .5s ease;
+            }
+
+            @media(max-width:1399px) {
+                font-size: 21px;
+            }
+
+            @media(max-width:575px) {
+                font-size: 17px;
+            }
+        }
+
+        &:hover {
+            .industry-image {
+                transform: scale(1.1);
+            }
+
+            &::before {
+                background: linear-gradient(180deg, rgba($brand-navy-deep, 0.35) 0%, rgba($brand-teal, 0.15) 35%, rgba($brand-navy-deep, 0.6) 65%, rgba($brand-navy-deep, 0.97) 100%);
+            }
+
+            h3::before {
+                width: 60px;
+            }
+        }
+    }
+}
+
+/* Partners: client / OEM logo slider */
+.wpo-partner-section {
+    .partner-caption {
+        margin: 0 0 25px;
+        text-align: center;
+        color: $funky-gray;
+        font-weight: $fw-medium;
+        font-size: 18px;
+        line-height: 145%;
+
+        @media(max-width:767px) {
+            font-size: 16px;
+        }
+    }
+}
+
+// continuous logo marquee (replaces the stepped slick slider)
+.client-marquee {
+    overflow: hidden;
+    // soft fade at both edges
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+
+    .client-marquee-track {
+        display: flex;
+        width: max-content;
+        // same colour as the page, so the logos' multiply blend below has a
+        // backdrop inside this (transformed, hence isolated) layer
+        background-color: $body-bg-color;
+        animation: client-marquee 40s linear infinite;
+    }
+
+    &:hover .client-marquee-track {
+        animation-play-state: paused;
+    }
+
+    .client-marquee-list {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        margin: 0;
+        padding: 10px 80px 10px 0;
+        list-style: none;
+
+        @media(max-width:991px) {
+            gap: 50px;
+            padding-right: 50px;
+        }
+
+        @media(max-width:575px) {
+            gap: 35px;
+            padding-right: 35px;
+        }
+
+        li {
+            flex: 0 0 auto;
+            height: 110px;
+            display: flex;
+            align-items: center;
+
+            @media(max-width:991px) {
+                height: 85px;
+            }
+
+            @media(max-width:575px) {
+                height: 65px;
+            }
+        }
+
+        img {
+            width: auto;
+            height: auto;
+            max-height: 100%;
+            max-width: 240px;
+            object-fit: contain;
+            // drops the white boxes baked into the JPG logos
+            mix-blend-mode: multiply;
+            transition: transform .4s ease;
+
+            @media(max-width:575px) {
+                max-width: 150px;
+            }
+        }
+
+        li:hover img {
+            transform: scale(1.06);
+        }
+    }
+
+    // reduced-motion users still get the strip, just slower (hover pauses it)
+    @media (prefers-reduced-motion: reduce) {
+        .client-marquee-track {
+            animation-duration: 55s;
+        }
+    }
+}
+
+@keyframes client-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Contact / CTA */
+.wpo-contact-section .contact-left-side {
+    .client-image li img {
+        object-fit: contain;
+        background-color: $white;
+        padding: 6px;
+    }
+
+    .contact-btn {
+        padding-top: 35px;
+
+        @media(max-width:991px) {
+            padding-top: 25px;
+        }
+    }
+}
+
+/* Footer: office addresses */
+.wpo-site-footer-s2 .footer-info .footer-offices ul li {
+    color: $white-gray;
+    font-size: 15px;
+    line-height: 145%;
+    padding-bottom: 15px;
+
+    strong {
+        display: block;
+        color: $white;
+        font-weight: $fw-bold;
+        padding-bottom: 3px;
+    }
+}
+
+.wpo-site-footer-s2 .footer-contact .contact-info li a {
+    color: inherit;
+}
+
+// footer: titled Quick Links column beside Social links
+.wpo-site-footer-s2 {
+    .social-item {
+        padding-right: 40px;
+
+        @media (max-width:767px) {
+            padding: 0;
+        }
+    }
+
+    .quick-links-item {
+        min-width: 260px;
+
+        @media (max-width:767px) {
+            margin-bottom: 50px;
+        }
+
+        .footer-quick-links {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px 30px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                padding: 0;
+                font-size: 16px;
+                line-height: 130%;
+
+                a {
+                    position: relative;
+                    display: inline-block;
+                    color: $white-gray;
+                    transition: color .3s ease, transform .3s ease;
+
+                    &:hover,
+                    &:focus-visible {
+                        color: $small-white;
+                        transform: translateX(4px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// menu links: a link focused by a mouse click (e.g. after using the browser's
+// back button) keeps its normal colour instead of the template's teal focus
+// colour; keyboard focus still gets a visible outline
+@media(min-width:992px) {
+    .header-style-s3 .navigation #navbar>ul>li>a {
+        &:focus:not(:focus-visible):not(:hover):not(.active) {
+            color: $white;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $brand-sky;
+            outline-offset: -6px;
+            border-radius: 8px;
+        }
+    }
+
+    .header-style-s3 .navigation.sticky-header #navbar>ul>li>a {
+        &:focus:not(:focus-visible):not(:hover):not(.active) {
+            color: $heading-color;
+        }
+    }
+}

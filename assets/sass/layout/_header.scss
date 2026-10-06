@@ -1186,14 +1186,15 @@
 
 	#navbar>ul>li>a {
 		color: $white;
-		padding: 25px 40px;
+		// 7 one-page menu items: tighter than the template's 5-item spacing
+		padding: 25px 24px;
 
 		@media(max-width:1399px) {
-			padding: 25px 30px;
+			padding: 25px 16px;
 		}
 
 		@media(max-width:1199px) {
-			padding: 25px 20px;
+			padding: 25px 10px;
 		}
 
 		@media(max-width:991px) {

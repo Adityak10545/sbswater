@@ -1,0 +1,381 @@
+/*======================================
+14.0 Careers Page
+=======================================*/
+
+/* Shared form field styles (careers + quote forms) */
+@mixin sbs-form-fields {
+    position: relative;
+
+    .row {
+        row-gap: 22px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: $heading-color;
+        font-weight: $fw-medium;
+        font-size: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        height: 52px;
+        padding: 12px 16px;
+        border: 1px solid $brand-line-tint;
+        border-radius: 10px;
+        background-color: $body-bg-color;
+        color: $dark-gray;
+        font-size: 15px;
+        box-shadow: none;
+        transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
+
+        &::placeholder {
+            color: $small-black;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $theme-primary-color;
+            background-color: $white;
+            box-shadow: 0 0 0 3px rgba($theme-primary-color, 0.15);
+        }
+
+        &:user-invalid {
+            border-color: #D93025;
+        }
+    }
+
+    select.form-control {
+        appearance: none;
+        padding-right: 40px;
+        background-image: linear-gradient(45deg, transparent 50%, $heading-color 50%), linear-gradient(135deg, $heading-color 50%, transparent 50%);
+        background-position: calc(100% - 22px) 50%, calc(100% - 16px) 50%;
+        background-size: 6px 6px;
+        background-repeat: no-repeat;
+    }
+
+    textarea.form-control {
+        height: auto;
+        min-height: 140px;
+        resize: vertical;
+    }
+
+    .careers-file {
+        height: auto;
+        padding: 11px 12px;
+        cursor: pointer;
+
+        &::file-selector-button {
+            margin-right: 12px;
+            padding: 6px 14px;
+            border: 0;
+            border-radius: 6px;
+            background-color: $theme-primary-color;
+            color: $white;
+            font-weight: $fw-medium;
+            cursor: pointer;
+        }
+    }
+}
+
+/* Page title: SBS plant photo behind the transparent header */
+.wpo-page-title.page-title-careers {
+    background-image: url(../images/plants/balaji-sugar-etp.jpg);
+    background-position: center;
+    margin-left: 0;
+    min-height: 480px;
+    padding-top: 90px;
+
+    @media(max-width: 991px) {
+        background-image: url(../images/plants/balaji-sugar-etp-1200.jpg);
+        min-height: 380px;
+    }
+
+    @media(max-width: 575px) {
+        min-height: 300px;
+    }
+
+    &::before {
+        width: 100%;
+        background: linear-gradient(180deg, rgba($brand-navy-deep, 0.75) 0%, rgba($brand-navy-deep, 0.85) 100%);
+    }
+
+    .wpo-breadcumb-wrap ol li,
+    .wpo-breadcumb-wrap ol li a {
+        color: $white-gray;
+    }
+
+    .wpo-breadcumb-wrap ol li a:hover {
+        color: $small-white;
+    }
+}
+
+/* Intro + contact cards */
+.wpo-careers-section {
+    .wpo-careers-wrap {
+        max-width: 1555px;
+        margin: 0 auto;
+    }
+
+    .careers-intro {
+        padding-right: 60px;
+
+        @media(max-width: 1199px) {
+            padding-right: 20px;
+        }
+
+        @media(max-width: 991px) {
+            padding-right: 0;
+            margin-bottom: 40px;
+        }
+
+        .wpo-section-title-s2 {
+            margin-bottom: 25px;
+
+            h2 {
+                font-size: 64px;
+                line-height: 100%;
+                padding-top: 20px;
+
+                @media(max-width: 1399px) {
+                    font-size: 55px;
+                }
+
+                @media(max-width: 1199px) {
+                    font-size: 45px;
+                }
+
+                @media(max-width: 767px) {
+                    font-size: 35px;
+                }
+
+                @media(max-width: 425px) {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+    .careers-lead {
+        margin: 0;
+        max-width: 720px;
+        color: $lead-color;
+        font-size: 19px;
+        line-height: 160%;
+
+        @media(max-width: 991px) {
+            font-size: 17px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+
+    .careers-perks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 40px 0 0;
+        padding: 0;
+        list-style: none;
+
+        @media(max-width: 575px) {
+            grid-template-columns: 1fr;
+        }
+
+        li {
+            background-color: $white;
+            border: 1px solid $brand-line-tint;
+            border-left: 3px solid $theme-primary-color;
+            border-radius: 12px;
+            padding: 20px 22px;
+            color: $funky-gray;
+            font-size: 16px;
+            line-height: 150%;
+
+            strong {
+                display: block;
+                padding-bottom: 6px;
+                color: $heading-color;
+                font-weight: $fw-bold;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .careers-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .careers-contact-card {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        background-color: $card-bg-color-s3;
+        border-radius: 14px;
+        padding: 24px;
+
+        @media(max-width: 575px) {
+            padding: 18px;
+            gap: 15px;
+        }
+
+        .icon {
+            flex: 0 0 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba($white, 0.1);
+            color: $brand-sky;
+            font-size: 22px;
+        }
+
+        h3 {
+            margin: 0;
+            padding-bottom: 6px;
+            color: $white;
+            font-weight: $fw-bold;
+            font-size: 19px;
+            line-height: 125%;
+        }
+
+        p {
+            margin: 0;
+            color: $white-gray;
+            font-size: 16px;
+            line-height: 150%;
+
+            a {
+                color: $white;
+                font-weight: $fw-medium;
+
+                &:hover {
+                    color: $small-white;
+                }
+            }
+        }
+    }
+}
+
+/* Application form */
+.wpo-careers-form-section {
+    .careers-form-wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        background-color: $white;
+        border: 1px solid $brand-line-tint;
+        border-radius: 20px;
+        padding: 60px;
+        box-shadow: 0 20px 50px rgba($brand-navy, 0.08);
+
+        @media(max-width: 991px) {
+            padding: 40px;
+        }
+
+        @media(max-width: 575px) {
+            padding: 24px 18px;
+        }
+    }
+
+    .careers-form-head {
+        text-align: center;
+        margin-bottom: 40px;
+
+        .title-text {
+            display: inline-block;
+            position: relative;
+            padding-left: 15px;
+            font-weight: $fw-medium;
+            font-size: 16px;
+            color: $theme-primary-color;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 6px;
+                left: 0;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: $theme-primary-color;
+            }
+        }
+
+        h2 {
+            margin: 12px 0 0;
+            font-size: 44px;
+            line-height: 110%;
+
+            @media(max-width: 767px) {
+                font-size: 32px;
+            }
+        }
+
+        p {
+            margin: 15px auto 0;
+            max-width: 620px;
+            color: $funky-gray;
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+
+    // spam trap: off-screen rather than display:none so bots still fill it
+    .careers-hp {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+
+    .careers-form {
+        @include sbs-form-fields;
+    }
+
+    .careers-submit {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+        padding-top: 10px;
+
+        @media(max-width: 575px) {
+            flex-direction: column;
+            align-items: stretch;
+            text-align: center;
+        }
+
+        .theme-btn {
+            border: 0;
+
+            &:disabled {
+                opacity: .6;
+                cursor: wait;
+            }
+        }
+    }
+
+    .careers-status {
+        margin: 0;
+        flex: 1;
+        font-size: 15px;
+        line-height: 145%;
+
+        &.is-pending {
+            color: $theme-primary-color;
+        }
+
+        &.is-success {
+            color: #1E8E3E;
+        }
+
+        &.is-error {
+            color: #D93025;
+        }
+    }
+}
