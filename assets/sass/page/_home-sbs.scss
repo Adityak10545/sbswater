@@ -658,31 +658,36 @@
 
         li {
             flex: 0 0 auto;
-            height: 110px;
+            height: 135px;
             display: flex;
             align-items: center;
 
             @media(max-width:991px) {
-                height: 85px;
+                height: 100px;
             }
 
             @media(max-width:575px) {
-                height: 65px;
+                height: 75px;
             }
         }
 
+        // --logo-w is set per logo in the HTML so every logo covers roughly
+        // the same visual area (a square mark ~115px, wide wordmarks wider)
         img {
-            width: auto;
+            width: var(--logo-w, 160px);
             height: auto;
             max-height: 100%;
-            max-width: 240px;
             object-fit: contain;
             // drops the white boxes baked into the JPG logos
             mix-blend-mode: multiply;
             transition: transform .4s ease;
 
+            @media(max-width:991px) {
+                width: calc(var(--logo-w, 160px) * .75);
+            }
+
             @media(max-width:575px) {
-                max-width: 150px;
+                width: calc(var(--logo-w, 160px) * .55);
             }
         }
 
@@ -812,5 +817,58 @@
         &:focus:not(:focus-visible):not(:hover):not(.active) {
             color: $heading-color;
         }
+    }
+}
+
+// About section photo: fill the whole right column, matching the text column height
+.wpo-about-section-s2 .about-image.about-image-fill {
+    max-width: none;
+    margin-left: 0;
+    min-height: 480px;
+
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 991px) {
+        min-height: 0;
+        margin-top: 40px;
+
+        img {
+            position: static;
+            height: auto;
+        }
+    }
+}
+
+// Services, Projects, Journey and Insights headings: same scale as the Industries heading
+.wpo-service-section-s2 .wpo-section-title-s3 h2,
+.wpo-portfolio-section-s2 .wpo-section-title-s3 h2,
+.wpo-blog-section-s2 .wpo-section-title-s3 h2,
+.wpo-performance-section .wpo-section-title-s3 h2 {
+    font-size: 96px;
+
+    @media(max-width:1600px) {
+        font-size: 85px;
+    }
+
+    @media(max-width:1399px) {
+        font-size: 70px;
+    }
+
+    @media(max-width:1199px) {
+        font-size: 60px;
+    }
+
+    @media(max-width:767px) {
+        font-size: 45px;
+    }
+
+    @media(max-width:575px) {
+        font-size: 35px;
     }
 }
