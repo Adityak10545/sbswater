@@ -50,7 +50,7 @@
         var endpoint = form.getAttribute("action");
         if (!endpoint) {
             setStatus(
-                "Online applications will be available soon. Meanwhile, please email your CV to info@sbswater.in.",
+                "Online applications will be available soon. Meanwhile, please email your CV to marketing@sbswater.in.",
                 "pending",
             );
             return;
@@ -94,7 +94,7 @@
                         ? error.message
                         : "We couldn't send your application. Please try again.";
                 setStatus(
-                    text + " You can also email your CV to info@sbswater.in.",
+                    text + " You can also email your CV to marketing@sbswater.in.",
                     "error",
                 );
             })

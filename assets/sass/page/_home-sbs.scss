@@ -438,6 +438,43 @@
     }
 }
 
+/* Journey: full-width, centred layout (theme default is right-aligned at 1170px) */
+.wpo-performance-section .performance-item {
+    max-width: none;
+    margin: 0 auto;
+    align-items: stretch;
+
+    .category-card {
+        flex: 0 0 38%;
+
+        @media(max-width:1199px) {
+            flex-basis: auto;
+            width: 100%;
+        }
+    }
+
+    .award-card {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .award-content {
+            flex: 1 1 0;
+            margin-bottom: 0;
+
+            .award-item .date {
+                margin-left: auto;
+                white-space: nowrap;
+
+                @media(max-width:575px) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
 /* Journey: photo inside the category card */
 .wpo-performance-section .performance-item .category-card .category-image img {
     width: 100%;
@@ -715,18 +752,117 @@
 }
 
 /* Contact / CTA */
-.wpo-contact-section .contact-left-side {
-    .client-image li img {
-        object-fit: contain;
-        background-color: $white;
-        padding: 6px;
+.sbs-cta-section .sbs-cta-wrap {
+    background: $brand-teal;
+    border-radius: 24px;
+    padding: 80px 60px 70px;
+    text-align: center;
+
+    @include media-query(991px) {
+        padding: 60px 40px 50px;
     }
 
-    .contact-btn {
-        padding-top: 35px;
+    @include media-query(575px) {
+        padding: 45px 20px 40px;
+        border-radius: 16px;
+    }
 
-        @media(max-width:991px) {
-            padding-top: 25px;
+    h2 {
+        color: $white;
+        font-size: 50px;
+        font-weight: $fw-bold;
+        line-height: 120%;
+        max-width: 900px;
+        margin: 0 auto 20px;
+
+        @include media-query(991px) {
+            font-size: 38px;
+        }
+
+        @include media-query(575px) {
+            font-size: 28px;
+        }
+    }
+
+    .sbs-cta-lead {
+        color: $white-gray;
+        font-size: 18px;
+        line-height: 160%;
+        max-width: 640px;
+        margin: 0 auto;
+
+        @include media-query(575px) {
+            font-size: 16px;
+        }
+    }
+
+    .sbs-cta-btns {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 35px;
+    }
+
+    .sbs-cta-contacts {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 760px;
+        margin: 55px auto 0;
+
+        @include media-query(767px) {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 45px;
+        }
+    }
+
+    .sbs-cta-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        text-align: left;
+        padding: 10px 20px;
+
+        & + .sbs-cta-contact {
+            border-left: 1px solid rgba($white, .3);
+
+            @include media-query(767px) {
+                border-left: 0;
+                border-top: 1px solid rgba($white, .3);
+                padding-top: 30px;
+            }
+        }
+
+        i {
+            flex: 0 0 60px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $white;
+            color: $brand-teal;
+            font-size: 24px;
+        }
+
+        h3 {
+            color: $white;
+            font-size: 22px;
+            font-weight: $fw-bold;
+            margin: 0 0 6px;
+        }
+
+        a {
+            color: $white-gray;
+            font-size: 17px;
+
+            &:hover {
+                color: $brand-yellow;
+            }
         }
     }
 }
@@ -849,6 +985,7 @@
 .wpo-service-section-s2 .wpo-section-title-s3 h2,
 .wpo-portfolio-section-s2 .wpo-section-title-s3 h2,
 .wpo-blog-section-s2 .wpo-section-title-s3 h2,
+.wpo-partner-section .wpo-section-title-s3 h2,
 .wpo-performance-section .wpo-section-title-s3 h2 {
     font-size: 96px;
 
