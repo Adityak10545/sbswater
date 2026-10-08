@@ -75,6 +75,12 @@
             color: $white;
             font-weight: $fw-medium;
             cursor: pointer;
+            transition: background-color .2s ease;
+        }
+
+        &:hover::file-selector-button,
+        &:focus-visible::file-selector-button {
+            background-color: $brand-navy;
         }
     }
 }

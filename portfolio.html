@@ -12,11 +12,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/brand/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#2E4673">
-    <meta name="description" content="SBS Water &amp; Infra Projects Private Limited is a water and wastewater infrastructure company providing condensate treatment, effluent treatment, wastewater treatment and reverse osmosis systems for industrial and municipal clients.">
+    <meta name="description" content="Projects by SBS Water &amp; Infra Projects: 53+ condensate polishing, water treatment and effluent treatment plants delivered for India's sugar, distillery and biofuel industries, with 18 more in execution in 2026.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SBS Water &amp; Infra Projects Private Limited">
-    <meta property="og:title" content="Portfolio | SBS Water &amp; Infra Projects Private Limited">
-    <meta property="og:description" content="SBS Water &amp; Infra Projects Private Limited is a water and wastewater infrastructure company providing condensate treatment, effluent treatment, wastewater treatment and reverse osmosis systems for industrial and municipal clients.">
+    <meta property="og:title" content="Projects | SBS Water &amp; Infra Projects Private Limited">
+    <meta property="og:description" content="Projects by SBS Water &amp; Infra Projects: 53+ condensate polishing, water treatment and effluent treatment plants delivered for India's sugar, distillery and biofuel industries, with 18 more in execution in 2026.">
     <meta property="og:url" content="https://adityak10545.github.io/sbswater/portfolio.html">
     <meta property="og:image" content="https://adityak10545.github.io/sbswater/assets/images/brand/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
     <meta property="og:image:alt" content="SBS Water &amp; Infra Projects Private Limited logo">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://adityak10545.github.io/sbswater/portfolio.html">
-    <title>Portfolio | SBS Water &amp; Infra Projects Private Limited</title>
+    <title>Projects | SBS Water &amp; Infra Projects Private Limited</title>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon_framehaus.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -280,15 +280,22 @@
         <!-- end of header -->
 
         <!-- start wpo-page-title -->
-        <section class="wpo-page-title">
+        <section class="wpo-page-title page-title-projects">
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
                         <div class="wpo-breadcumb-wrap">
-                            <h1>Portfolio Page</h1>
+                            <h1>Our Projects</h1>
+                            <p class="page-title-lead">
+                                <strong>Plants Built to Recover Every Drop.</strong>
+                                Condensate polishing units, water treatment and
+                                effluent treatment plants designed, manufactured and
+                                commissioned by SBS Water for India's sugar,
+                                distillery and biofuel industries.
+                            </p>
                             <ol class="wpo-breadcumb-wrap">
                                 <li><a href="index.html">Home</a></li>
-                                <li>Portfolio Page</li>
+                                <li>Projects</li>
                             </ol>
                         </div>
                     </div>
@@ -297,188 +304,634 @@
         </section>
         <!-- end page-title -->
 
-        <!-- start portfolio section -->
-        <div class="wpo-portfolio-section-s3 section-padding">
+        <!-- start projects overview -->
+        <section class="wpo-projects-overview section-padding pb-0">
             <div class="container-fluid">
-                <div class="wpo-portfolio-wrap">
+                <div class="projects-wrap">
+                    <ul class="sbs-stats">
+                        <li class="wow fadeInUp" data-wow-delay="0.1s">
+                            <h3><span class="odometer" data-count="53">00</span>+</h3>
+                            <p>Plants delivered</p>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay="0.2s">
+                            <h3><span class="odometer" data-count="18">00</span></h3>
+                            <p>Projects in execution, 2026</p>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay="0.3s">
+                            <h3><span class="odometer" data-count="90">00</span>+<small>MLD</small></h3>
+                            <p>Treatment capacity installed</p>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay="0.4s">
+                            <h3><span class="odometer" data-count="10">00</span>+</h3>
+                            <p>States across India</p>
+                        </li>
+                    </ul>
+                    <nav class="projects-subnav" aria-label="Projects page sections">
+                        <a href="#featured">Featured Projects</a>
+                        <a href="#register">Project Register</a>
+                        <a href="#ongoing">Ongoing 2026</a>
+                        <a href="#delivery">How We Deliver</a>
+                        <a href="#partners">OEM &amp; EPC Partners</a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <!-- end projects overview -->
+
+        <!-- start featured projects -->
+        <section class="wpo-projects-featured section-padding" id="featured">
+            <div class="container-fluid">
+                <div class="projects-wrap">
+                    <div class="projects-head wow fadeInUp" data-wow-delay="0.1s">
+                        <div>
+                            <span class="projects-label">Featured Projects</span>
+                            <h2>From Site Photos to Running Plants</h2>
+                        </div>
+                        <p>Photographs from our plant sites, taken during
+                            construction, commissioning and operation. Select any
+                            project to see more.</p>
+                    </div>
+                    <div class="projects-filters" role="group" aria-label="Filter featured projects">
+                        <button type="button" class="is-active" data-filter="all" aria-pressed="true">All</button>
+                        <button type="button" data-filter="cpu" aria-pressed="false">CPU</button>
+                        <button type="button" data-filter="wtp" aria-pressed="false">WTP</button>
+                        <button type="button" data-filter="etp" aria-pressed="false">ETP &amp; Biological</button>
+                        <button type="button" data-filter="ongoing" aria-pressed="false">Ongoing</button>
+                        <span class="projects-count" id="featured-count" aria-live="polite"></span>
+                    </div>
+                    <div class="projects-grid" id="featured-grid">
+                        <article class="project-card wow fadeInUp" data-tags="etp" data-project="balaji" data-photos="3">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Balaji Sugar">
+                                <img src="assets/images/projects/balaji-1.jpg" alt="Effluent Treatment Plant at Balaji Sugar" loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>3 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">Effluent Treatment Plant</span>
+                                <h3>Balaji Sugar</h3>
+                                <p>Aerial view of a complete effluent treatment plant: aeration basins, secondary clarifiers and sludge handling laid out for a sugar complex.</p>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu wtp etp ongoing" data-project="satish" data-photos="5">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Satish Sugars Ltd.">
+                                <img src="assets/images/projects/satish-1.jpg" alt="Distillery CPU · ETP · WTP at Satish Sugars Ltd." loading="lazy">
+                                <span class="project-status is-expand">Expansion ongoing</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>5 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">Distillery CPU · ETP · WTP</span>
+                                <h3>Satish Sugars Ltd.</h3>
+                                <p>A long-term partner site. After the original distillery CPU, SBS is now executing an ETP upgrade plus new 1,600 KLD ETP and WTP and a 6 MLD CPU.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Belgaum, Karnataka</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>1,100 KLPD CPU</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu wtp" data-project="ambalika" data-photos="5">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Ambalika Sugars Pvt. Ltd.">
+                                <img src="assets/images/projects/ambalika-1.jpg" alt="WTP + CPU at Ambalika Sugars Pvt. Ltd." loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>5 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">WTP + CPU</span>
+                                <h3>Ambalika Sugars Pvt. Ltd.</h3>
+                                <p>Twin systems: a 2,000 KLPD condensate polishing unit and a 2,000 KLPD water treatment plant, with RO skids under a covered process shed.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Karjat, Maharashtra</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>2,000 + 2,000 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu etp" data-project="belgaum" data-photos="3">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Belgaum Sugars Ltd.">
+                                <img src="assets/images/projects/belgaum-1.jpg" alt="Sugar CPU + ETP at Belgaum Sugars Ltd." loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>3 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">Sugar CPU + ETP</span>
+                                <h3>Belgaum Sugars Ltd.</h3>
+                                <p>One of our largest sugar-side CPUs at 4,200 KLPD, with an indoor RO hall, degasser towers and a separate 1,200 KLPD ETP.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Belgaum, Karnataka</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>4,200 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu wtp" data-project="udgiri" data-photos="3">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Udagiri Sugars Pvt. Ltd.">
+                                <img src="assets/images/projects/udgiri-1.jpg" alt="CPU / WTP at Udagiri Sugars Pvt. Ltd." loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>3 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">CPU / WTP</span>
+                                <h3>Udagiri Sugars Pvt. Ltd.</h3>
+                                <p>Clarifier, treated-water tanks and pumping laid out in a compact footprint beside the cane fields.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Vita, Maharashtra</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>2,000 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="etp" data-project="dahod" data-photos="3">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Water Treatment Complex">
+                                <img src="assets/images/projects/dahod-1.jpg" alt="Effluent &amp; Water Treatment at Water Treatment Complex" loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>3 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">Effluent &amp; Water Treatment</span>
+                                <h3>Water Treatment Complex</h3>
+                                <p>A full treatment complex with process tanks, filtration and a lined holding pond, built around the plant&#x27;s water balance.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Dahod, Gujarat</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="etp" data-project="southern" data-photos="3">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Southern Bioenergy">
+                                <img src="assets/images/projects/southern-1.jpg" alt="Biological Treatment Plant at Southern Bioenergy" loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>3 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">Biological Treatment Plant</span>
+                                <h3>Southern Bioenergy</h3>
+                                <p>Biological treatment with aeration basins, clarification and dosing, designed for high-strength distillery streams.</p>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu" data-project="pandurang" data-photos="4">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Shri Pandurang SSK">
+                                <img src="assets/images/projects/pandurang-1.jpg" alt="CPU at Shri Pandurang SSK" loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>4 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">CPU</span>
+                                <h3>Shri Pandurang SSK</h3>
+                                <p>Pressure filters, cartridge filtration and multi-stage RO under a single open shed for easy operation and maintenance.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Shripur, Maharashtra</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>1,500 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu" data-project="indo" data-photos="3">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Indo Nuclear Pvt. Ltd.">
+                                <img src="assets/images/projects/indo-1.jpg" alt="Distillery CPU at Indo Nuclear Pvt. Ltd." loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>3 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">Distillery CPU</span>
+                                <h3>Indo Nuclear Pvt. Ltd.</h3>
+                                <p>Rooftop-installed RO and polishing skids recovering distillery condensate as reusable process water.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Indore, Madhya Pradesh</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>1,000 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu ongoing" data-project="allianz" data-photos="2">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Allianz Distillery">
+                                <img src="assets/images/projects/allianz-1.jpg" alt="Distillery CPU at Allianz Distillery" loading="lazy">
+                                <span class="project-status is-expand">Expansion ongoing</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>2 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">Distillery CPU</span>
+                                <h3>Allianz Distillery</h3>
+                                <p>A 1,000 KLPD distillery CPU with clarifier and biological stage. A further 900 KLPD CPU is under execution in 2026.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Mathura, Uttar Pradesh</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>1,000 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu ongoing" data-project="satva" data-photos="3">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Satva Biorefinery">
+                                <img src="assets/images/projects/satva-1.jpg" alt="Distillery CPU at Satva Biorefinery" loading="lazy">
+                                <span class="project-status is-ongoing">Ongoing · 2026</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>3 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">Distillery CPU</span>
+                                <h3>Satva Biorefinery</h3>
+                                <p>UF and RO trains with biological pre-treatment, currently being commissioned.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>1,750 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu ongoing" data-project="sitaram" data-photos="2">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Sitaram Maharaj Distillery">
+                                <img src="assets/images/projects/sitaram-1.jpg" alt="Distillery CPU at Sitaram Maharaj Distillery" loading="lazy">
+                                <span class="project-status is-ongoing">Ongoing · 2026</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>2 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">Distillery CPU</span>
+                                <h3>Sitaram Maharaj Distillery</h3>
+                                <p>Biological treatment and cooling towers for a 1,500 KLPD distillery CPU, now in execution.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Maharashtra</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>1,500 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="etp ongoing" data-project="bhima" data-photos="2">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of MRN Bhima Sugar &amp; Power">
+                                <img src="assets/images/projects/bhima-1.jpg" alt="ETP at MRN Bhima Sugar &amp; Power" loading="lazy">
+                                <span class="project-status is-ongoing">Ongoing · 2026</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>2 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">ETP</span>
+                                <h3>MRN Bhima Sugar &amp; Power</h3>
+                                <p>Aeration basins in operation at a 1,500 KLD effluent treatment plant for a sugar and power complex.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Patas, Maharashtra</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>1,500 KLD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="wtp" data-project="mula" data-photos="2">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Mula SSK">
+                                <img src="assets/images/projects/mula-1.jpg" alt="Distillery WTP at Mula SSK" loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>2 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">Distillery WTP</span>
+                                <h3>Mula SSK</h3>
+                                <p>Pressure sand and carbon filters with clarifier feeding a 1,500 KLPD water treatment plant.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Ahilyanagar, Maharashtra</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>1,500 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu wtp" data-project="betul" data-photos="1">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Shreeji Sugars">
+                                <img src="assets/images/projects/betul-1.jpg" alt="CPU to WTP at Shreeji Sugars" loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>1 photo</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">CPU to WTP</span>
+                                <h3>Shreeji Sugars</h3>
+                                <p>Condensate is treated and routed into the water treatment line, cutting fresh-water draw.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Betul, Madhya Pradesh</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>800 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu wtp" data-project="newlook" data-photos="2">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of New Look Biofuels Pvt. Ltd.">
+                                <img src="assets/images/projects/newlook-1.jpg" alt="WTP &amp; CPU at New Look Biofuels Pvt. Ltd." loading="lazy">
+                                <span class="project-status is-done">Commissioned</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>2 photos</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">WTP &amp; CPU</span>
+                                <h3>New Look Biofuels Pvt. Ltd.</h3>
+                                <p>Large-format storage tanks going up during construction of a 2,000 KLPD WTP and CPU.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Raipur, Chhattisgarh</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>2,000 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project-card wow fadeInUp" data-tags="cpu wtp ongoing" data-project="venus" data-photos="1">
+                            <button type="button" class="project-card-image project-photo" aria-label="View photos of Venus Agro Fuels">
+                                <img src="assets/images/projects/venus-1.jpg" alt="CPU &amp; WTP at Venus Agro Fuels" loading="lazy">
+                                <span class="project-status is-ongoing">Ongoing · 2026</span>
+                                <span class="project-photos"><i class="ti-gallery" aria-hidden="true"></i>1 photo</span>
+                            </button>
+                            <div class="project-card-body">
+                                <span class="project-scope">CPU &amp; WTP</span>
+                                <h3>Venus Agro Fuels</h3>
+                                <p>Piping and skids being installed for a 600 KLPD CPU and WTP.</p>
+                                <ul class="project-meta">
+                                    <li><i class="ti-location-pin" aria-hidden="true"></i>Katni, Madhya Pradesh</li>
+                                    <li><i class="ti-dashboard" aria-hidden="true"></i>600 KLPD</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end featured projects -->
+
+        <!-- start project register -->
+        <section class="wpo-projects-register section-padding" id="register">
+            <div class="container-fluid">
+                <div class="projects-wrap">
+                    <div class="projects-head wow fadeInUp" data-wow-delay="0.1s">
+                        <div>
+                            <span class="projects-label">Project Register</span>
+                            <h2>Every Plant We Have Delivered</h2>
+                        </div>
+                        <p>Our full reference list as of 2026, covering sugar mills,
+                            distilleries, biofuel units and municipal infrastructure.</p>
+                    </div>
+                    <ul class="register-totals">
+                        <li><strong>43</strong><span>Condensate polishing units (CPU)</span></li>
+                        <li><strong>17</strong><span>Water treatment plants (WTP)</span></li>
+                        <li><strong>5</strong><span>Effluent treatment plants (ETP)</span></li>
+                        <li><strong>1</strong><span>Sewage treatment plant, 4 MLD (STP)</span></li>
+                    </ul>
+                    <div class="projects-filters" role="group" aria-label="Filter project register">
+                        <button type="button" class="is-active" data-register-filter="all" aria-pressed="true">All</button>
+                        <button type="button" data-register-filter="cpu" aria-pressed="false">CPU</button>
+                        <button type="button" data-register-filter="wtp" aria-pressed="false">WTP</button>
+                        <button type="button" data-register-filter="etp" aria-pressed="false">ETP</button>
+                        <button type="button" data-register-filter="stp" aria-pressed="false">STP</button>
+                        <label class="register-search">
+                            <i class="ti-search" aria-hidden="true"></i>
+                            <input type="search" id="register-search" placeholder="Search client or location"
+                                aria-label="Search client or location">
+                        </label>
+                    </div>
+                    <div class="register-table-wrap">
+                        <table class="register-table" id="register-table">
+                            <thead>
+                                <tr><th>#</th><th>Client</th><th>Plant</th><th>Capacity</th></tr>
+                            </thead>
+                            <tbody>
+                                    <tr data-type="cpu"><td class="register-no">01</td><td><strong>Balrampur Chini Mills</strong><span>Babhnan, UP</span></td><td>Sugar CPU</td><td class="register-cap">1,400 KLPD</td></tr>
+                                    <tr data-type="etp"><td class="register-no">02</td><td><strong>Balrampur Chini Mills</strong><span>Balrampur, UP</span></td><td>Sugar ETP + UF + RO</td><td class="register-cap">2,400 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">03</td><td><strong>Narmada Sugar</strong><span>Madhya Pradesh</span></td><td>Distillery CPU</td><td class="register-cap">1,050 KLPD</td></tr>
+                                    <tr data-type="wtp"><td class="register-no">04</td><td><strong>Shri Dutt India Pvt. Ltd.</strong><span>Phaltan, MH</span></td><td>Distillery WTP</td><td class="register-cap">2,400 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">05</td><td><strong>Vista Projects Ltd.</strong></td><td>Distillery CPU</td><td class="register-cap">600 KLPD</td></tr>
+                                    <tr data-type="stp"><td class="register-no">06</td><td><strong>BVG India Ltd.</strong><span>Pune, MH</span></td><td>STP</td><td class="register-cap">4 MLD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">07</td><td><strong>Jamkhandi Sugars Ltd.</strong><span>Jamkhandi, KA</span></td><td>Distillery CPU</td><td class="register-cap">1,200 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">08</td><td><strong>Gangamai Sugars &amp; Construction Ltd.</strong><span>Shevgaon, MH</span></td><td>Distillery CPU</td><td class="register-cap">1,400 KLPD</td></tr>
+                                    <tr data-type="wtp"><td class="register-no">09</td><td><strong>Mula SSK</strong><span>Ahilyanagar, MH</span></td><td>Distillery WTP</td><td class="register-cap">1,500 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">10</td><td><strong>Harsha Sugars Ltd.</strong><span>Karnataka</span></td><td>Distillery CPU</td><td class="register-cap">800 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">11</td><td><strong>Satish Sugars Ltd.</strong><span>Belgaum, KA</span></td><td>Distillery CPU</td><td class="register-cap">1,100 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">12</td><td><strong>Davangere Sugars Ltd.</strong><span>Karnataka</span></td><td>Distillery CPU</td><td class="register-cap">800 KLPD</td></tr>
+                                    <tr data-type="wtp"><td class="register-no">13</td><td><strong>Venkateshwara Power Projects Ltd.</strong><span>Bedkihal, KA</span></td><td>Sugar WTP</td><td class="register-cap">2,500 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">14</td><td><strong>Indo Nuclear Pvt. Ltd.</strong><span>Indore, MP</span></td><td>Distillery CPU</td><td class="register-cap">1,000 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">15</td><td><strong>Belgaum Sugars Ltd.</strong><span>Belgaum, KA</span></td><td>Sugar CPU</td><td class="register-cap">4,200 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">16</td><td><strong>Halsidhnath Sugars Ltd.</strong></td><td>Distillery CPU</td><td class="register-cap">1,000 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">17</td><td><strong>Mekalsuta Sugar Factory</strong><span>Madhya Pradesh</span></td><td>Distillery CPU &amp; WTP</td><td class="register-cap">1,200 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">18</td><td><strong>Chilika Distillery</strong> <span class="register-badge">In progress</span><span>Odisha</span></td><td>CPU &amp; WTP</td><td class="register-cap">1,000 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">19</td><td><strong>Nakshatra Biofuel</strong><span>Haryana</span></td><td>CPU &amp; WTP</td><td class="register-cap">1,450 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">20</td><td><strong>Balrampur Chini Mills</strong><span>Balrampur, UP</span></td><td>UF + RO Post CPU</td><td class="register-cap">4,200 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">21</td><td><strong>Yedeshwari Agro Products Ltd.</strong><span>Kej, MH</span></td><td>Distillery CPU</td><td class="register-cap">2,500 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">22</td><td><strong>Yedeshwari Agro Products Ltd.</strong><span>Kej, MH</span></td><td>Sugar CPU</td><td class="register-cap">1,800 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">23</td><td><strong>Ugar Sugar Works</strong><span>Karnataka</span></td><td>CPU</td><td class="register-cap">2,500 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">24</td><td><strong>Allianz Distillery</strong><span>Mathura, UP</span></td><td>CPU</td><td class="register-cap">1,000 KLPD</td></tr>
+                                    <tr data-type="etp"><td class="register-no">25</td><td><strong>Belgaum Sugars Ltd.</strong><span>Belgaum, KA</span></td><td>Sugar ETP</td><td class="register-cap">1,200 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">26</td><td><strong>Kedarnath Sugars Ltd.</strong><span>Bagalkot, KA</span></td><td>Distillery CPU</td><td class="register-cap">1,400 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">27</td><td><strong>Bidri SSK</strong><span>Kolhapur, MH</span></td><td>Distillery CPU</td><td class="register-cap">900 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">28</td><td><strong>Piyush Agro Ltd.</strong><span>Chh. Sambhajinagar, MH</span></td><td>Distillery CPU</td><td class="register-cap">300 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">29</td><td><strong>Sonasati Organics Ltd.</strong><span>Bihar</span></td><td>Distillery CPU</td><td class="register-cap">1,600 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">30</td><td><strong>NSL Sugars Ltd.</strong><span>Beed, MH</span></td><td>CPU &amp; WTP</td><td class="register-cap">4,400 KLPD</td></tr>
+                                    <tr data-type="other"><td class="register-no">31</td><td><strong>Mellbros Sugar Ltd.</strong><span>Bagalkot, KA</span></td><td>Sugar</td><td class="register-cap">3,600 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">32</td><td><strong>Harsha Sugar</strong><span>Belgaum, KA</span></td><td>Sugar CPU to WTP</td><td class="register-cap">1,550 KLPD</td></tr>
+                                    <tr data-type="wtp"><td class="register-no">33</td><td><strong>Ambalika Sugars Pvt. Ltd.</strong><span>Karjat, MH</span></td><td>WTP</td><td class="register-cap">2,000 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">34</td><td><strong>Ambalika Sugars Pvt. Ltd.</strong><span>Karjat, MH</span></td><td>CPU</td><td class="register-cap">2,000 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">35</td><td><strong>Quenergy Sugar Pvt. Ltd.</strong><span>Solapur, MH</span></td><td>CPU</td><td class="register-cap">2,200 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">36</td><td><strong>Shri Pandurang SSK</strong><span>Shripur, MH</span></td><td>CPU</td><td class="register-cap">1,500 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">37</td><td><strong>Udagiri Sugars Pvt. Ltd.</strong><span>Vita, MH</span></td><td>CPU / WTP</td><td class="register-cap">2,000 KLPD</td></tr>
+                                    <tr data-type="etp"><td class="register-no">38</td><td><strong>Quenergy Sugars Pvt. Ltd.</strong><span>Solapur, MH</span></td><td>ETP</td><td class="register-cap">1,200 KLPD</td></tr>
+                                    <tr data-type="cpu etp"><td class="register-no">39</td><td><strong>Ayyan Multitrade LLP</strong></td><td>ETP &amp; CPU</td><td class="register-cap">2,200 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">40</td><td><strong>New Look Biofuels Pvt. Ltd.</strong><span>Raipur, CG</span></td><td>WTP &amp; CPU</td><td class="register-cap">2,000 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">41</td><td><strong>Kamakhya Biofuels Pvt. Ltd.</strong><span>Guwahati, AS</span></td><td>WTP &amp; CPU</td><td class="register-cap">3,000 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">42</td><td><strong>MRN Saipriya Sugars (Nirani Sugars)</strong><span>Karnataka</span></td><td>Distillery CPU</td><td class="register-cap">2,500 KLPD</td></tr>
+                                    <tr data-type="wtp"><td class="register-no">43</td><td><strong>Nirani Sugars Ltd.</strong><span>Mudhol, KA</span></td><td>Distillery WTP</td><td class="register-cap">2,400 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">44</td><td><strong>Kedarnath Distillery</strong><span>Bagalkot, KA</span></td><td>Distillery CPU</td><td class="register-cap">2,000 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">45</td><td><strong>Shreeji Sugars</strong><span>Betul, MP</span></td><td>CPU to WTP</td><td class="register-cap">800 KLPD</td></tr>
+                                    <tr data-type="cpu etp"><td class="register-no">46</td><td><strong>Mrunal Sugars Ltd.</strong><span>Dharwad, KA</span></td><td>CPU &amp; ETP</td><td class="register-cap">1,550 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">47</td><td><strong>Dollex Distillery</strong> <span class="register-badge">In progress</span><span>Madhya Pradesh</span></td><td>CPU &amp; WTP</td><td class="register-cap">800 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">48</td><td><strong>Maa Kaushal Sugar &amp; Power</strong> <span class="register-badge">In progress</span><span>Madhya Pradesh</span></td><td>CPU &amp; WTP</td><td class="register-cap">1,800 KLPD</td></tr>
+                                    <tr data-type="cpu wtp"><td class="register-no">49</td><td><strong>Venus Agro Fuels</strong> <span class="register-badge">In progress</span><span>Katni, MP</span></td><td>CPU &amp; WTP</td><td class="register-cap">600 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">50</td><td><strong>O2 Chemicals &amp; Biofuels</strong><span>West Bengal</span></td><td>CPU</td><td class="register-cap">800 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">51</td><td><strong>Deccan Sugar</strong></td><td>Distillery CPU</td><td class="register-cap">1,200 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">52</td><td><strong>Agro Mark</strong></td><td>Distillery CPU</td><td class="register-cap">1,200 KLPD</td></tr>
+                                    <tr data-type="cpu"><td class="register-no">53</td><td><strong>Westwell Biorefineries Pvt. Ltd.</strong></td><td>Distillery CPU</td><td class="register-cap">2,000 KLPD</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="register-empty" id="register-empty" hidden>No plants match that search.</p>
+                    </div>
+                    <div class="register-more">
+                        <span id="register-count" aria-live="polite"></span>
+                        <button type="button" class="theme-btn" id="register-more">Show all plants</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end project register -->
+
+        <!-- start ongoing projects -->
+        <section class="wpo-projects-ongoing section-padding pt-0" id="ongoing">
+            <div class="container-fluid">
+                <div class="projects-wrap">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                            <div class="portfolio-card wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="image-item">
-                                    <div class="text">
-                                        <small>01/</small>
-                                    </div>
-                                    <div class="image inner-image">
-                                        <img src="assets/images/portfolio/img-5.jpg" alt="">
-                                    </div>
+                        <div class="col-lg-5 col-12">
+                            <figure class="ongoing-image project-photo wow fadeInUp" data-wow-delay="0.1s">
+                                <img src="assets/images/projects/satva-2.jpg"
+                                    alt="UF and RO trains under installation at Satva Biorefinery" loading="lazy">
+                                <figcaption><strong>Satva Biorefinery</strong>1,750 KLPD distillery CPU in execution</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-lg-7 col-12">
+                            <div class="projects-head projects-head-stacked wow fadeInUp" data-wow-delay="0.2s">
+                                <div>
+                                    <span class="projects-label">Ongoing Projects 2026</span>
+                                    <h2>18 Plants in Execution</h2>
                                 </div>
-                                <div class="portfolio-content">
-                                    <div class="portfolio-text">
-                                        <span><a href="portfolio-single.html">Modern minimalist
-                                                luxury villa</a></span>
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <ul>
-                                            <li><span>Location:</span>California, USA</li>
-                                            <li><span>Area:</span>6,500 sq ft</li>
-                                            <li><span>Style:</span>Modern Minimalist</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="portfolio-view">
-                                    <a class="view-link" href="portfolio-single.html">View project<i
-                                            class="ti-arrow-right"></i></a>
+                                <p>New plants and expansions currently being engineered,
+                                    fabricated or commissioned for returning and new clients.</p>
+                            </div>
+                            <ol class="ongoing-list">
+                                <li><span class="ongoing-no">01</span><div><strong>MRN Bhima Sugar &amp; Power Pvt. Ltd.</strong><span>ETP</span></div><em>1,500 KLD</em></li>
+                                <li><span class="ongoing-no">02</span><div><strong>Godavari Biorefineries Pvt. Ltd.</strong><span>CPU</span></div><em>2,000 KLD</em></li>
+                                <li><span class="ongoing-no">03</span><div><strong>Satish Sugars</strong><span>ETP Upgradation</span></div><em>1,200 KLD</em></li>
+                                <li><span class="ongoing-no">04</span><div><strong>Mrinal Sugars</strong><span>ETP</span></div><em>1,200 KLD</em></li>
+                                <li><span class="ongoing-no">05</span><div><strong>Mrinal Sugars</strong><span>WTP</span></div><em>2,400 KLD</em></li>
+                                <li><span class="ongoing-no">06</span><div><strong>Mrinal Sugars</strong><span>CPU</span></div><em>1,500 KLD</em></li>
+                                <li><span class="ongoing-no">07</span><div><strong>Malhar Sugar (MH)</strong><span>Distillery CPU</span></div><em>1,750 KLD</em></li>
+                                <li><span class="ongoing-no">08</span><div><strong>MVK Agro (MH)</strong><span>WTP</span></div><em>1,300 KLD</em></li>
+                                <li><span class="ongoing-no">09</span><div><strong>Dhage Patil Chemical Pvt. Ltd. (MH)</strong><span>PCTP</span></div><em>500 KLD</em></li>
+                                <li><span class="ongoing-no">10</span><div><strong>Satish Sugars</strong><span>ETP</span></div><em>1,600 KLD</em></li>
+                                <li><span class="ongoing-no">11</span><div><strong>Satish Sugars</strong><span>WTP</span></div><em>1,600 KLD</em></li>
+                                <li><span class="ongoing-no">12</span><div><strong>Satish Sugars</strong><span>CPU</span></div><em>6 MLD</em></li>
+                                <li><span class="ongoing-no">13</span><div><strong>Sharayu Agro</strong><span>Distillery CPU</span></div><em>1,500 KLPD</em></li>
+                                <li><span class="ongoing-no">14</span><div><strong>Sitaram Maharaj</strong><span>Distillery CPU</span></div><em>1,500 KLPD</em></li>
+                                <li><span class="ongoing-no">15</span><div><strong>Ugar Sugar</strong><span>Distillery CPU</span></div><em>2,500 KLPD</em></li>
+                                <li><span class="ongoing-no">16</span><div><strong>Satva Biorefinery</strong><span>Distillery CPU</span></div><em>1,750 KLPD</em></li>
+                                <li><span class="ongoing-no">17</span><div><strong>Allianz Distillery</strong><span>Distillery CPU</span></div><em>900 KLPD</em></li>
+                                <li><span class="ongoing-no">18</span><div><strong>Baramati Agro</strong><span>Distillery CPU</span></div><em>3,000 KLPD</em></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end ongoing projects -->
+
+        <!-- start how we deliver -->
+        <section class="wpo-projects-delivery section-padding" id="delivery">
+            <div class="container-fluid">
+                <div class="projects-wrap">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 col-12">
+                            <div class="projects-head projects-head-stacked wow fadeInUp" data-wow-delay="0.1s">
+                                <div>
+                                    <span class="projects-label">How We Deliver</span>
+                                    <h2>One Team, From Process Design to Plant Handover</h2>
                                 </div>
                             </div>
+                            <ol class="delivery-steps">
+                                <li class="wow fadeInUp" data-wow-delay="0.1s">
+                                    <strong>01</strong>
+                                    <h3>Process Design</h3>
+                                    <p>Water balance, treatability study and a process flow diagram built around your effluent and reuse targets.</p>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-delay="0.2s">
+                                    <strong>02</strong>
+                                    <h3>In-house Manufacturing</h3>
+                                    <p>Vessels, skids and control panels fabricated at our Talawade, Pune facility for tighter quality control.</p>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-delay="0.3s">
+                                    <strong>03</strong>
+                                    <h3>Erection &amp; Commissioning</h3>
+                                    <p>Our site teams install, test and commission the plant, then train your operators on it.</p>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-delay="0.4s">
+                                    <strong>04</strong>
+                                    <h3>Operation &amp; Support</h3>
+                                    <p>O&amp;M, upgrades and performance reviews that keep the plant at design output season after season.</p>
+                                </li>
+                            </ol>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                            <div class="portfolio-card wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="image-item">
-                                    <div class="text">
-                                        <small>02/</small>
-                                    </div>
-                                    <div class="image inner-image">
-                                        <img src="assets/images/portfolio/img-6.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="portfolio-content">
-                                    <div class="portfolio-text">
-                                        <span><a href="portfolio-single.html">Creative workspace
-                                                headquarters</a></span>
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <ul>
-                                            <li><span>Location:</span>London, UK</li>
-                                            <li><span>Area:</span>12,000 sq ft</li>
-                                            <li><span>Style:</span>Corporate</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="portfolio-view">
-                                    <a class="view-link" href="portfolio-single.html">View project<i
-                                            class="ti-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                            <div class="portfolio-card wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="image-item">
-                                    <div class="text">
-                                        <small>03/</small>
-                                    </div>
-                                    <div class="image inner-image">
-                                        <img src="assets/images/portfolio/img-7.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="portfolio-content">
-                                    <div class="portfolio-text">
-                                        <span><a href="portfolio-single.html">Urban apartment interior</a></span>
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <ul>
-                                            <li><span>Location:</span>Toronto, Canada</li>
-                                            <li><span>Area:</span>2,200 sq ft</li>
-                                            <li><span>Style:</span>Scandinavian Modern</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="portfolio-view">
-                                    <a class="view-link" href="portfolio-single.html">View project<i
-                                            class="ti-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                            <div class="portfolio-card wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="image-item">
-                                    <div class="text">
-                                        <small>04/</small>
-                                    </div>
-                                    <div class="image inner-image">
-                                        <img src="assets/images/portfolio/img-8.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="portfolio-content">
-                                    <div class="portfolio-text">
-                                        <span><a href="portfolio-single.html">Modern Residential Design with
-                                                Elegance</a></span>
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <ul>
-                                            <li><span>Location:</span>Sydney, Australia</li>
-                                            <li><span>Area:</span>5,500 sq ft</li>
-                                            <li><span>Style:</span>Luxury Contemporary</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="portfolio-view">
-                                    <a class="view-link" href="portfolio-single.html">View project<i
-                                            class="ti-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                            <div class="portfolio-card wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="image-item">
-                                    <div class="text">
-                                        <small>05/</small>
-                                    </div>
-                                    <div class="image inner-image">
-                                        <img src="assets/images/portfolio/img-9.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="portfolio-content">
-                                    <div class="portfolio-text">
-                                        <span><a href="portfolio-single.html">Contemporary Office Complex</a></span>
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <ul>
-                                            <li><span>Location:</span>Dubai, UAE</li>
-                                            <li><span>Area:</span>4,800 sq ft</li>
-                                            <li><span>Style:</span>Industrial Modern</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="portfolio-view">
-                                    <a class="view-link" href="portfolio-single.html">View project<i
-                                            class="ti-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                            <div class="portfolio-card wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="image-item">
-                                    <div class="text">
-                                        <small>06/</small>
-                                    </div>
-                                    <div class="image inner-image">
-                                        <img src="assets/images/portfolio/img-10.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="portfolio-content">
-                                    <div class="portfolio-text">
-                                        <span><a href="portfolio-single.html">Luxury Residential Interior
-                                                Design</a></span>
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <ul>
-                                            <li><span>Location:</span>Tokyo, Japan</li>
-                                            <li><span>Area:</span>8,300 sq ft</li>
-                                            <li><span>Style:</span>Building Apartment</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="portfolio-view">
-                                    <a class="view-link" href="portfolio-single.html">View project<i
-                                            class="ti-arrow-right"></i></a>
-                                </div>
+                        <div class="col-lg-5 col-12">
+                            <div class="delivery-image project-photo wow fadeInRight" data-wow-delay="0.2s">
+                                <img src="assets/images/projects/panel-1.jpg"
+                                    alt="SBS-built motor control panel ready for dispatch" loading="lazy">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- end how we deliver -->
+
+        <!-- start partners -->
+        <section class="wpo-projects-partners section-padding" id="partners">
+            <div class="container-fluid">
+                <div class="projects-wrap">
+                    <div class="projects-head wow fadeInUp" data-wow-delay="0.1s">
+                        <div>
+                            <span class="projects-label">OEM &amp; EPC Partners</span>
+                            <h2>Trusted by Leading Distillery OEMs</h2>
+                        </div>
+                        <p>We also work alongside OEMs and EPC consultants as the
+                            water and wastewater partner on their distillery projects.</p>
+                    </div>
+                    <!-- OEM logo marquee (same as the home page clients strip): the list
+                         is repeated once so the loop is seamless; the copy is hidden from
+                         screen readers. Mojj, Vapco and SSEPL show as name tiles until
+                         their logos are added to assets/images/clients/ -->
+                    <div class="client-marquee partner-marquee wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="client-marquee-track">
+                        <ul class="client-marquee-list">
+                                <li>
+                                    <img src="assets/images/clients/praj.png" style="--logo-w: 124px" alt="Praj Industries Ltd., Pune" />
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/isgec.jpg" style="--logo-w: 156px" alt="ISGEC Heavy Engineering, Noida" />
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/kbk.jpg" style="--logo-w: 142px" alt="KBK Chem Engineering, Pune" />
+                                </li>
+                                <li class="client-marquee-name">
+                                    <strong>Mojj Engineering Systems</strong><span>Pvt. Ltd., Pune</span>
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/thermax.svg" style="--logo-w: 103px" alt="Thermax" />
+                                </li>
+                                <li class="client-marquee-name">
+                                    <strong>Vapco Engineering</strong><span>Pvt. Ltd., Mumbai</span>
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/raj-process.png" style="--logo-w: 259px" alt="Raj Process Equipments and Systems" />
+                                </li>
+                                <li class="client-marquee-name">
+                                    <strong>SSEPL Techno</strong><span>Pvt. Ltd., Pune</span>
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/alco-tech.png" style="--logo-w: 197px" alt="Alco Tech Engineering" />
+                                </li>
+                        </ul>
+                        <ul class="client-marquee-list" aria-hidden="true">
+                                <li>
+                                    <img src="assets/images/clients/praj.png" style="--logo-w: 124px" alt="" />
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/isgec.jpg" style="--logo-w: 156px" alt="" />
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/kbk.jpg" style="--logo-w: 142px" alt="" />
+                                </li>
+                                <li class="client-marquee-name">
+                                    <strong>Mojj Engineering Systems</strong><span>Pvt. Ltd., Pune</span>
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/thermax.svg" style="--logo-w: 103px" alt="" />
+                                </li>
+                                <li class="client-marquee-name">
+                                    <strong>Vapco Engineering</strong><span>Pvt. Ltd., Mumbai</span>
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/raj-process.png" style="--logo-w: 259px" alt="" />
+                                </li>
+                                <li class="client-marquee-name">
+                                    <strong>SSEPL Techno</strong><span>Pvt. Ltd., Pune</span>
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/alco-tech.png" style="--logo-w: 197px" alt="" />
+                                </li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="projects-cta wow fadeInUp" data-wow-delay="0.1s">
+                        <h2>Planning a CPU, WTP or ETP? Let's size it together.</h2>
+                        <a class="theme-btn" href="get-a-quote.html">Discuss Your Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end partners -->
+
+        <!-- project photo lightbox (filled by projects.js) -->
+        <div class="project-lightbox" id="project-lightbox" role="dialog" aria-modal="true"
+            aria-labelledby="lightbox-title" hidden>
+            <div class="project-lightbox-inner">
+                <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close"><i class="ti-close"></i></button>
+                <div class="lightbox-stage project-photo">
+                    <img id="lightbox-image" src="" alt="">
+                    <button type="button" class="lightbox-nav is-prev" id="lightbox-prev" aria-label="Previous photo"><i class="ti-angle-left"></i></button>
+                    <button type="button" class="lightbox-nav is-next" id="lightbox-next" aria-label="Next photo"><i class="ti-angle-right"></i></button>
+                    <span class="lightbox-counter" id="lightbox-counter"></span>
+                </div>
+                <div class="lightbox-info">
+                    <span class="project-scope" id="lightbox-scope"></span>
+                    <h3 id="lightbox-title"></h3>
+                    <p id="lightbox-text"></p>
+                    <dl class="lightbox-meta" id="lightbox-meta"></dl>
+                    <div class="lightbox-thumbs" id="lightbox-thumbs"></div>
+                </div>
+            </div>
         </div>
-        <!-- end portfolio section -->
 
         <!-- Start wpo footer section -->
         <footer class="wpo-site-footer-s2 section-padding pb-0">
@@ -697,6 +1150,7 @@
     <script src="assets/js/gsap-script.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/whatsapp-widget.js"></script>
+    <script src="assets/js/projects.js"></script>
 </body>
 
 </html>

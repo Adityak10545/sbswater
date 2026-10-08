@@ -427,3 +427,322 @@
         }
     }
 }
+/*======================================
+    SBS About page (about.html)
+=======================================*/
+
+/* Page titles (About, Projects): plant photo + tagline under the h1 */
+.wpo-page-title.page-title-about,
+.wpo-page-title.page-title-projects {
+    background-image: url(../images/plants/dahod-smart-city-plant.jpg);
+    background-position: center;
+    margin-left: 0;
+    min-height: 520px;
+    padding-top: 90px;
+
+    @media(max-width: 991px) {
+        min-height: 420px;
+    }
+
+    @media(max-width: 575px) {
+        min-height: 340px;
+    }
+
+    &::before {
+        width: 100%;
+        background: linear-gradient(180deg, rgba($brand-navy-deep, 0.75) 0%, rgba($brand-navy-deep, 0.85) 100%);
+    }
+
+    .page-title-lead {
+        max-width: 760px;
+        margin: 0 auto 25px;
+        color: $white-gray;
+        font-size: 20px;
+        line-height: 150%;
+
+        strong {
+            display: block;
+            color: $white;
+            font-weight: $fw-medium;
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        @media(max-width: 767px) {
+            font-size: 17px;
+            margin-bottom: 18px;
+
+            strong {
+                font-size: 21px;
+            }
+        }
+    }
+
+    .wpo-breadcumb-wrap ol li,
+    .wpo-breadcumb-wrap ol li a {
+        color: $white-gray;
+    }
+
+    .wpo-breadcumb-wrap ol li a:hover {
+        color: $small-white;
+    }
+}
+
+.wpo-page-title.page-title-projects {
+    background-image: url(../images/plants/balaji-sugar-etp.jpg);
+
+    @media(max-width: 991px) {
+        background-image: url(../images/plants/balaji-sugar-etp-1200.jpg);
+    }
+}
+
+/* Who we are: three paragraphs */
+.about-page-intro {
+    .about-left-side .about-top {
+        max-width: 640px;
+
+        p {
+            margin: 0;
+            padding: 18px 0 0;
+
+            &:first-of-type {
+                padding-top: 25px;
+            }
+        }
+    }
+
+    .sbs-stats {
+        margin-top: 60px;
+
+        @media(max-width: 991px) {
+            margin-top: 40px;
+        }
+    }
+}
+
+/* Stat tiles (About, Projects) */
+.sbs-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        background-color: $card-bg-color;
+        border-radius: 12px;
+        padding: 30px 25px;
+        text-align: center;
+
+        @media(max-width: 575px) {
+            padding: 20px 12px;
+        }
+    }
+
+    h3 {
+        margin: 0 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        font-weight: $fw-medium;
+        font-size: 56px;
+        line-height: 100%;
+        color: $heading-color;
+
+        @media(max-width: 1199px) {
+            font-size: 44px;
+        }
+
+        @media(max-width: 575px) {
+            font-size: 34px;
+        }
+
+        small {
+            margin-left: 6px;
+            font-size: 45%;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 16px;
+        color: $funky-gray;
+    }
+}
+
+/* Strengths: six cards in two rows, intro line, process heading */
+.about-page-strengths {
+    .why-choose-lead {
+        margin: 25px 0 0;
+        max-width: 600px;
+        font-size: 18px;
+        line-height: 150%;
+
+        @media(max-width: 991px) {
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+    }
+
+    .why-choose-item {
+        max-width: 420px;
+
+        h3 {
+            max-width: none;
+        }
+    }
+
+    .why-choose-bottom .row {
+        row-gap: 50px;
+
+        @media(max-width: 991px) {
+            row-gap: 0;
+        }
+    }
+
+    .why-choose-process-head {
+        margin-top: 90px;
+
+        @media(max-width: 991px) {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        span {
+            display: block;
+            font-weight: $fw-medium;
+            font-size: 16px;
+            letter-spacing: 0.64px;
+            color: $small-white;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin: 0;
+            font-weight: $fw-bold;
+            font-size: 40px;
+            line-height: 114%;
+            color: $heading-color;
+
+            @media(max-width: 767px) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .why-choose-process {
+        margin-top: 30px;
+    }
+}
+
+/* Leadership: founder card */
+.wpo-leadership-section {
+    .leadership-card {
+        max-width: 1555px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        padding: 60px;
+        border-radius: 12px;
+        background-color: $brand-navy;
+        color: $white-gray;
+
+        @media(max-width: 991px) {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+            padding: 40px 25px;
+        }
+    }
+
+    .leadership-photo {
+        flex: 0 0 280px;
+        aspect-ratio: 1;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: $brand-navy-deep;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media(max-width: 991px) {
+            flex-basis: auto;
+            width: 200px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        span {
+            font-weight: $fw-bold;
+            font-size: 96px;
+            color: $white;
+            opacity: .9;
+
+            @media(max-width: 991px) {
+                font-size: 70px;
+            }
+        }
+    }
+
+    .leadership-content {
+        max-width: 820px;
+
+        p {
+            margin: 0 0 20px;
+            color: $white-gray;
+            line-height: 160%;
+        }
+    }
+
+    .leadership-label {
+        display: block;
+        font-weight: $fw-medium;
+        font-size: 16px;
+        letter-spacing: 0.64px;
+        color: $small-white;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        margin: 0 0 6px;
+        font-weight: $fw-bold;
+        font-size: 48px;
+        line-height: 110%;
+        color: $white;
+
+        @media(max-width: 767px) {
+            font-size: 34px;
+        }
+    }
+
+    .leadership-content .leadership-role {
+        font-size: 18px;
+        font-weight: $fw-medium;
+        color: $white;
+        margin-bottom: 25px;
+    }
+
+    .leadership-content .leadership-award {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        padding: 10px 20px;
+        border-radius: 40px;
+        border: 1px solid rgba($white, .25);
+        color: $white;
+        font-weight: $fw-medium;
+        font-size: 16px;
+
+        i {
+            color: $small-white;
+            font-size: 20px;
+        }
+    }
+}
