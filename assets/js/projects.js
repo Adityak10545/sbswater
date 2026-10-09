@@ -7,7 +7,7 @@
 
     PHOTOS: drop files into assets/images/projects/ named
     <data-project>-1.jpg … <data-project>-<data-photos>.jpg
-    (e.g. satish-1.jpg … satish-5.jpg), plus satva-2.jpg and panel-1.jpg.
+    (e.g. satish-1.jpg … satish-5.jpg), plus satva-2.jpg and delivery-1.jpg.
 -------------------------------------------*/
 (function () {
     "use strict";

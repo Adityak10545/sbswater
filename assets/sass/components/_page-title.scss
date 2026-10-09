@@ -1,21 +1,19 @@
 // page-title
 .wpo-page-title {
-	background: url(../images/page-title.jpg) no-repeat center top / cover;
+	// default banner: SBS plant photo (Balaji Sugar ETP) under a navy overlay,
+	// full width behind the transparent header; pages can swap the photo
+	background: url(../images/plants/balaji-sugar-etp.jpg) no-repeat center / cover;
 	min-height: 450px;
+	padding-top: 90px;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	z-index: 1;
-	margin-left: 80px;
-
-	@media(max-width: 1199px) {
-		margin-left: 40px;
-	}
 
 	@media(max-width: 991px) {
+		background-image: url(../images/plants/balaji-sugar-etp-1200.jpg);
 		min-height: 350px;
-		margin: 0;
 	}
 
 	@media(max-width: 575px) {
@@ -27,10 +25,10 @@
 		content: "";
 		left: 0;
 		top: 0;
-		width: 550px;
+		width: 100%;
 		height: 100%;
 		z-index: -1;
-		background: linear-gradient(269.18deg, rgba($brand-overlay, 0) 2.47%, rgba($brand-overlay, 0.65) 31.07%);
+		background: linear-gradient(180deg, rgba($brand-navy-deep, 0.75) 0%, rgba($brand-navy-deep, 0.85) 100%);
 	}
 
 	.wpo-breadcumb-wrap {

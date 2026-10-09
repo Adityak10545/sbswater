@@ -1186,10 +1186,22 @@
 
 	#navbar>ul>li>a {
 		color: $white;
-		// 7 one-page menu items: tighter than the template's 5-item spacing
-		padding: 25px 24px;
+		// 7 one-page menu items: larger and roomier on wide screens, tighter
+		// as the bar narrows so they always stay on one line
+		font-size: 18px;
+		padding: 25px 30px;
+
+		@media(max-width:1699px) {
+			padding: 25px 22px;
+		}
+
+		@media(max-width:1499px) {
+			font-size: 17px;
+			padding: 25px 17px;
+		}
 
 		@media(max-width:1399px) {
+			font-size: 16px;
 			padding: 25px 16px;
 		}
 
@@ -1239,19 +1251,19 @@
 		img {
 			display: block;
 			width: auto;
-			height: 48px;
+			height: 60px;
 			max-width: none;
 
 			@media(max-width:1399px) {
-				height: 42px;
+				height: 52px;
 			}
 
 			@media(max-width:575px) {
-				height: 36px;
+				height: 42px;
 			}
 
 			@media(max-width:360px) {
-				height: 30px;
+				height: 34px;
 			}
 		}
 	}
