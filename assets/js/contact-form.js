@@ -93,6 +93,7 @@ $(document).ready(function () {
         submitFormToGoogle(payload)
             .then(function (result) {
                 console.log("Contact form request completed.", result);
+                if (window.sbsTrack) window.sbsTrack("generate_lead", { form_type: "contact" });
                 wrap.stop(true, true).fadeOut(300, function () {
                     form[0].reset();
                     successBox.removeClass("d-none").hide().fadeIn(500);

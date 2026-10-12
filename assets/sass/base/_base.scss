@@ -20,7 +20,7 @@ body {
     }
 }
 
-// Body text — Pangram Regular, #666666 (Brand Book p.12)
+// Body text - Pangram Regular, #666666 (Brand Book p.12)
 p {
     font-size: 18px;
     color: $muted-color;
@@ -43,7 +43,7 @@ h6 {
     font-weight: $fw-bold;
 }
 
-// Titles — Pangram Bold, navy; sub-headings — Pangram Medium
+// Titles - Pangram Bold, navy; sub-headings - Pangram Medium
 h1,
 h2 {
     color: $title-color;
@@ -57,7 +57,7 @@ h6 {
     font-weight: $fw-medium;
 }
 
-// Important text — Pangram Bold, #1A1A1A
+// Important text - Pangram Bold, #1A1A1A
 strong,
 b {
     font-weight: $fw-bold;
@@ -109,6 +109,9 @@ a:hover {
 
 img {
     max-width: 100%;
+    // width/height attributes reserve space before load; keep the ratio
+    // when CSS or max-width changes the rendered width
+    height: auto;
 }
 
 .sr-only {
@@ -137,6 +140,20 @@ img {
 
 .wow {
     visibility: hidden;
+}
+
+// Added by script.js when WOW.js never starts (e.g. a script error), so
+// content is not left hidden. WOW.js's inline styles win once it runs.
+.wow-fallback .wow {
+    visibility: visible;
+}
+
+// No scroll-reveal for visitors who ask for reduced motion
+@media (prefers-reduced-motion: reduce) {
+    .wow {
+        visibility: visible !important;
+        animation: none !important;
+    }
 }
 
 .fi:before {

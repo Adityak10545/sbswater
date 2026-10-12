@@ -128,6 +128,7 @@
                 });
             })
             .then(function () {
+                if (window.sbsTrack) window.sbsTrack("job_application", { form_type: "career" });
                 form.reset();
                 setStatus(
                     "Thank you! Your application has been received. Our HR team will contact you if your profile matches an opening.",

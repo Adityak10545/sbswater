@@ -1,3 +1,81 @@
+/*------------------------------------------
+    = REVEAL SAFETY NET
+    The preloader and WOW.js (.wow { visibility: hidden }) are released by
+    the theme code below after window load. If that code fails, never leave
+    the page covered or hidden: drop the preloader and show .wow content.
+    Kept separate so an error elsewhere in this file cannot stop it.
+-------------------------------------------*/
+(function () {
+    "use strict";
+
+    function check() {
+        var preloader = document.querySelector(".preloader");
+        var preloaderStuck = preloader && window.getComputedStyle(preloader).display !== "none";
+        // WOW.js sets an inline visibility on every box when it starts
+        var box = document.querySelector(".wow");
+        var wowStuck = box && !box.style.visibility;
+        if (preloaderStuck) preloader.style.display = "none";
+        if (preloaderStuck || wowStuck) {
+            document.documentElement.classList.add("wow-fallback");
+        }
+    }
+
+    // WOW.js styles boxes in requestAnimationFrame, which browsers pause in
+    // background tabs, so only judge it while the page is visible
+    function schedule() {
+        setTimeout(function () {
+            if (document.hidden) {
+                document.addEventListener("visibilitychange", schedule, { once: true });
+                return;
+            }
+            check();
+        }, 4000);
+    }
+
+    window.addEventListener("load", schedule);
+})();
+
+/*------------------------------------------
+    = CONVERSION EVENTS
+    Pushes events to window.dataLayer for Google Tag Manager / GA4 to pick
+    up once a container is installed (see scripts/seo/seo.config.mjs).
+    Without a container the pushes are inert. Never pass personal data
+    (names, emails, phone numbers, messages) in params.
+-------------------------------------------*/
+(function () {
+    "use strict";
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.sbsTrack = function (event, params) {
+        var data = { event: event };
+        if (params) {
+            Object.keys(params).forEach(function (key) {
+                data[key] = params[key];
+            });
+        }
+        window.dataLayer.push(data);
+    };
+
+    // phone, email and WhatsApp clicks (the WhatsApp widget is injected
+    // later, so listen on the document; capture phase, because some theme
+    // and widget handlers stop propagation)
+    document.addEventListener("click", function (e) {
+        var link = e.target.closest ? e.target.closest("a[href]") : null;
+        if (!link) return;
+        var href = link.getAttribute("href") || "";
+        var location = link.closest("footer") ? "footer"
+            : link.closest("header") ? "header" : "content";
+        if (/^tel:/i.test(href)) {
+            window.sbsTrack("phone_click", { link_location: location });
+        } else if (/^mailto:/i.test(href)) {
+            window.sbsTrack("email_click", { link_location: location });
+        } else if (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//i.test(href)) {
+            window.sbsTrack("whatsapp_click", { link_location: location });
+        }
+    }, true);
+})();
+
 (function ($) {
 
     "use strict";

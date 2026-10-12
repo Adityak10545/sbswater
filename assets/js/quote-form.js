@@ -142,6 +142,7 @@ $(document).ready(function () {
         submitFormToGoogle(payload)
             .then(function (result) {
                 console.log("Quote form request completed.", result);
+                if (window.sbsTrack) window.sbsTrack("generate_lead", { form_type: "quote" });
                 // after submitting, the card shows only the thank-you message
                 const others = $(".quote-card .quote-head, .quote-card .quote-intro, .quote-card .quote-contact");
                 others.stop(true, true).fadeOut(300);

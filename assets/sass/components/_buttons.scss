@@ -107,16 +107,19 @@
 	}
 
 	&::after {
-		background-color: $brand-teal;
+		background-color: $brand-yellow;
 	}
 
+	// yellow fill on hover (teal disappeared into the teal CTA band);
+	// navy text keeps it readable on yellow
 	&:hover,
 	&:focus,
 	&:active {
 		background-color: $brand-navy;
+		color: $brand-navy;
 
 		&::before {
-			color: $brand-teal;
+			color: $brand-navy;
 		}
 	}
 }

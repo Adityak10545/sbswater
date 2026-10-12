@@ -2,13 +2,13 @@
 	Fonts
 ----------------------------*/
 
-// Brand font (SBS Brand Book p.12): Pangram, in three weights only —
+// Brand font (SBS Brand Book p.12): Pangram, in three weights only  - 
 //   Bold (700)    titles + important text
 //   Medium (500)  subtitles + lead text
 //   Regular (400) body text
 // Files: assets/fonts/Pangram-{Regular,Medium,Bold}.woff2, converted from the
 // "Pangram-FullFamily-FreeForPersonalUse" package. LICENSE: that package is
-// for personal use only — buy a Pangram web license (pangrampangram.com)
+// for personal use only - buy a Pangram web license (pangrampangram.com)
 // before this site goes live, and replace these files with the licensed ones.
 //
 // Plus Jakarta Sans (SIL OFL, self-hosted) is the fallback; set
@@ -80,7 +80,7 @@ $base-font-size: 18;
 $base-font: $brand-font-stack;
 $heading-font: $brand-font-stack;
 
-// brand font weights — the only three Pangram weights the brand uses
+// brand font weights - the only three Pangram weights the brand uses
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
@@ -113,7 +113,7 @@ $brand-surface-tint: #E5F1F4;
 $brand-line-tint: #C9E1E7;
 
 /*---------------------------
-	Theme tokens (template names kept — used across all partials)
+	Theme tokens (template names kept - used across all partials)
 ----------------------------*/
 
 // color
@@ -143,8 +143,8 @@ $border-color: $brand-gray-light;
 	Brand text roles (Brand Book p.12)
 ----------------------------*/
 
-$title-color: $brand-navy; // Title — Pangram Bold
-$subtitle-color: $brand-teal; // Subtitle — Pangram Medium
-$important-color: $brand-ink; // Important text — Pangram Bold
-$lead-color: $brand-gray-dark; // Lead / body — Pangram Medium
-$muted-color: $brand-gray; // Secondary body — Pangram Regular
+$title-color: $brand-navy; // Title - Pangram Bold
+$subtitle-color: $brand-teal; // Subtitle - Pangram Medium
+$important-color: $brand-ink; // Important text - Pangram Bold
+$lead-color: $brand-gray-dark; // Lead / body - Pangram Medium
+$muted-color: $brand-gray; // Secondary body - Pangram Regular

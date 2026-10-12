@@ -94,21 +94,28 @@
         }
     }
 
-    // SBS's own ETP at Balaji Sugars (top-down drone photo); smaller file on mobile
+    // SBS's own ETP at Balaji Sugars (top-down drone photo); smaller file on mobile.
+    // WebP via image-set(); the plain JPEG line is the fallback for browsers
+    // without image-set() type() support. Keep in sync with the hero preload
+    // in scripts/seo/seo.config.mjs.
     .hero-bg-balaji {
         background-image: url(../images/plants/hero-balaji-sugar.jpg);
+        background-image: image-set(url(../images/plants/hero-balaji-sugar.webp) type("image/webp"), url(../images/plants/hero-balaji-sugar.jpg) type("image/jpeg"));
 
         @media(max-width:991px) {
             background-image: url(../images/plants/hero-balaji-sugar-1200.jpg);
+            background-image: image-set(url(../images/plants/hero-balaji-sugar-1200.webp) type("image/webp"), url(../images/plants/hero-balaji-sugar-1200.jpg) type("image/jpeg"));
         }
     }
 
     // Dahod Smart City plant, Gujarat, beside the lake (slide 2)
     .hero-bg-dahod {
         background-image: url(../images/plants/hero-dahod-smart-city.jpg);
+        background-image: image-set(url(../images/plants/hero-dahod-smart-city.webp) type("image/webp"), url(../images/plants/hero-dahod-smart-city.jpg) type("image/jpeg"));
 
         @media(max-width:991px) {
             background-image: url(../images/plants/hero-dahod-smart-city-1200.jpg);
+            background-image: image-set(url(../images/plants/hero-dahod-smart-city-1200.webp) type("image/webp"), url(../images/plants/hero-dahod-smart-city-1200.jpg) type("image/jpeg"));
         }
     }
 
@@ -872,6 +879,30 @@ $process-step-colors: (
         justify-content: center;
         gap: 20px;
         padding-top: 35px;
+
+        // plain colour fade on hover instead of the theme's centre-out sweep
+        .theme-btn-s2,
+        .theme-btn-s4 {
+            transition: background-color .3s ease, color .3s ease;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .theme-btn-s4:hover,
+        .theme-btn-s4:focus,
+        .theme-btn-s4:active {
+            background-color: $brand-navy;
+            color: $white;
+        }
+
+        .theme-btn-s2:hover,
+        .theme-btn-s2:focus,
+        .theme-btn-s2:active {
+            background-color: $brand-yellow;
+            color: $brand-navy;
+        }
     }
 
     .sbs-cta-contacts {
@@ -974,8 +1005,8 @@ $process-step-colors: (
 
         .footer-quick-links {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px 30px;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 12px;
             margin: 0;
             padding: 0;
             list-style: none;
