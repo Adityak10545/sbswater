@@ -377,6 +377,62 @@
     }
 }
 
+// compact service grid: narrower wrap with side breathing room
+.wpo-service-section-s2 .wpo-service-wrap {
+    max-width: 1340px;
+    padding: 0 40px;
+
+    @media(max-width:991px) {
+        padding: 0 20px;
+    }
+
+    @media(max-width:575px) {
+        padding: 0;
+    }
+
+    .service-all-content .row {
+        --bs-gutter-x: 40px;
+    }
+
+    .service-all-content .service-item .service-content {
+        padding-top: 14px;
+        gap: 14px;
+    }
+}
+
+// why-choose photo: smaller, fixed frame so it sits neatly beside the heading
+.wpo-why-choose-section .why-choose-image {
+    max-width: 480px;
+    margin-left: auto;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 12px;
+
+    @media(max-width:991px) {
+        margin: 30px auto 0;
+    }
+}
+
+// heading + photo share the same grid as the feature row below:
+// heading lines up with item 1, photo spans items 3-4
+@media(min-width:992px) {
+    .wpo-why-choose-section .why-choose-top > .row {
+        align-items: center;
+
+        > .col-lg-7,
+        > .col-lg-5 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+    }
+
+    .wpo-why-choose-section .why-choose-image {
+        max-width: none;
+        margin: 0;
+        aspect-ratio: 16 / 10;
+    }
+}
+
 .wpo-portfolio-section-s2 .section-btn {
     padding-top: 60px;
 
