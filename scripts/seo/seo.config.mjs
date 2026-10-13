@@ -197,15 +197,41 @@ export const PAGES = [
         breadcrumb: [["Home", "index.html"], ["Careers", "careers.html"]],
     },
 
-    // Theme template pages still holding placeholder content. Kept reachable
-    // but out of the index until real content replaces the placeholders.
     {
         file: "blog.html",
-        index: false,
-        title: "Insights | SBS Water & Infra Projects",
+        index: true,
+        title: "Insights: Water & Wastewater Treatment Articles | SBS Water",
         description:
-            "Insights from SBS Water & Infra Projects on water and wastewater treatment for industry.",
+            "Articles from SBS Water on distillery effluent treatment, zero liquid discharge, condensate polishing and water reuse for sugar, distillery and process industries.",
+        breadcrumb: [["Home", "index.html"], ["Insights", "blog.html"]],
     },
+    {
+        file: "distillery-effluent-treatment-zero-liquid-discharge.html",
+        index: true,
+        title: "Distillery Effluent Treatment: Why ZLD Is a Paradigm Shift",
+        description:
+            "Learn what a distillery effluent treatment plant must handle, why treat and discharge no longer works, and how zero liquid discharge changes the design.",
+        breadcrumb: [
+            ["Home", "index.html"],
+            ["Insights", "blog.html"],
+            ["Distillery Effluent Treatment", "distillery-effluent-treatment-zero-liquid-discharge.html"],
+        ],
+    },
+    {
+        file: "condensate-polishing-in-sugar-mills.html",
+        index: true,
+        title: "Condensate Polishing in Sugar Mills: What It Saves",
+        description:
+            "Sugar mills make tonnes of hot, near-pure water every day and often waste it. Here is how condensate polishing works and what reusing that water saves.",
+        breadcrumb: [
+            ["Home", "index.html"],
+            ["Insights", "blog.html"],
+            ["Condensate Polishing in Sugar Mills", "condensate-polishing-in-sugar-mills.html"],
+        ],
+    },
+
+    // Theme template pages still holding placeholder content. Kept reachable
+    // but out of the index until real content replaces the placeholders.
     {
         file: "blog-single.html",
         index: false,

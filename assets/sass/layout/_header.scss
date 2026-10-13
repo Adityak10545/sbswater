@@ -1188,25 +1188,25 @@
 		color: $white;
 		// 7 one-page menu items: larger and roomier on wide screens, tighter
 		// as the bar narrows so they always stay on one line
-		font-size: 18px;
-		padding: 25px 30px;
+		font-size: 17px;
+		padding: 22px 28px;
 
 		@media(max-width:1699px) {
-			padding: 25px 22px;
+			padding: 22px 21px;
 		}
 
 		@media(max-width:1499px) {
-			font-size: 17px;
-			padding: 25px 17px;
+			font-size: 16px;
+			padding: 22px 16px;
 		}
 
 		@media(max-width:1399px) {
-			font-size: 16px;
-			padding: 25px 16px;
+			padding: 22px 14px;
 		}
 
 		@media(max-width:1199px) {
-			padding: 25px 10px;
+			font-size: 15px;
+			padding: 22px 9px;
 		}
 
 		@media(max-width:991px) {
@@ -1251,15 +1251,15 @@
 		img {
 			display: block;
 			width: auto;
-			height: 60px;
+			height: 54px;
 			max-width: none;
 
 			@media(max-width:1399px) {
-				height: 52px;
+				height: 48px;
 			}
 
 			@media(max-width:575px) {
-				height: 42px;
+				height: 40px;
 			}
 
 			@media(max-width:360px) {
@@ -1275,10 +1275,10 @@
 			color: $white;
 
 			.fi {
-				font-size: 40px;
+				font-size: 36px;
 
 				&::before {
-					font-size: 35px;
+					font-size: 32px;
 				}
 			}
 		}

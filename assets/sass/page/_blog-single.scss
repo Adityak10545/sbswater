@@ -838,3 +838,196 @@
         }
     }
 }
+
+// SBS article pages: tables, figures, lists and FAQs inside the post body
+.sbs-article {
+    .entry-meta ul li {
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    .post {
+        h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+
+            @media(max-width: 1199px) {
+                font-size: 34px;
+                line-height: 120%;
+            }
+
+            @include media-query(575px) {
+                font-size: 28px;
+            }
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 30px;
+            margin-bottom: 22px;
+
+            @include media-query(575px) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+
+        h3 {
+            font-size: 21px;
+            line-height: 130%;
+            margin-bottom: 15px;
+
+            @include media-query(575px) {
+                font-size: 20px;
+            }
+        }
+
+        .sbs-table-wrap {
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+
+        .sbs-article-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+
+            @include media-query(575px) {
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 12px 16px;
+                border: 1px solid $border-color;
+                text-align: left;
+                vertical-align: top;
+            }
+
+            th {
+                background: $heading-color;
+                color: $white;
+                font-weight: $fw-medium;
+            }
+
+            tbody tr:nth-child(even) {
+                background: $brand-surface;
+            }
+
+            td:first-child {
+                color: $heading-color;
+                font-weight: $fw-medium;
+            }
+        }
+
+        .sbs-article-figure {
+            margin: 10px 0 30px;
+
+            img {
+                width: 100%;
+                max-height: 640px;
+                object-fit: cover;
+            }
+
+            figcaption {
+                margin-top: 10px;
+                font-size: 16px;
+                color: $funky-gray;
+            }
+        }
+
+        .sbs-article-list {
+            margin: 0 0 30px;
+            padding-left: 22px;
+
+            li {
+                list-style: disc;
+                margin-bottom: 10px;
+                color: $text-color;
+                font-size: 17px;
+                line-height: 30px;
+
+                @include media-query(575px) {
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+            }
+        }
+
+        .sbs-article-faq {
+            margin-bottom: 40px;
+        }
+
+        .sbs-faq {
+            border-bottom: 1px solid $border-color;
+
+            summary {
+                position: relative;
+                padding: 22px 40px 22px 0;
+                color: $heading-color;
+                font-size: 19px;
+                font-weight: $fw-bold;
+                line-height: 140%;
+                cursor: pointer;
+                list-style: none;
+
+                @include media-query(575px) {
+                    font-size: 17px;
+                    padding: 18px 32px 18px 0;
+                }
+
+                &::-webkit-details-marker {
+                    display: none;
+                }
+
+                // themify chevron, rotated when the item is open
+                &::after {
+                    content: "\e64b";
+                    font-family: 'themify';
+                    position: absolute;
+                    right: 8px;
+                    top: 50%;
+                    font-size: 13px;
+                    color: $heading-color;
+                    transform: translateY(-50%);
+                    transition: transform .25s ease;
+                }
+
+                &:hover {
+                    color: $theme-primary-color;
+                }
+
+                &:focus-visible {
+                    outline: 2px solid $brand-sky;
+                    outline-offset: 2px;
+                }
+            }
+
+            &[open] summary::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+
+            p {
+                margin: 0;
+                padding: 0 40px 24px 0;
+            }
+        }
+
+        .sbs-article-cta {
+            padding: 25px 30px;
+            background: $brand-surface-tint;
+            border-left: 4px solid $theme-primary-color;
+
+            a {
+                color: $theme-primary-color;
+                font-weight: $fw-medium;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.sbs-article .blog-sidebar .recent-post-widget .post h4 {
+    font-size: 17px;
+    line-height: 1.4;
+}

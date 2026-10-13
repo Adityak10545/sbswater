@@ -19,12 +19,12 @@
 // header CTA: outlined button (white over the hero, navy on the sticky bar)
 .header-style-s3 .header-right .header-contact .header-cta {
     display: inline-block;
-    padding: 13px 24px;
+    padding: 12px 22px;
     border: 1px solid rgba($white, 0.7);
     border-radius: 10px;
     color: $white;
     font-weight: $fw-bold;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 100%;
     white-space: nowrap;
     transition: background-color .3s ease, color .3s ease, border-color .3s ease;
@@ -42,8 +42,8 @@
     }
 
     @media(max-width:1399px) {
-        padding: 11px 18px;
-        font-size: 15px;
+        padding: 10px 18px;
+        font-size: 14px;
     }
 }
 
@@ -340,8 +340,21 @@
     }
 }
 
-.wpo-service-section-s2 .service-all-content .service-item .service-content span a {
-    display: block;
+.wpo-service-section-s2 .service-all-content .service-item .service-content span {
+    font-size: 22px;
+    letter-spacing: -0.3px;
+
+    @media(max-width:1355px) {
+        font-size: 21px;
+    }
+
+    @media(max-width:575px) {
+        font-size: 20px;
+    }
+
+    a {
+        display: block;
+    }
 }
 
 // service photos: uniform 4:3 frame, gentle zoom on hover
@@ -1110,6 +1123,35 @@ $process-step-colors: (
     }
 }
 
+// Projects list: the cards carry only a number (no photo), so the template's
+// wide photo column pushed the project name to the middle; shrink it to the
+// number so the name sits on the left
+@media(min-width:992px) {
+    .wpo-portfolio-section-s2 .portfolio-all-item .portfolio-card {
+        justify-content: flex-start;
+        gap: 40px;
+
+        .image-item {
+            flex: 0 0 60px;
+            max-width: 60px;
+        }
+
+        .portfolio-content {
+            flex: 1 1 auto;
+            max-width: 760px;
+        }
+
+        .portfolio-text {
+            max-width: 340px;
+        }
+
+        .portfolio-view {
+            margin-left: auto;
+            padding-left: 0;
+        }
+    }
+}
+
 // Projects list on tablets (768-991px): the cards carry only a number (no
 // photo), so the template's wrapping row left a gap; stack number above the
 // content like on phones, keeping the title and details side by side
@@ -1126,6 +1168,19 @@ $process-step-colors: (
 
         .portfolio-content {
             align-items: flex-start;
+        }
+    }
+}
+
+// Insights: two articles, so the cards split the full row (60/40 on hover)
+// instead of the template's 50/25/25 layout for three
+@media(min-width:992px) {
+    .wpo-blog-section-s2 .blog-card {
+        width: 40%;
+
+        &.active,
+        &:hover {
+            width: 60%;
         }
     }
 }
