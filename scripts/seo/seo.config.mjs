@@ -118,6 +118,22 @@ export const PAGES = [
         breadcrumb: [["Home", "index.html"], ["Services", "service.html"]],
     },
     {
+        file: "condensate-polishing-unit.html",
+        index: true,
+        title: "Condensate Polishing Unit (CPU) Manufacturer | SBS Water",
+        description:
+            "RO-based and Biological condensate polishing units for sugar and distillery plants, recovering about 85% of process condensate for cooling tower and process reuse.",
+        breadcrumb: [
+            ["Home", "index.html"],
+            ["Services", "service.html"],
+            ["Condensate Polishing Unit", "condensate-polishing-unit.html"],
+        ],
+        service: {
+            name: "Condensate Polishing Unit (CPU)",
+            serviceType: "Condensate polishing unit design, manufacturing and commissioning",
+        },
+    },
+    {
         file: "water-treatment-plant.html",
         index: true,
         title: "Industrial Water Treatment Plant (WTP) Manufacturer | SBS Water",

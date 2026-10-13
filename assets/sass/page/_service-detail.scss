@@ -1334,3 +1334,209 @@
         object-fit: cover;
     }
 }
+
+/* CPU page: links under the technology comparison table */
+.sd-compare-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+
+    i {
+        margin-left: 6px;
+        font-size: 13px;
+    }
+}
+
+// two process sections back to back: separate them with a hairline
+.sd-process--alt {
+    border-top: 1px solid rgba($white, 0.08);
+}
+
+/* Process flow diagram (condensate-polishing-unit.html)
+   Inline SVG on a 6-column grid; node and line colours come from these rules */
+$cf-pre: #EEF6FB;
+$cf-red: #C0392B;
+
+.cf-card {
+    margin: 0 0 50px;
+    padding: 30px;
+    border-radius: 18px;
+    background-color: $white;
+    box-shadow: 0 20px 50px rgba($black, 0.18);
+
+    @media(max-width:575px) {
+        padding: 18px;
+    }
+}
+
+// below ~900px the diagram keeps a readable size and scrolls sideways
+.cf-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+
+    &:focus-visible {
+        outline: 2px solid $brand-sky;
+        outline-offset: 4px;
+    }
+}
+
+.cf-svg {
+    display: block;
+    width: 100%;
+    min-width: 900px;
+    height: auto;
+    font-family: $base-font;
+
+    text {
+        font-size: 15px;
+        font-weight: $fw-bold;
+    }
+
+    .cf-node rect {
+        stroke-width: 1.5;
+    }
+
+    .cf-pre {
+        rect { fill: $cf-pre; stroke: $brand-sky; }
+        text { fill: $brand-navy; }
+    }
+
+    .cf-bio {
+        rect { fill: $brand-teal; stroke: $brand-teal; }
+        text { fill: $white; }
+    }
+
+    .cf-ro {
+        rect { fill: $brand-navy; stroke: $brand-navy; }
+        text { fill: $white; }
+    }
+
+    .cf-out {
+        rect { fill: $brand-cyan; stroke: $brand-cyan; }
+        text { fill: $white; }
+    }
+
+    .cf-reuse {
+        rect { fill: $brand-green; stroke: $brand-green; }
+        text { fill: $white; }
+    }
+
+    .cf-rej {
+        rect { fill: #FDECEA; stroke: $cf-red; }
+        text { fill: $cf-red; }
+    }
+
+    .cf-sub {
+        font-size: 12.5px;
+        font-weight: $fw-medium;
+        opacity: .85;
+    }
+
+    .cf-line {
+        fill: none;
+        stroke: $brand-sky;
+        stroke-width: 2.5;
+        stroke-linejoin: round;
+
+        &--perm { stroke: $brand-cyan; }
+        &--red { stroke: $cf-red; }
+        &--muted { stroke: $brand-gray; stroke-width: 2; }
+        &--dash { stroke-dasharray: 7 5; stroke-width: 2; }
+    }
+
+    .cf-head { fill: $brand-sky; }
+    .cf-head-red { fill: $cf-red; }
+    .cf-head-muted { fill: $brand-gray; }
+
+    .cf-label {
+        fill: $brand-gray-dark;
+        font-size: 13px;
+        font-weight: $fw-medium;
+
+        &--src {
+            fill: $brand-navy;
+            font-weight: $fw-bold;
+        }
+    }
+}
+
+.cf-legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 22px;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid $border-color;
+    color: $text-color;
+    font-size: 14px;
+}
+
+.cf-key {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+        content: "";
+        width: 18px;
+        height: 12px;
+        border-radius: 3px;
+    }
+
+    &--pre::before { background: $cf-pre; border: 1.5px solid $brand-sky; }
+    &--bio::before { background: $brand-teal; }
+    &--ro::before { background: $brand-navy; }
+    &--out::before { background: $brand-cyan; }
+    &--reuse::before { background: $brand-green; }
+    &--rej::before { background: #FDECEA; border: 1.5px solid $cf-red; }
+
+    &--perm::before,
+    &--dash::before {
+        height: 0;
+        border-radius: 0;
+        border-top: 2.5px solid $brand-cyan;
+    }
+
+    &--dash::before {
+        border-top: 2px dashed $brand-sky;
+    }
+}
+
+// only needed when the diagram actually scrolls
+.cf-swipe {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    color: $brand-teal;
+    font-weight: $fw-medium;
+
+    @media(max-width:991px) {
+        display: inline-flex;
+    }
+}
+
+.cf-notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 30px;
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+    color: $text-color;
+    font-size: 14px;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    i {
+        color: $brand-teal;
+        font-size: 11px;
+    }
+}

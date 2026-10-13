@@ -8001,6 +8001,7 @@ img {
     margin: 30px auto 0;
   }
 }
+
 @media (min-width: 992px) {
   .wpo-why-choose-section .why-choose-top > .row {
     align-items: center;
@@ -8016,7 +8017,6 @@ img {
     aspect-ratio: 16/10;
   }
 }
-
 .wpo-portfolio-section-s2 .section-btn {
   padding-top: 60px;
 }
@@ -14579,6 +14579,233 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* CPU page: links under the technology comparison table */
+.sd-compare-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+.sd-compare-links i {
+  margin-left: 6px;
+  font-size: 13px;
+}
+
+.sd-process--alt {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Process flow diagram (condensate-polishing-unit.html)
+   Inline SVG on a 6-column grid; node and line colours come from these rules */
+.cf-card {
+  margin: 0 0 50px;
+  padding: 30px;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+@media (max-width: 575px) {
+  .cf-card {
+    padding: 18px;
+  }
+}
+
+.cf-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.cf-scroll:focus-visible {
+  outline: 2px solid #2896D3;
+  outline-offset: 4px;
+}
+
+.cf-svg {
+  display: block;
+  width: 100%;
+  min-width: 900px;
+  height: auto;
+  font-family: "Pangram", "Plus Jakarta Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.cf-svg text {
+  font-size: 15px;
+  font-weight: 700;
+}
+.cf-svg .cf-node rect {
+  stroke-width: 1.5;
+}
+.cf-svg .cf-pre rect {
+  fill: #EEF6FB;
+  stroke: #2896D3;
+}
+.cf-svg .cf-pre text {
+  fill: #2E4673;
+}
+.cf-svg .cf-bio rect {
+  fill: #0B7A8F;
+  stroke: #0B7A8F;
+}
+.cf-svg .cf-bio text {
+  fill: #fff;
+}
+.cf-svg .cf-ro rect {
+  fill: #2E4673;
+  stroke: #2E4673;
+}
+.cf-svg .cf-ro text {
+  fill: #fff;
+}
+.cf-svg .cf-out rect {
+  fill: #0088A7;
+  stroke: #0088A7;
+}
+.cf-svg .cf-out text {
+  fill: #fff;
+}
+.cf-svg .cf-reuse rect {
+  fill: #87AD32;
+  stroke: #87AD32;
+}
+.cf-svg .cf-reuse text {
+  fill: #fff;
+}
+.cf-svg .cf-rej rect {
+  fill: #FDECEA;
+  stroke: #C0392B;
+}
+.cf-svg .cf-rej text {
+  fill: #C0392B;
+}
+.cf-svg .cf-sub {
+  font-size: 12.5px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+.cf-svg .cf-line {
+  fill: none;
+  stroke: #2896D3;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+.cf-svg .cf-line--perm {
+  stroke: #0088A7;
+}
+.cf-svg .cf-line--red {
+  stroke: #C0392B;
+}
+.cf-svg .cf-line--muted {
+  stroke: #666666;
+  stroke-width: 2;
+}
+.cf-svg .cf-line--dash {
+  stroke-dasharray: 7 5;
+  stroke-width: 2;
+}
+.cf-svg .cf-head {
+  fill: #2896D3;
+}
+.cf-svg .cf-head-red {
+  fill: #C0392B;
+}
+.cf-svg .cf-head-muted {
+  fill: #666666;
+}
+.cf-svg .cf-label {
+  fill: #4D4D4D;
+  font-size: 13px;
+  font-weight: 500;
+}
+.cf-svg .cf-label--src {
+  fill: #2E4673;
+  font-weight: 700;
+}
+
+.cf-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 22px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #E7E7E7;
+  color: #4D4D4D;
+  font-size: 14px;
+}
+
+.cf-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.cf-key::before {
+  content: "";
+  width: 18px;
+  height: 12px;
+  border-radius: 3px;
+}
+.cf-key--pre::before {
+  background: #EEF6FB;
+  border: 1.5px solid #2896D3;
+}
+.cf-key--bio::before {
+  background: #0B7A8F;
+}
+.cf-key--ro::before {
+  background: #2E4673;
+}
+.cf-key--out::before {
+  background: #0088A7;
+}
+.cf-key--reuse::before {
+  background: #87AD32;
+}
+.cf-key--rej::before {
+  background: #FDECEA;
+  border: 1.5px solid #C0392B;
+}
+.cf-key--perm::before, .cf-key--dash::before {
+  height: 0;
+  border-radius: 0;
+  border-top: 2.5px solid #0088A7;
+}
+.cf-key--dash::before {
+  border-top: 2px dashed #2896D3;
+}
+
+.cf-swipe {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  color: #0B7A8F;
+  font-weight: 500;
+}
+@media (max-width: 991px) {
+  .cf-swipe {
+    display: inline-flex;
+  }
+}
+
+.cf-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 30px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #4D4D4D;
+  font-size: 14px;
+}
+.cf-notes li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cf-notes i {
+  color: #0B7A8F;
+  font-size: 11px;
 }
 
 /*======================================
