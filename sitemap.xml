@@ -2,44 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.sbswater.in/</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://www.sbswater.in/about.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://www.sbswater.in/service.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
-    <loc>https://www.sbswater.in/condensate-polishing-unit.html</loc>
+    <loc>https://www.sbswater.in/services/condensate-polishing-unit.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
-    <loc>https://www.sbswater.in/water-treatment-plant.html</loc>
+    <loc>https://www.sbswater.in/services/water-treatment-plant.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
-    <loc>https://www.sbswater.in/reverse-osmosis-plant.html</loc>
+    <loc>https://www.sbswater.in/services/reverse-osmosis-plant.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
-    <loc>https://www.sbswater.in/effluent-treatment-plant.html</loc>
+    <loc>https://www.sbswater.in/services/effluent-treatment-plant.html</loc>
+    <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sbswater.in/services/sewage-treatment-plant.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://www.sbswater.in/portfolio.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://www.sbswater.in/contact.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://www.sbswater.in/get-a-quote.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://www.sbswater.in/careers.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://www.sbswater.in/blog.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
-    <loc>https://www.sbswater.in/distillery-effluent-treatment-zero-liquid-discharge.html</loc>
+    <loc>https://www.sbswater.in/blogs/distillery-effluent-treatment-zero-liquid-discharge.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
-    <loc>https://www.sbswater.in/condensate-polishing-in-sugar-mills.html</loc>
+    <loc>https://www.sbswater.in/blogs/condensate-polishing-in-sugar-mills.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
 </urlset>

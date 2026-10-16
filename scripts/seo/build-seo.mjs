@@ -8,6 +8,7 @@
 -------------------------------------------*/
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
+import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import {
     SITE_URL,
@@ -261,9 +262,23 @@ function escapeRe(s) {
     return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+// <lastmod> = date of the last commit touching the page, or today when the
+// page has uncommitted changes (or git is unavailable).
+function lastModified(file) {
+    const today = new Date().toISOString().slice(0, 10);
+    try {
+        const git = (...args) => execFileSync("git", args, { cwd: ROOT, encoding: "utf8" }).trim();
+        if (git("status", "--porcelain", "--", file)) return today;
+        return git("log", "-1", "--format=%cs", "--", file) || today;
+    } catch {
+        return today;
+    }
+}
+
 function writeSitemap() {
     const urls = PAGES.filter((p) => p.index).map(
-        (p) => `  <url>\n    <loc>${text(pageUrl(p))}</loc>\n  </url>`,
+        (p) =>
+            `  <url>\n    <loc>${text(pageUrl(p))}</loc>\n    <lastmod>${lastModified(p.file)}</lastmod>\n  </url>`,
     );
     const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`;
     writeFileSync(resolve(ROOT, "sitemap.xml"), xml);

@@ -118,7 +118,7 @@ export const PAGES = [
         breadcrumb: [["Home", "index.html"], ["Services", "service.html"]],
     },
     {
-        file: "condensate-polishing-unit.html",
+        file: "services/condensate-polishing-unit.html",
         index: true,
         title: "Condensate Polishing Unit (CPU) Manufacturer | SBS Water",
         description:
@@ -126,7 +126,7 @@ export const PAGES = [
         breadcrumb: [
             ["Home", "index.html"],
             ["Services", "service.html"],
-            ["Condensate Polishing Unit", "condensate-polishing-unit.html"],
+            ["Condensate Polishing Unit", "services/condensate-polishing-unit.html"],
         ],
         service: {
             name: "Condensate Polishing Unit (CPU)",
@@ -134,7 +134,7 @@ export const PAGES = [
         },
     },
     {
-        file: "water-treatment-plant.html",
+        file: "services/water-treatment-plant.html",
         index: true,
         title: "Industrial Water Treatment Plant (WTP) Manufacturer | SBS Water",
         description:
@@ -142,7 +142,7 @@ export const PAGES = [
         breadcrumb: [
             ["Home", "index.html"],
             ["Services", "service.html"],
-            ["Water Treatment Plant", "water-treatment-plant.html"],
+            ["Water Treatment Plant", "services/water-treatment-plant.html"],
         ],
         service: {
             name: "Water Treatment Plant (WTP)",
@@ -150,7 +150,7 @@ export const PAGES = [
         },
     },
     {
-        file: "reverse-osmosis-plant.html",
+        file: "services/reverse-osmosis-plant.html",
         index: true,
         title: "Industrial Reverse Osmosis (RO) Plant Manufacturer | SBS Water",
         description:
@@ -158,7 +158,7 @@ export const PAGES = [
         breadcrumb: [
             ["Home", "index.html"],
             ["Services", "service.html"],
-            ["Reverse Osmosis Systems", "reverse-osmosis-plant.html"],
+            ["Reverse Osmosis Systems", "services/reverse-osmosis-plant.html"],
         ],
         service: {
             name: "Reverse Osmosis (RO) Plant",
@@ -166,7 +166,7 @@ export const PAGES = [
         },
     },
     {
-        file: "effluent-treatment-plant.html",
+        file: "services/effluent-treatment-plant.html",
         index: true,
         title: "Effluent Treatment Plant (ETP) for Sugar & Distillery | SBS Water",
         description:
@@ -174,7 +174,7 @@ export const PAGES = [
         breadcrumb: [
             ["Home", "index.html"],
             ["Services", "service.html"],
-            ["Effluent Treatment Plant", "effluent-treatment-plant.html"],
+            ["Effluent Treatment Plant", "services/effluent-treatment-plant.html"],
         ],
         service: {
             name: "Effluent Treatment Plant (ETP)",
@@ -182,12 +182,28 @@ export const PAGES = [
         },
     },
     {
+        file: "services/sewage-treatment-plant.html",
+        index: true,
+        title: "Sewage Treatment Plant (STP) Manufacturer in Pune | SBS Water",
+        description:
+            "MBBR-based Sewage Treatment Plants for industries, townships, commercial buildings and institutions, with tertiary filtration and ozone disinfection for water reuse.",
+        breadcrumb: [
+            ["Home", "index.html"],
+            ["Services", "service.html"],
+            ["Sewage Treatment Plant", "services/sewage-treatment-plant.html"],
+        ],
+        service: {
+            name: "Sewage Treatment Plant (STP)",
+            serviceType: "Sewage treatment plant design, manufacturing and commissioning",
+        },
+    },
+    {
         file: "portfolio.html",
         index: true,
-        title: "Projects: CPU, WTP & ETP Plants Delivered in India | SBS Water",
+        title: "Portfolio: CPU, WTP & ETP Plants Delivered in India | SBS Water",
         description:
-            "Projects by SBS Water: 53+ condensate polishing, water treatment and effluent treatment plants delivered for India's sugar, distillery and biofuel industries.",
-        breadcrumb: [["Home", "index.html"], ["Projects", "portfolio.html"]],
+            "Portfolio of SBS Water: 53+ condensate polishing, water treatment and effluent treatment plants delivered for India's sugar, distillery and biofuel industries.",
+        breadcrumb: [["Home", "index.html"], ["Portfolio", "portfolio.html"]],
     },
     {
         file: "contact.html",
@@ -216,33 +232,33 @@ export const PAGES = [
     {
         file: "blog.html",
         index: true,
-        title: "Insights: Water & Wastewater Treatment Articles | SBS Water",
+        title: "Blogs: Water & Wastewater Treatment Articles | SBS Water",
         description:
             "Articles from SBS Water on distillery effluent treatment, zero liquid discharge, condensate polishing and water reuse for sugar, distillery and process industries.",
-        breadcrumb: [["Home", "index.html"], ["Insights", "blog.html"]],
+        breadcrumb: [["Home", "index.html"], ["Blogs", "blog.html"]],
     },
     {
-        file: "distillery-effluent-treatment-zero-liquid-discharge.html",
+        file: "blogs/distillery-effluent-treatment-zero-liquid-discharge.html",
         index: true,
         title: "Distillery Effluent Treatment: Why ZLD Is a Paradigm Shift",
         description:
             "Learn what a distillery effluent treatment plant must handle, why treat and discharge no longer works, and how zero liquid discharge changes the design.",
         breadcrumb: [
             ["Home", "index.html"],
-            ["Insights", "blog.html"],
-            ["Distillery Effluent Treatment", "distillery-effluent-treatment-zero-liquid-discharge.html"],
+            ["Blogs", "blog.html"],
+            ["Distillery Effluent Treatment", "blogs/distillery-effluent-treatment-zero-liquid-discharge.html"],
         ],
     },
     {
-        file: "condensate-polishing-in-sugar-mills.html",
+        file: "blogs/condensate-polishing-in-sugar-mills.html",
         index: true,
         title: "Condensate Polishing in Sugar Mills: What It Saves",
         description:
             "Sugar mills make tonnes of hot, near-pure water every day and often waste it. Here is how condensate polishing works and what reusing that water saves.",
         breadcrumb: [
             ["Home", "index.html"],
-            ["Insights", "blog.html"],
-            ["Condensate Polishing in Sugar Mills", "condensate-polishing-in-sugar-mills.html"],
+            ["Blogs", "blog.html"],
+            ["Condensate Polishing in Sugar Mills", "blogs/condensate-polishing-in-sugar-mills.html"],
         ],
     },
 
@@ -251,13 +267,13 @@ export const PAGES = [
     {
         file: "blog-single.html",
         index: false,
-        title: "Insight Article | SBS Water & Infra Projects",
+        title: "Blog Article | SBS Water & Infra Projects",
         description: "An article from SBS Water & Infra Projects.",
     },
     {
         file: "blog-standard.html",
         index: false,
-        title: "Insights Archive | SBS Water & Infra Projects",
+        title: "Blog Archive | SBS Water & Infra Projects",
         description: "Archive of articles from SBS Water & Infra Projects.",
     },
     {

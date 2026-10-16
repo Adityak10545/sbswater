@@ -1003,6 +1003,15 @@
                 }
             }
 
+            // question is an <h3> for the outline; it keeps the summary's look
+            .sbs-faq-q {
+                display: inline;
+                margin: 0;
+                padding: 0;
+                color: inherit;
+                font: inherit;
+            }
+
             &[open] summary::after {
                 transform: translateY(-50%) rotate(180deg);
             }
@@ -1027,7 +1036,7 @@
     }
 }
 
-.sbs-article .blog-sidebar .recent-post-widget .post h4 {
+.sbs-article .blog-sidebar .recent-post-widget .post :is(h3, h4) {
     font-size: 17px;
     line-height: 1.4;
 }

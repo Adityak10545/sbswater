@@ -19,6 +19,7 @@
 	.widget {
 		border: 1px solid $border-color;
 
+		h2,
 		h3 {
 			display: block;
 			color: $heading-color;
@@ -191,7 +192,7 @@
 			}
 		}
 
-		.post h4 {
+		.post :is(h3, h4) {
 			margin: 0 0 0.3em;
 			color: $black;
 			font-size: 20px;
@@ -213,12 +214,12 @@
 			}
 		}
 
-		.post h4 a {
+		.post :is(h3, h4) a {
 			display: inline-block;
 			color: $black;
 		}
 
-		.post h4 a:hover {
+		.post :is(h3, h4) a:hover {
 			color: $theme-primary-color;
 		}
 

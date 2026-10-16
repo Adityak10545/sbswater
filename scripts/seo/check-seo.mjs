@@ -7,7 +7,7 @@
     Usage: npm run seo:check   (exits 1 on any FAIL)
 -------------------------------------------*/
 import { readFileSync, existsSync, readdirSync } from "node:fs";
-import { resolve, dirname } from "node:path";
+import { resolve, dirname, posix } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE_URL, PAGES } from "./seo.config.mjs";
 import { pageUrl } from "./build-seo.mjs";
@@ -23,8 +23,15 @@ const decode = (s) =>
 const all = (html, re) => [...html.matchAll(re)];
 const head = (html) => html.split(/<\/head>/i)[0];
 
-// every HTML page at the root must be configured
-const htmlFiles = readdirSync(ROOT).filter((f) => f.endsWith(".html"));
+// every HTML page at the root or in a page folder must be configured
+const PAGE_DIRS = ["", "services", "blogs"];
+const htmlFiles = PAGE_DIRS.flatMap((d) =>
+    existsSync(resolve(ROOT, d))
+        ? readdirSync(resolve(ROOT, d))
+              .filter((f) => f.endsWith(".html"))
+              .map((f) => (d ? `${d}/${f}` : f))
+        : [],
+);
 for (const f of htmlFiles) {
     if (!PAGES.some((p) => p.file === f)) fail(`${f}: not listed in seo.config.mjs`);
 }
@@ -106,7 +113,8 @@ for (const [f, html] of pagesHtml) {
     for (const [, href] of all(body, /<a\b[^>]*\shref="([^"]*)"/gi)) {
         if (/^(https?:|mailto:|tel:|javascript:|#?$)/i.test(href)) continue;
         const [path, frag] = href.split("#");
-        const target = path ? strip(path) : f;
+        // links are relative to the page's own folder
+        const target = path ? posix.normalize(posix.join(posix.dirname(f), strip(path))) : f;
         if (path && !existsSync(resolve(ROOT, target))) {
             fail(`${f}: broken link → ${href}`);
             continue;
@@ -117,7 +125,7 @@ for (const [f, html] of pagesHtml) {
     }
     for (const [, src] of all(body, /<(?:img|source|link)\b[^>]*\s(?:src|href)="([^"]*)"/gi)) {
         if (/^(https?:|data:|\/\/)/i.test(src)) continue;
-        if (!existsSync(resolve(ROOT, strip(src)))) fail(`${f}: missing asset → ${src}`);
+        if (!existsSync(resolve(ROOT, posix.dirname(f), strip(src)))) fail(`${f}: missing asset → ${src}`);
     }
 }
 
@@ -128,6 +136,9 @@ if (!/^<\?xml version="1.0" encoding="UTF-8"\?>\s*<urlset xmlns="http:\/\/www\.s
 const locs = all(sitemap, /<loc>([^<]*)<\/loc>/g).map((m) => m[1]);
 const expected = PAGES.filter((p) => p.index).map(pageUrl);
 if (new Set(locs).size !== locs.length) fail("sitemap.xml: duplicate URLs");
+for (const [entry] of all(sitemap, /<url>[\s\S]*?<\/url>/g)) {
+    if (!/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/.test(entry)) fail(`sitemap.xml: missing or invalid <lastmod> in ${entry.match(/<loc>([^<]*)/)?.[1]}`);
+}
 for (const u of expected) if (!locs.includes(u)) fail(`sitemap.xml: missing ${u}`);
 for (const u of locs) if (!expected.includes(u)) fail(`sitemap.xml: unexpected ${u}`);
 

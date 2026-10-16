@@ -107,6 +107,15 @@
         }
     }
 
+    // second heading inside the same section
+    &--sub {
+        margin-top: 70px;
+
+        @media(max-width:767px) {
+            margin-top: 50px;
+        }
+    }
+
     &--light {
         h2 {
             color: $white;
@@ -1096,6 +1105,15 @@
 
     @media(max-width:575px) {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--4 {
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 0;
+
+        @media(max-width:991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     figure {

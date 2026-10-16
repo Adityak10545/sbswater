@@ -21,7 +21,20 @@ npm run seo:check   # exits 1 on any FAIL
 Do not hand-edit tags inside the `SEO:BEGIN/END` block — they are overwritten.
 
 **Adding a page:** add an entry to `PAGES` in `seo.config.mjs`, run both
-commands. `seo:check` fails if any root `.html` file is missing from the config.
+commands. `seo:check` fails if any `.html` file at the root, in `services/` or
+in `blogs/` is missing from the config.
+
+**URL structure:** service detail pages live in `services/` (e.g.
+`/services/sewage-treatment-plant.html`) and articles in `blogs/` (e.g.
+`/blogs/condensate-polishing-in-sugar-mills.html`). The listing pages stay at
+the root (`service.html`, `blog.html`). Pages inside a folder use `../` for
+assets and root pages; copy an existing page from the same folder when adding
+a new one. Blog articles keep one `<h1>`, `<h2>` per section, `<h3>` below
+that (including each FAQ question).
+
+**Sitemap dates:** each URL gets a `<lastmod>` from the last git commit that
+touched the page, or today's date when the page has uncommitted changes. Run
+`npm run seo:build` after committing to refresh them.
 
 **Publishing a real blog post or project page:** create the page, add it to
 `PAGES` with `index: true` and a unique title/description, then rebuild.
@@ -37,7 +50,8 @@ commands. `seo:check` fails if any root `.html` file is missing from the config.
   absolute, and each breadcrumb label is visible on the page
 - every local link and image resolves to a real file; missing `#fragment`
   targets are warnings
-- `sitemap.xml` is well-formed and lists exactly the indexable pages;
+- `sitemap.xml` is well-formed, lists exactly the indexable pages and gives
+  each one a `<lastmod>` date;
   `robots.txt` references it and does not block the site
 
 ## Index policy

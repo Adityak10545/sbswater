@@ -19,9 +19,9 @@ page lists sites in Maharashtra, Karnataka and Gujarat.
 | --- | --- | --- | --- |
 | `/` | water and wastewater treatment company Pune | ETP STP ZLD manufacturer India; industrial water treatment company; water treatment for sugar industry | Commercial / brand |
 | `service.html` | industrial water treatment services | wastewater treatment solutions India; water treatment plant revamping | Commercial |
-| `water-treatment-plant.html` | industrial water treatment plant manufacturer | WTP for sugar factory; raw water treatment plant; water treatment plant for distillery | Commercial |
-| `reverse-osmosis-plant.html` | industrial RO plant manufacturer | RO plant for condensate recovery; UF RO system industrial; high recovery RO plant | Commercial |
-| `effluent-treatment-plant.html` | effluent treatment plant for sugar industry | ETP for distillery; ETP plant manufacturer India; industrial effluent treatment plant | Commercial |
+| `services/water-treatment-plant.html` | industrial water treatment plant manufacturer | WTP for sugar factory; raw water treatment plant; water treatment plant for distillery | Commercial |
+| `services/reverse-osmosis-plant.html` | industrial RO plant manufacturer | RO plant for condensate recovery; UF RO system industrial; high recovery RO plant | Commercial |
+| `services/effluent-treatment-plant.html` | effluent treatment plant for sugar industry | ETP for distillery; ETP plant manufacturer India; industrial effluent treatment plant | Commercial |
 | `portfolio.html` | water treatment projects India | condensate polishing unit projects; ETP projects sugar mills | Commercial investigation |
 | `about.html` | SBS Water & Infra Projects | water treatment company Pune since 2019; ISO 9001 water treatment company | Brand / trust |
 | `contact.html` | SBS Water contact | water treatment company Shivajinagar Pune | Navigational / local |
@@ -53,7 +53,7 @@ Do **not** create city "service area" pages (e.g. "ETP in Kolhapur") unless
 each has genuine projects and distinct content — thin location pages are
 treated as doorway pages.
 
-### Article ideas (for the Insights section, once real)
+### Article ideas (for the Blogs section, once real)
 Each should link to the matching service page.
 - How a condensate polishing unit cuts fresh-water intake in a distillery → CPU page
 - ETP design for seasonal sugar-mill effluent (pH 4–5, COD up to 10,000 ppm) → ETP page
