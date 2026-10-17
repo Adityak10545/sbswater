@@ -27,7 +27,7 @@ in `blogs/` is missing from the config.
 **URL structure:** service detail pages live in `services/` (e.g.
 `/services/sewage-treatment-plant.html`) and articles in `blogs/` (e.g.
 `/blogs/condensate-polishing-in-sugar-mills.html`). The listing pages stay at
-the root (`service.html`, `blog.html`). Pages inside a folder use `../` for
+the root (`service.html`, `blogs.html`). Pages inside a folder use `../` for
 assets and root pages; copy an existing page from the same folder when adding
 a new one. Blog articles keep one `<h1>`, `<h2>` per section, `<h3>` below
 that (including each FAQ question).
@@ -61,7 +61,7 @@ touched the page, or today's date when the page has uncommitted changes. Run
 `effluent-treatment-plant.html`, `portfolio.html`, `contact.html`,
 `get-a-quote.html`, `careers.html`.
 
-**`noindex, follow`:** `blog.html`, `blog-single.html`, `blog-standard.html`,
+**`noindex, follow`:** `blogs.html`, `blog-single.html`, `blog-standard.html`,
 `service-single.html`, `portfolio-single.html`, `team.html`,
 `team-single.html`, `index-2.html`, `404.html`. These are theme templates
 still holding placeholder content (architecture/fitness copy, "Michel" as

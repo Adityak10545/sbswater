@@ -230,12 +230,12 @@ export const PAGES = [
     },
 
     {
-        file: "blog.html",
+        file: "blogs.html",
         index: true,
         title: "Blogs: Water & Wastewater Treatment Articles | SBS Water",
         description:
             "Articles from SBS Water on distillery effluent treatment, zero liquid discharge, condensate polishing and water reuse for sugar, distillery and process industries.",
-        breadcrumb: [["Home", "index.html"], ["Blogs", "blog.html"]],
+        breadcrumb: [["Home", "index.html"], ["Blogs", "blogs.html"]],
     },
     {
         file: "blogs/distillery-effluent-treatment-zero-liquid-discharge.html",
@@ -245,7 +245,7 @@ export const PAGES = [
             "Learn what a distillery effluent treatment plant must handle, why treat and discharge no longer works, and how zero liquid discharge changes the design.",
         breadcrumb: [
             ["Home", "index.html"],
-            ["Blogs", "blog.html"],
+            ["Blogs", "blogs.html"],
             ["Distillery Effluent Treatment", "blogs/distillery-effluent-treatment-zero-liquid-discharge.html"],
         ],
     },
@@ -257,7 +257,7 @@ export const PAGES = [
             "Sugar mills make tonnes of hot, near-pure water every day and often waste it. Here is how condensate polishing works and what reusing that water saves.",
         breadcrumb: [
             ["Home", "index.html"],
-            ["Blogs", "blog.html"],
+            ["Blogs", "blogs.html"],
             ["Condensate Polishing in Sugar Mills", "blogs/condensate-polishing-in-sugar-mills.html"],
         ],
     },
