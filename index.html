@@ -47,8 +47,8 @@
         <meta name="twitter:title" content="Water &amp; Wastewater Treatment Plant Company in Pune | SBS Water">
         <meta name="twitter:description" content="SBS Water designs, manufactures and commissions ETP, STP, ZLD, CPU, RO and water treatment plants for sugar, distillery and process industries across India.">
         <meta name="twitter:image" content="https://www.sbswater.in/assets/images/brand/og-image.jpg">
-        <link rel="preload" as="image" href="assets/images/plants/hero-balaji-sugar.webp" type="image/webp" media="(min-width: 992px)" fetchpriority="high">
-        <link rel="preload" as="image" href="assets/images/plants/hero-balaji-sugar-1200.webp" type="image/webp" media="(max-width: 991px)" fetchpriority="high">
+        <link rel="preload" as="image" href="assets/images/plants/hero-drone.webp" type="image/webp" media="(min-width: 992px)" fetchpriority="high">
+        <link rel="preload" as="image" href="assets/images/plants/hero-drone-1200.webp" type="image/webp" media="(max-width: 991px)" fetchpriority="high">
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PRZ28JG3');</script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNJEKH2XJY"></script>
         <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NNJEKH2XJY');</script>
@@ -122,7 +122,7 @@
         <link href="assets/css/animate.css" rel="stylesheet" />
         <link href="assets/css/swiper.min.css" rel="stylesheet" />
         <link href="assets/css/odometer-theme-default.css" rel="stylesheet" />
-        <link href="assets/sass/style.css" rel="stylesheet" />
+        <link href="assets/sass/style.css?v=20261017e" rel="stylesheet" />
         <noscript><style>.preloader{display:none}.wow{visibility:visible}</style></noscript>
     </head>
 
@@ -371,12 +371,21 @@
             <section class="wpo-hero-section-s2 hero-sbs" id="home">
                 <div class="swiper hero-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-swiper-autoplay="12000">
                             <div
-                                class="hero-bg hero-bg-balaji"
+                                class="hero-bg hero-bg-video hero-bg-drone"
                                 role="img"
-                                aria-label="Aerial view of the effluent treatment plant built by SBS Water at Balaji Sugars"
-                            ></div>
+                                aria-label="Drone flight over the sewage treatment plant built by SBS Water at Dahod, Gujarat"
+                            >
+                                <video
+                                    class="hero-video"
+                                    src="assets/videos/hero-drone.mp4?v=6s"
+                                    muted
+                                    playsinline
+                                    preload="metadata"
+                                    aria-hidden="true"
+                                ></video>
+                            </div>
                             <div class="container-fluid">
                                 <div class="hero-content">
                                     <div class="hero-grid">
@@ -426,12 +435,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-swiper-autoplay="12000">
                             <div
-                                class="hero-bg hero-bg-dahod"
+                                class="hero-bg hero-bg-video hero-bg-drone-2"
                                 role="img"
-                                aria-label="Aerial view of the water treatment plant built by SBS Water for Dahod Smart City, Gujarat"
-                            ></div>
+                                aria-label="Drone flight over the effluent treatment plant built by SBS Water at Balaji Sugars"
+                            >
+                                <video
+                                    class="hero-video"
+                                    src="assets/videos/hero-drone-2.mp4?v=6s"
+                                    muted
+                                    playsinline
+                                    preload="metadata"
+                                    aria-hidden="true"
+                                ></video>
+                            </div>
                             <div class="container-fluid">
                                 <div class="hero-content">
                                     <div class="hero-grid">
@@ -1109,30 +1127,36 @@
                                 </div>
                             </div>
                         </div>
-                        <ol class="why-choose-process">
+                        <ol class="sd-scope why-choose-process">
                             <li class="wow fadeInUp" data-wow-delay="0.1s">
                                 <strong>01</strong>
                                 <h4>Assess</h4>
+                                <span>Site &amp; water analysis</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-delay="0.2s">
                                 <strong>02</strong>
                                 <h4>Design</h4>
+                                <span>Process &amp; engineering design</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-delay="0.3s">
                                 <strong>03</strong>
                                 <h4>Supply</h4>
+                                <span>In-house manufacturing</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-delay="0.4s">
                                 <strong>04</strong>
                                 <h4>Install</h4>
+                                <span>Erection &amp; installation</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-delay="0.5s">
                                 <strong>05</strong>
                                 <h4>Commission</h4>
+                                <span>Start-up &amp; operator training</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-delay="0.6s">
                                 <strong>06</strong>
                                 <h4>Optimise</h4>
+                                <span>Upgrades &amp; debottlenecking</span>
                             </li>
                         </ol>
                     </div>
@@ -1231,7 +1255,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="date">
-                                                    <span>2025–26</span>
+                                                    <span>2025-26</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1816,7 +1840,7 @@
                                                     >
                                                     Fifth Floor, Pride Silicon
                                                     Plaza, 'B' Wing, S B Road,
-                                                    Shivajinagar, Pune – 411016,
+                                                    Shivajinagar, Pune - 411016,
                                                     Maharashtra
                                                 </li>
                                                 <li>
@@ -1836,7 +1860,7 @@
                                                     >
                                                     1st Floor, Khushi Square
                                                     Building, Akkol Road,
-                                                    Nipani, Karnataka – 591237
+                                                    Nipani, Karnataka - 591237
                                                 </li>
                                             </ul>
                                         </div>
@@ -1921,7 +1945,7 @@
         <script src="assets/js/jquery-plugin-collection.js"></script>
         <!-- Custom script for this template -->
         <script src="assets/js/gsap-script.js"></script>
-        <script src="assets/js/script.js"></script>
+        <script src="assets/js/script.js?v=20261017f"></script>
         <script src="assets/js/whatsapp-widget.js"></script>
         <script src="assets/js/hero-align.js"></script>
     </body>

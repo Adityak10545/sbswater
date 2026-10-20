@@ -380,6 +380,24 @@
         }
     });
 
+    // Hero video: only the visible slide's video plays (loop mode clones slides,
+    // so there can be more than one copy of the video in the DOM).
+    function syncHeroVideos(swiper) {
+        if (!swiper || !swiper.slides) return;
+        for (var i = 0; i < swiper.slides.length; i++) {
+            var video = swiper.slides[i].querySelector(".hero-video");
+            if (!video) continue;
+            if (i === swiper.activeIndex) {
+                video.muted = true; // cloned slides can lose the muted state, which blocks autoplay
+                video.currentTime = 0;
+                var playing = video.play();
+                if (playing && playing.catch) playing.catch(function () {});
+            } else {
+                video.pause();
+            }
+        }
+    }
+
     var heroSlider = new Swiper(".hero-slider", {
         loop: true,
         speed: 1500,
@@ -387,6 +405,12 @@
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
+        },
+
+        on: {
+            slideChangeTransitionStart: function () {
+                syncHeroVideos(this);
+            },
         },
 
         pagination: {
@@ -400,6 +424,18 @@
                     "</span>";
 
             }
+        }
+    });
+
+    // this Swiper version doesn't emit "init" to params.on, so start the first slide here
+    syncHeroVideos(heroSlider);
+
+    // A video slide moves on as soon as its clip ends (the clip holds its last frame
+    // during the fade). data-swiper-autoplay on those slides is only a fallback for
+    // when a video can't play.
+    $(".hero-slider .hero-video").on("ended", function () {
+        if ($(this).closest(".swiper-slide").hasClass("swiper-slide-active")) {
+            heroSlider.slideNext();
         }
     });
 

@@ -108,6 +108,45 @@
         }
     }
 
+    // Hero slides with a drone video. The background is the video's first frame,
+    // so the slide looks identical before the video starts playing.
+    .hero-bg-video {
+        // No slow zoom on video slides: the drone already moves, and scaling the video
+        // at the screen's 60 fps on top of its own 24 fps makes the picture judder.
+        transform: none !important;
+        transition: none !important;
+
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // Slide 1: Dahod STP. Keep in sync with the hero preload in scripts/seo/seo.config.mjs.
+    .hero-bg-drone {
+        background-image: url(../images/plants/hero-drone.jpg);
+        background-image: image-set(url(../images/plants/hero-drone.webp) type("image/webp"), url(../images/plants/hero-drone.jpg) type("image/jpeg"));
+
+        @media(max-width:991px) {
+            background-image: url(../images/plants/hero-drone-1200.jpg);
+            background-image: image-set(url(../images/plants/hero-drone-1200.webp) type("image/webp"), url(../images/plants/hero-drone-1200.jpg) type("image/jpeg"));
+        }
+    }
+
+    // Slide 2: Balaji Sugars ETP
+    .hero-bg-drone-2 {
+        background-image: url(../images/plants/hero-drone-2.jpg);
+        background-image: image-set(url(../images/plants/hero-drone-2.webp) type("image/webp"), url(../images/plants/hero-drone-2.jpg) type("image/jpeg"));
+
+        @media(max-width:991px) {
+            background-image: url(../images/plants/hero-drone-2-1200.jpg);
+            background-image: image-set(url(../images/plants/hero-drone-2-1200.webp) type("image/webp"), url(../images/plants/hero-drone-2-1200.jpg) type("image/jpeg"));
+        }
+    }
+
     // Dahod Smart City plant, Gujarat, beside the lake (slide 2)
     .hero-bg-dahod {
         background-image: url(../images/plants/hero-dahod-smart-city.jpg);
@@ -442,144 +481,13 @@
 }
 
 /* Why choose: 6-step delivery process
-   Each card deepens from cyan to navy so the row reads as a progression,
-   and a round arrow badge sits in the gap between consecutive steps. */
-$process-step-colors: (
-    $brand-cyan,
-    mix($brand-cyan, $brand-teal, 50%),
-    $brand-teal,
-    mix($brand-teal, $brand-navy, 50%),
-    $brand-navy,
-    $brand-navy-deep
-);
-
+   Uses the coloured step cards with arrow badges from the service pages (.sd-scope);
+   only the spacing above the row is set here. */
 .wpo-why-choose-section .why-choose-process {
-    --step-gap: 34px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: var(--step-gap);
-    margin: 60px 0 0;
-    padding: 0;
-    list-style: none;
-
-    @media(max-width:1399px) {
-        --step-gap: 30px;
-    }
-
-    @media(max-width:1199px) {
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 16px;
-    }
+    margin-top: 60px;
 
     @media(max-width:991px) {
         margin-top: 30px;
-    }
-
-    @media(max-width:575px) {
-        --step-gap: 28px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    li {
-        border-radius: 12px;
-        padding: 25px;
-        position: relative;
-        box-shadow: 0 10px 24px rgba($brand-navy-deep, 0.12);
-        transition: transform .4s ease, box-shadow .4s ease;
-
-        @each $color in $process-step-colors {
-            $i: index($process-step-colors, $color);
-
-            &:nth-child(#{$i}) {
-                background: linear-gradient(145deg, lighten($color, 6%) 0%, $color 100%);
-            }
-        }
-
-        @media(max-width:575px) {
-            padding: 18px;
-        }
-
-        // arrow badge centred in the gap after this step
-        &:not(:last-child)::after {
-            content: "\e628";
-            font-family: "themify";
-            position: absolute;
-            top: 50%;
-            right: calc(var(--step-gap) / -2);
-            z-index: 2;
-            width: 30px;
-            height: 30px;
-            margin-top: -15px;
-            margin-right: -15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background-color: $white;
-            color: $brand-teal;
-            font-size: 12px;
-            box-shadow: 0 4px 12px rgba($brand-navy-deep, 0.2);
-        }
-
-        // no arrow pointing off the end of a row when the steps wrap
-        @media(max-width:1199px) {
-            &:nth-child(3n)::after {
-                display: none;
-            }
-        }
-
-        @media(max-width:575px) {
-            &:nth-child(3n)::after {
-                display: flex;
-            }
-
-            &:nth-child(2n)::after {
-                display: none;
-            }
-
-            &::after {
-                width: 24px;
-                height: 24px;
-                margin-top: -12px;
-                margin-right: -12px;
-                font-size: 10px;
-            }
-        }
-
-        strong {
-            display: block;
-            font-weight: $fw-medium;
-            font-size: 16px;
-            line-height: 145%;
-            color: $small-white;
-            padding-bottom: 25px;
-
-            @media(max-width:575px) {
-                padding-bottom: 12px;
-            }
-        }
-
-        h4 {
-            margin: 0;
-            font-weight: $fw-bold;
-            font-size: 24px;
-            line-height: 122%;
-            letter-spacing: -0.64px;
-            color: $white;
-
-            @media(max-width:1399px) {
-                font-size: 21px;
-            }
-
-            @media(max-width:575px) {
-                font-size: 18px;
-            }
-        }
-
-        &:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 30px rgba($brand-navy-deep, 0.22);
-        }
     }
 }
 

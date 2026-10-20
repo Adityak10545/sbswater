@@ -86,16 +86,17 @@ export const PAGES = [
         description:
             "SBS Water designs, manufactures and commissions ETP, STP, ZLD, CPU, RO and water treatment plants for sugar, distillery and process industries across India.",
         home: true,
-        // Mirrors .hero-bg-balaji in assets/sass/page/_home-sbs.scss, which
-        // serves WebP via image-set() with the JPEGs as fallback
+        // Mirrors .hero-bg-drone in assets/sass/page/_home-sbs.scss (the first
+        // frame of the hero video, shown until it plays), which serves WebP via
+        // image-set() with the JPEGs as fallback
         preload: [
             {
-                href: "assets/images/plants/hero-balaji-sugar.webp",
+                href: "assets/images/plants/hero-drone.webp",
                 type: "image/webp",
                 media: "(min-width: 992px)",
             },
             {
-                href: "assets/images/plants/hero-balaji-sugar-1200.webp",
+                href: "assets/images/plants/hero-drone-1200.webp",
                 type: "image/webp",
                 media: "(max-width: 991px)",
             },
@@ -154,7 +155,7 @@ export const PAGES = [
         index: true,
         title: "Industrial Reverse Osmosis (RO) Plant Manufacturer | SBS Water",
         description:
-            "High-recovery industrial RO systems, standalone or integrated with CPU, WTP and ETP plants, with 85–90% recovery and permeate TDS below 100 ppm in RO-based CPUs.",
+            "High-recovery industrial RO systems, standalone or integrated with CPU, WTP and ETP plants, with 85-90% recovery and permeate TDS below 100 ppm in RO-based CPUs.",
         breadcrumb: [
             ["Home", "index.html"],
             ["Services", "service.html"],
