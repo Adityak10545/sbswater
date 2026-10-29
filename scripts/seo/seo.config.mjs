@@ -76,6 +76,8 @@ export const ORGANIZATION = {
       breadcrumb: [[label, file], ...] - must mirror the visible breadcrumb
       service:    emits Service structured data for genuine service pages
       preload:    LCP images to preload ({ href, media })
+      article:    emits BlogPosting structured data for blog articles
+                  (headline = the visible <h1>, image = the lead image)
 */
 export const PAGES = [
     {
@@ -249,6 +251,12 @@ export const PAGES = [
             ["Blogs", "blogs.html"],
             ["Distillery Effluent Treatment", "blogs/distillery-effluent-treatment-zero-liquid-discharge.html"],
         ],
+        article: {
+            headline: "Distillery Effluent Treatment: Inflows That a Plant Should Consider and Why ZLD Is a Paradigm Shift",
+            image: { path: "assets/images/service-detail/etp-distillery.webp", width: 1200, height: 900 },
+            datePublished: "2026-10-16",
+            dateModified: "2026-10-20",
+        },
     },
     {
         file: "blogs/condensate-polishing-in-sugar-mills.html",
@@ -261,52 +269,14 @@ export const PAGES = [
             ["Blogs", "blogs.html"],
             ["Condensate Polishing in Sugar Mills", "blogs/condensate-polishing-in-sugar-mills.html"],
         ],
+        article: {
+            headline: "Condensate Polishing in Sugar Mills: What It Is and What Reusing It Saves",
+            image: { path: "assets/images/service-detail/svc-cpu.webp", width: 1200, height: 900 },
+            datePublished: "2026-10-16",
+            dateModified: "2026-10-20",
+        },
     },
 
-    // Theme template pages still holding placeholder content. Kept reachable
-    // but out of the index until real content replaces the placeholders.
-    {
-        file: "blog-single.html",
-        index: false,
-        title: "Blog Article | SBS Water & Infra Projects",
-        description: "An article from SBS Water & Infra Projects.",
-    },
-    {
-        file: "blog-standard.html",
-        index: false,
-        title: "Blog Archive | SBS Water & Infra Projects",
-        description: "Archive of articles from SBS Water & Infra Projects.",
-    },
-    {
-        file: "service-single.html",
-        index: false,
-        title: "Service Details | SBS Water & Infra Projects",
-        description: "Service details from SBS Water & Infra Projects.",
-    },
-    {
-        file: "portfolio-single.html",
-        index: false,
-        title: "Project Details | SBS Water & Infra Projects",
-        description: "Project details from SBS Water & Infra Projects.",
-    },
-    {
-        file: "team.html",
-        index: false,
-        title: "Our Team | SBS Water & Infra Projects",
-        description: "The team at SBS Water & Infra Projects.",
-    },
-    {
-        file: "team-single.html",
-        index: false,
-        title: "Team Member | SBS Water & Infra Projects",
-        description: "A team member at SBS Water & Infra Projects.",
-    },
-    {
-        file: "index-2.html",
-        index: false,
-        title: "Home Sections (Archive) | SBS Water & Infra Projects",
-        description: "Archived home page sections.",
-    },
     {
         file: "404.html",
         index: false,

@@ -416,19 +416,6 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-image: url("../images/portfolio/img-1.jpg");
-
-            &:nth-child(2) {
-                background-image: url("../images/portfolio/img-2.jpg");
-            }
-
-            &:nth-child(3) {
-                background-image: url("../images/portfolio/img-3.jpg");
-            }
-
-            &:nth-child(4) {
-                background-image: url("../images/portfolio/img-4.jpg");
-            }
 
             &::before {
                 content: "";
@@ -653,7 +640,7 @@
             border: 0;
 
             &::before {
-                content: url(../images/left-arrow.svg);
+                content: "";
                 transition: all .3s ease-in-out;
             }
 
@@ -667,7 +654,7 @@
             border: 0;
 
             &::before {
-                content: url(../images/right-arrow.svg);
+                content: "";
                 transition: all .3s ease-in-out;
             }
 

@@ -6,8 +6,8 @@
     - Both only run while the gallery is on screen, so it starts at photo 1
       when the visitor reaches it; hovering or focusing it pauses both
 
-    PHOTOS: assets/images/about/gallery/gallery-NN.jpg (stage) and
-    gallery-NN-thumb.jpg (400x300 strip thumbnail).
+    PHOTOS: assets/images/about/gallery/gallery-NN.webp (stage) and
+    gallery-NN-thumb.webp (400x300 strip thumbnail).
 -------------------------------------------*/
 (function () {
     "use strict";

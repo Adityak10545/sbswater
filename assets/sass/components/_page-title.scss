@@ -2,7 +2,7 @@
 .wpo-page-title {
 	// default banner: SBS plant photo (Balaji Sugar ETP) under a navy overlay,
 	// full width behind the transparent header; pages can swap the photo
-	background: url(../images/plants/balaji-sugar-etp.jpg) no-repeat center / cover;
+	background: url(../images/plants/balaji-sugar-etp.webp) no-repeat center / cover;
 	min-height: 450px;
 	padding-top: 90px;
 	position: relative;
@@ -12,7 +12,7 @@
 	z-index: 1;
 
 	@media(max-width: 991px) {
-		background-image: url(../images/plants/balaji-sugar-etp-1200.jpg);
+		background-image: url(../images/plants/balaji-sugar-etp-1200.webp);
 		min-height: 350px;
 	}
 

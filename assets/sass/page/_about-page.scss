@@ -435,7 +435,7 @@
 .wpo-page-title.page-title-about,
 .wpo-page-title.page-title-projects,
 .wpo-page-title.page-title-services {
-    background-image: url(../images/plants/dahod-smart-city-plant.jpg);
+    background-image: url(../images/plants/dahod-smart-city-plant.webp);
     background-position: center;
     margin-left: 0;
     min-height: 520px;
@@ -490,10 +490,10 @@
 }
 
 .wpo-page-title.page-title-projects {
-    background-image: url(../images/plants/balaji-sugar-etp.jpg);
+    background-image: url(../images/plants/balaji-sugar-etp.webp);
 
     @media(max-width: 991px) {
-        background-image: url(../images/plants/balaji-sugar-etp-1200.jpg);
+        background-image: url(../images/plants/balaji-sugar-etp-1200.webp);
     }
 }
 
@@ -1012,5 +1012,5 @@
 
 // Services page title uses an aerial ETP photo instead of the Dahod plant
 .wpo-page-title.page-title-services {
-    background-image: url(../images/service-detail/etp-hero.jpg);
+    background-image: url(../images/service-detail/etp-hero.webp);
 }

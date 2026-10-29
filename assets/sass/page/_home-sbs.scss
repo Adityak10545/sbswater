@@ -94,20 +94,6 @@
         }
     }
 
-    // SBS's own ETP at Balaji Sugars (top-down drone photo); smaller file on mobile.
-    // WebP via image-set(); the plain JPEG line is the fallback for browsers
-    // without image-set() type() support. Keep in sync with the hero preload
-    // in scripts/seo/seo.config.mjs.
-    .hero-bg-balaji {
-        background-image: url(../images/plants/hero-balaji-sugar.jpg);
-        background-image: image-set(url(../images/plants/hero-balaji-sugar.webp) type("image/webp"), url(../images/plants/hero-balaji-sugar.jpg) type("image/jpeg"));
-
-        @media(max-width:991px) {
-            background-image: url(../images/plants/hero-balaji-sugar-1200.jpg);
-            background-image: image-set(url(../images/plants/hero-balaji-sugar-1200.webp) type("image/webp"), url(../images/plants/hero-balaji-sugar-1200.jpg) type("image/jpeg"));
-        }
-    }
-
     // Hero slides with a drone video. The background is the video's first frame,
     // so the slide looks identical before the video starts playing.
     .hero-bg-video {
@@ -127,34 +113,19 @@
 
     // Slide 1: Dahod STP. Keep in sync with the hero preload in scripts/seo/seo.config.mjs.
     .hero-bg-drone {
-        background-image: url(../images/plants/hero-drone.jpg);
-        background-image: image-set(url(../images/plants/hero-drone.webp) type("image/webp"), url(../images/plants/hero-drone.jpg) type("image/jpeg"));
+        background-image: url(../images/plants/hero-drone.webp);
 
         @media(max-width:991px) {
-            background-image: url(../images/plants/hero-drone-1200.jpg);
-            background-image: image-set(url(../images/plants/hero-drone-1200.webp) type("image/webp"), url(../images/plants/hero-drone-1200.jpg) type("image/jpeg"));
+            background-image: url(../images/plants/hero-drone-1200.webp);
         }
     }
 
     // Slide 2: Balaji Sugars ETP
     .hero-bg-drone-2 {
-        background-image: url(../images/plants/hero-drone-2.jpg);
-        background-image: image-set(url(../images/plants/hero-drone-2.webp) type("image/webp"), url(../images/plants/hero-drone-2.jpg) type("image/jpeg"));
+        background-image: url(../images/plants/hero-drone-2.webp);
 
         @media(max-width:991px) {
-            background-image: url(../images/plants/hero-drone-2-1200.jpg);
-            background-image: image-set(url(../images/plants/hero-drone-2-1200.webp) type("image/webp"), url(../images/plants/hero-drone-2-1200.jpg) type("image/jpeg"));
-        }
-    }
-
-    // Dahod Smart City plant, Gujarat, beside the lake (slide 2)
-    .hero-bg-dahod {
-        background-image: url(../images/plants/hero-dahod-smart-city.jpg);
-        background-image: image-set(url(../images/plants/hero-dahod-smart-city.webp) type("image/webp"), url(../images/plants/hero-dahod-smart-city.jpg) type("image/jpeg"));
-
-        @media(max-width:991px) {
-            background-image: url(../images/plants/hero-dahod-smart-city-1200.jpg);
-            background-image: image-set(url(../images/plants/hero-dahod-smart-city-1200.webp) type("image/webp"), url(../images/plants/hero-dahod-smart-city-1200.jpg) type("image/jpeg"));
+            background-image: url(../images/plants/hero-drone-2-1200.webp);
         }
     }
 

@@ -114,6 +114,33 @@ function structuredData(page) {
         });
     }
 
+    if (page.article) {
+        const a = page.article;
+        graph.push({
+            "@type": "BlogPosting",
+            "@id": url + "#article",
+            headline: a.headline,
+            description: page.description,
+            image: {
+                "@type": "ImageObject",
+                url: absolute(a.image.path),
+                width: a.image.width,
+                height: a.image.height,
+            },
+            datePublished: a.datePublished,
+            dateModified: a.dateModified,
+            inLanguage: HTML_LANG,
+            mainEntityOfPage: { "@type": "WebPage", "@id": url },
+            author: { "@type": "Organization", "@id": ORG_ID, name: ORGANIZATION.name, url: SITE_URL + "/" },
+            publisher: {
+                "@type": "Organization",
+                "@id": ORG_ID,
+                name: ORGANIZATION.name,
+                logo: { "@type": "ImageObject", url: absolute(ORGANIZATION.logo) },
+            },
+        });
+    }
+
     if (page.breadcrumb) {
         graph.push({
             "@type": "BreadcrumbList",
@@ -157,12 +184,18 @@ function headBlock(page) {
 
     lines.push(
         `<meta property="og:locale" content="${LOCALE}">`,
-        `<meta property="og:type" content="website">`,
+        `<meta property="og:type" content="${page.article ? "article" : "website"}">`,
         `<meta property="og:site_name" content="${attr(SITE_NAME)}">`,
         `<meta property="og:title" content="${attr(page.title)}">`,
         `<meta property="og:description" content="${attr(page.description)}">`,
     );
     if (page.index) lines.push(`<meta property="og:url" content="${attr(url)}">`);
+    if (page.article) {
+        lines.push(
+            `<meta property="article:published_time" content="${attr(page.article.datePublished)}">`,
+            `<meta property="article:modified_time" content="${attr(page.article.dateModified)}">`,
+        );
+    }
     lines.push(
         `<meta property="og:image" content="${attr(image)}">`,
         `<meta property="og:image:width" content="${DEFAULT_IMAGE.width}">`,

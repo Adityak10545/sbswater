@@ -6,8 +6,8 @@
       "Photo coming soon" placeholder instead of a broken image.
 
     PHOTOS: drop files into assets/images/projects/ named
-    <data-project>-1.jpg … <data-project>-<data-photos>.jpg
-    (e.g. satish-1.jpg … satish-5.jpg), plus satva-2.jpg and delivery-1.jpg.
+    <data-project>-1.webp … <data-project>-<data-photos>.webp
+    (e.g. satish-1.webp … satish-5.webp), plus delivery-1.webp.
 -------------------------------------------*/
 (function () {
     "use strict";
@@ -15,7 +15,7 @@
     var PHOTO_DIR = "assets/images/projects/";
 
     function photoSrc(id, index) {
-        return PHOTO_DIR + id + "-" + (index + 1) + ".jpg";
+        return PHOTO_DIR + id + "-" + (index + 1) + ".webp";
     }
 
     /* ---------- photo placeholders ---------- */

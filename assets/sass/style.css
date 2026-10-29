@@ -1356,7 +1356,7 @@ img {
 }
 .form select {
   font-style: normal;
-  background: url(../images/select-icon.png) no-repeat right center;
+  background: url(../images/select-icon.webp) no-repeat right center;
   display: inline-block;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1403,7 +1403,7 @@ img {
 }
 
 .wpo-page-title {
-  background: url(../images/plants/balaji-sugar-etp.jpg) no-repeat center/cover;
+  background: url(../images/plants/balaji-sugar-etp.webp) no-repeat center/cover;
   min-height: 450px;
   padding-top: 90px;
   position: relative;
@@ -1414,7 +1414,7 @@ img {
 }
 @media (max-width: 991px) {
   .wpo-page-title {
-    background-image: url(../images/plants/balaji-sugar-etp-1200.jpg);
+    background-image: url(../images/plants/balaji-sugar-etp-1200.webp);
     min-height: 350px;
   }
 }
@@ -5240,16 +5240,6 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../images/portfolio/img-1.jpg");
-}
-.wpo-portfolio-section .portfolio-img-group .image-bg:nth-child(2) {
-  background-image: url("../images/portfolio/img-2.jpg");
-}
-.wpo-portfolio-section .portfolio-img-group .image-bg:nth-child(3) {
-  background-image: url("../images/portfolio/img-3.jpg");
-}
-.wpo-portfolio-section .portfolio-img-group .image-bg:nth-child(4) {
-  background-image: url("../images/portfolio/img-4.jpg");
 }
 .wpo-portfolio-section .portfolio-img-group .image-bg::before {
   content: "";
@@ -5463,7 +5453,7 @@ img {
   border: 0;
 }
 .wpo-testimonial-section .testimonial-silde .owl-prev::before {
-  content: url(../images/left-arrow.svg);
+  content: "";
   transition: all 0.3s ease-in-out;
 }
 .wpo-testimonial-section .testimonial-silde .owl-prev span {
@@ -5474,7 +5464,7 @@ img {
   border: 0;
 }
 .wpo-testimonial-section .testimonial-silde .owl-next::before {
-  content: url(../images/right-arrow.svg);
+  content: "";
   transition: all 0.3s ease-in-out;
 }
 .wpo-testimonial-section .testimonial-silde .owl-next span {
@@ -7602,7 +7592,7 @@ img {
   -o-appearance: none;
   appearance: none;
   -moz-appearance: none;
-  background: transparent url(../images/select-icon.png) no-repeat calc(100% - 0px) center;
+  background: transparent url(../images/select-icon.webp) no-repeat calc(100% - 0px) center;
   position: relative;
 }
 .contact-form-area .contact-validation-active label.error {
@@ -7697,16 +7687,6 @@ img {
     background: rgba(31, 48, 80, 0.78);
   }
 }
-.wpo-hero-section-s2.hero-sbs .hero-bg-balaji {
-  background-image: url(../images/plants/hero-balaji-sugar.jpg);
-  background-image: image-set(url(../images/plants/hero-balaji-sugar.webp) type("image/webp"), url(../images/plants/hero-balaji-sugar.jpg) type("image/jpeg"));
-}
-@media (max-width: 991px) {
-  .wpo-hero-section-s2.hero-sbs .hero-bg-balaji {
-    background-image: url(../images/plants/hero-balaji-sugar-1200.jpg);
-    background-image: image-set(url(../images/plants/hero-balaji-sugar-1200.webp) type("image/webp"), url(../images/plants/hero-balaji-sugar-1200.jpg) type("image/jpeg"));
-  }
-}
 .wpo-hero-section-s2.hero-sbs .hero-bg-video {
   transform: none !important;
   transition: none !important;
@@ -7719,33 +7699,19 @@ img {
   object-fit: cover;
 }
 .wpo-hero-section-s2.hero-sbs .hero-bg-drone {
-  background-image: url(../images/plants/hero-drone.jpg);
-  background-image: image-set(url(../images/plants/hero-drone.webp) type("image/webp"), url(../images/plants/hero-drone.jpg) type("image/jpeg"));
+  background-image: url(../images/plants/hero-drone.webp);
 }
 @media (max-width: 991px) {
   .wpo-hero-section-s2.hero-sbs .hero-bg-drone {
-    background-image: url(../images/plants/hero-drone-1200.jpg);
-    background-image: image-set(url(../images/plants/hero-drone-1200.webp) type("image/webp"), url(../images/plants/hero-drone-1200.jpg) type("image/jpeg"));
+    background-image: url(../images/plants/hero-drone-1200.webp);
   }
 }
 .wpo-hero-section-s2.hero-sbs .hero-bg-drone-2 {
-  background-image: url(../images/plants/hero-drone-2.jpg);
-  background-image: image-set(url(../images/plants/hero-drone-2.webp) type("image/webp"), url(../images/plants/hero-drone-2.jpg) type("image/jpeg"));
+  background-image: url(../images/plants/hero-drone-2.webp);
 }
 @media (max-width: 991px) {
   .wpo-hero-section-s2.hero-sbs .hero-bg-drone-2 {
-    background-image: url(../images/plants/hero-drone-2-1200.jpg);
-    background-image: image-set(url(../images/plants/hero-drone-2-1200.webp) type("image/webp"), url(../images/plants/hero-drone-2-1200.jpg) type("image/jpeg"));
-  }
-}
-.wpo-hero-section-s2.hero-sbs .hero-bg-dahod {
-  background-image: url(../images/plants/hero-dahod-smart-city.jpg);
-  background-image: image-set(url(../images/plants/hero-dahod-smart-city.webp) type("image/webp"), url(../images/plants/hero-dahod-smart-city.jpg) type("image/jpeg"));
-}
-@media (max-width: 991px) {
-  .wpo-hero-section-s2.hero-sbs .hero-bg-dahod {
-    background-image: url(../images/plants/hero-dahod-smart-city-1200.jpg);
-    background-image: image-set(url(../images/plants/hero-dahod-smart-city-1200.webp) type("image/webp"), url(../images/plants/hero-dahod-smart-city-1200.jpg) type("image/jpeg"));
+    background-image: url(../images/plants/hero-drone-2-1200.webp);
   }
 }
 .wpo-hero-section-s2.hero-sbs .hero-slider .hero-content {
@@ -9087,7 +9053,7 @@ img {
 .wpo-page-title.page-title-about,
 .wpo-page-title.page-title-projects,
 .wpo-page-title.page-title-services {
-  background-image: url(../images/plants/dahod-smart-city-plant.jpg);
+  background-image: url(../images/plants/dahod-smart-city-plant.webp);
   background-position: center;
   margin-left: 0;
   min-height: 520px;
@@ -9159,11 +9125,11 @@ img {
 }
 
 .wpo-page-title.page-title-projects {
-  background-image: url(../images/plants/balaji-sugar-etp.jpg);
+  background-image: url(../images/plants/balaji-sugar-etp.webp);
 }
 @media (max-width: 991px) {
   .wpo-page-title.page-title-projects {
-    background-image: url(../images/plants/balaji-sugar-etp-1200.jpg);
+    background-image: url(../images/plants/balaji-sugar-etp-1200.webp);
   }
 }
 
@@ -9639,7 +9605,7 @@ img {
   }
 }
 .wpo-page-title.page-title-services {
-  background-image: url(../images/service-detail/etp-hero.jpg);
+  background-image: url(../images/service-detail/etp-hero.webp);
 }
 
 /*======================================
@@ -10406,7 +10372,7 @@ img {
 }
 .wpo-portfolio-single-area .wpo-portfolio-single-wrap .wpo-portfolio-contact-area .wpo-contact-form-area select.form-control {
   color: #666666;
-  background: transparent url(../images/select-icon.png) no-repeat calc(100% - 15px) center;
+  background: transparent url(../images/select-icon.webp) no-repeat calc(100% - 15px) center;
 }
 .wpo-portfolio-single-area .wpo-portfolio-single-wrap .wpo-portfolio-contact-area .wpo-contact-form-area .submit-area .theme-btn {
   border: none;
@@ -10561,7 +10527,7 @@ img {
   -o-appearance: none;
   appearance: none;
   -moz-appearance: none;
-  background: transparent url(../images/select-icon.png) no-repeat calc(100% - 15px) center;
+  background: transparent url(../images/select-icon.webp) no-repeat calc(100% - 15px) center;
   position: relative;
   color: #4D4D4D;
 }
@@ -12560,7 +12526,7 @@ img {
 /* Shared form field styles (careers + quote forms) */
 /* Page title: SBS plant photo behind the transparent header */
 .wpo-page-title.page-title-careers {
-  background-image: url(../images/plants/balaji-sugar-etp.jpg);
+  background-image: url(../images/plants/balaji-sugar-etp.webp);
   background-position: center;
   margin-left: 0;
   min-height: 480px;
@@ -12568,7 +12534,7 @@ img {
 }
 @media (max-width: 991px) {
   .wpo-page-title.page-title-careers {
-    background-image: url(../images/plants/balaji-sugar-etp-1200.jpg);
+    background-image: url(../images/plants/balaji-sugar-etp-1200.webp);
     min-height: 380px;
   }
 }
@@ -12914,7 +12880,7 @@ img {
   display: flex;
   align-items: center;
   padding: 150px 0 100px;
-  background: url(../images/plants/dahod-smart-city-plant.jpg) no-repeat center/cover;
+  background: url(../images/plants/dahod-smart-city-plant.webp) no-repeat center/cover;
 }
 @media (max-width: 991px) {
   .wpo-quote-section {
