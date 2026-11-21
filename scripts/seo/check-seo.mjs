@@ -108,13 +108,19 @@ for (const page of PAGES) {
 
 // local links, fragments and images
 const strip = (u) => u.split("?")[0];
+// clean URLs (see `path` in seo.config.mjs and .htaccess) → their HTML file
+const fileByPath = Object.fromEntries(PAGES.filter((p) => p.path).map((p) => [p.path.replace(/^\/|\/$/g, "") || ".", p.file]));
 for (const [f, html] of pagesHtml) {
     const body = html.replace(/<!--[\s\S]*?-->/g, "");
     for (const [, href] of all(body, /<a\b[^>]*\shref="([^"]*)"/gi)) {
         if (/^(https?:|mailto:|tel:|javascript:|#?$)/i.test(href)) continue;
         const [path, frag] = href.split("#");
         // links are relative to the page's own folder
-        const target = path ? posix.normalize(posix.join(posix.dirname(f), strip(path))) : f;
+        const resolved = path ? posix.normalize(posix.join(posix.dirname(f), strip(path))).replace(/\/$/, "") : f;
+        const target = fileByPath[resolved] || resolved;
+        if (path && Object.values(fileByPath).includes(resolved)) {
+            fail(`${f}: link uses .html instead of the clean URL → ${href}`);
+        }
         if (path && !existsSync(resolve(ROOT, target))) {
             fail(`${f}: broken link → ${href}`);
             continue;

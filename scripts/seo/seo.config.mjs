@@ -71,6 +71,8 @@ export const ORGANIZATION = {
 
 /*
     One entry per HTML file.
+      path:       public clean URL (no .html) - must match the rewrites in
+                  .htaccess; used for canonicals, sitemap and internal links
       index:      true  → indexable, canonical, listed in sitemap
                   false → "noindex, follow", no canonical, not in sitemap
       breadcrumb: [[label, file], ...] - must mirror the visible breadcrumb
@@ -106,6 +108,7 @@ export const PAGES = [
     },
     {
         file: "about.html",
+        path: "/about-us",
         index: true,
         title: "About SBS Water & Infra Projects | Water Treatment Company, Pune",
         description:
@@ -114,6 +117,7 @@ export const PAGES = [
     },
     {
         file: "service.html",
+        path: "/services",
         index: true,
         title: "Water & Wastewater Treatment Services | SBS Water",
         description:
@@ -122,6 +126,7 @@ export const PAGES = [
     },
     {
         file: "services/condensate-polishing-unit.html",
+        path: "/services/condensate-polishing-unit",
         index: true,
         title: "Condensate Polishing Unit (CPU) Manufacturer | SBS Water",
         description:
@@ -138,6 +143,7 @@ export const PAGES = [
     },
     {
         file: "services/water-treatment-plant.html",
+        path: "/services/water-treatment-plant",
         index: true,
         title: "Industrial Water Treatment Plant (WTP) Manufacturer | SBS Water",
         description:
@@ -154,6 +160,7 @@ export const PAGES = [
     },
     {
         file: "services/reverse-osmosis-plant.html",
+        path: "/services/reverse-osmosis-plant",
         index: true,
         title: "Industrial Reverse Osmosis (RO) Plant Manufacturer | SBS Water",
         description:
@@ -170,6 +177,7 @@ export const PAGES = [
     },
     {
         file: "services/effluent-treatment-plant.html",
+        path: "/services/effluent-treatment-plant",
         index: true,
         title: "Effluent Treatment Plant (ETP) for Sugar & Distillery | SBS Water",
         description:
@@ -186,6 +194,7 @@ export const PAGES = [
     },
     {
         file: "services/sewage-treatment-plant.html",
+        path: "/services/sewage-treatment-plant",
         index: true,
         title: "Sewage Treatment Plant (STP) Manufacturer in Pune | SBS Water",
         description:
@@ -202,6 +211,7 @@ export const PAGES = [
     },
     {
         file: "portfolio.html",
+        path: "/portfolio",
         index: true,
         title: "Portfolio: CPU, WTP & ETP Plants Delivered in India | SBS Water",
         description:
@@ -210,6 +220,7 @@ export const PAGES = [
     },
     {
         file: "contact.html",
+        path: "/contact",
         index: true,
         title: "Contact SBS Water | Water Treatment Engineers in Pune",
         description:
@@ -218,6 +229,7 @@ export const PAGES = [
     },
     {
         file: "get-a-quote.html",
+        path: "/get-a-quote",
         index: true,
         title: "Get a Quote for a Water Treatment Plant | SBS Water",
         description:
@@ -225,6 +237,7 @@ export const PAGES = [
     },
     {
         file: "careers.html",
+        path: "/careers",
         index: true,
         title: "Careers at SBS Water | Water Treatment Engineering Jobs, Pune",
         description:
@@ -234,6 +247,7 @@ export const PAGES = [
 
     {
         file: "blogs.html",
+        path: "/blogs",
         index: true,
         title: "Blogs: Water & Wastewater Treatment Articles | SBS Water",
         description:
@@ -242,6 +256,7 @@ export const PAGES = [
     },
     {
         file: "blogs/distillery-effluent-treatment-zero-liquid-discharge.html",
+        path: "/blogs/distillery-effluent-treatment-zero-liquid-discharge",
         index: true,
         title: "Distillery Effluent Treatment: Why ZLD Is a Paradigm Shift",
         description:
@@ -260,6 +275,7 @@ export const PAGES = [
     },
     {
         file: "blogs/condensate-polishing-in-sugar-mills.html",
+        path: "/blogs/condensate-polishing-in-sugar-mills",
         index: true,
         title: "Condensate Polishing in Sugar Mills: What It Saves",
         description:

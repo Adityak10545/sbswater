@@ -3,9 +3,15 @@
 #  Canonical host: https://www.sbswater.in (see scripts/seo/seo.config.mjs)
 # ------------------------------------------------------------------
 
-Options -Indexes
+Options -Indexes -MultiViews
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
+
+# /services and /blogs are both a page (service.html, blogs.html) and a
+# folder of sub-pages, so stop Apache adding a trailing slash to them.
+<IfModule mod_dir.c>
+    DirectorySlash Off
+</IfModule>
 
 # ---------- Redirects ----------
 <IfModule mod_rewrite.c>
@@ -23,6 +29,38 @@ ErrorDocument 404 /404.html
     RewriteRule (^|/)(node_modules|scripts|docs|\.git|\.vscode)(/|$) - [F,L,NC]
     RewriteRule (^|/)(package(-lock)?\.json|\.gitignore)$ - [F,L,NC]
     RewriteRule \.(scss|md|mjs|map)$ - [F,L,NC]
+
+    # ---------- Clean URLs (no .html) ----------
+    # Public paths must match `path` in scripts/seo/seo.config.mjs.
+    # THE_REQUEST is the browser's original request line, so these 301s
+    # only fire for typed/old links, never for the internal rewrites below.
+
+    # Old .html URLs → clean URLs (keeps old links and search results working)
+    RewriteCond %{THE_REQUEST} \s/+index\.html[?\s] [NC]
+    RewriteRule ^index\.html$ / [L,R=301]
+    RewriteCond %{THE_REQUEST} \s/+about\.html[?\s] [NC]
+    RewriteRule ^about\.html$ /about-us [L,R=301]
+    RewriteCond %{THE_REQUEST} \s/+service\.html[?\s] [NC]
+    RewriteRule ^service\.html$ /services [L,R=301]
+    RewriteCond %{THE_REQUEST} \s/+([^?\s]+)\.html[?\s] [NC]
+    RewriteRule ^ /%1 [L,R=301,NE]
+
+    # File names that differ from their public path
+    RewriteRule ^about$ /about-us [L,R=301]
+    RewriteRule ^service$ /services [L,R=301]
+    RewriteRule ^index$ / [L,R=301]
+
+    # Trailing slash → none (/about-us/ → /about-us, /services/ → /services)
+    RewriteCond %{REQUEST_URI} !^/$
+    RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+    # Clean URLs → the HTML files that serve them
+    RewriteRule ^about-us$ about.html [L]
+    RewriteRule ^services$ service.html [L]
+    RewriteRule ^blogs$ blogs.html [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.+)$ $1.html [L]
 </IfModule>
 
 # ---------- MIME types ----------

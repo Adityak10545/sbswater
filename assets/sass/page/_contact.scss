@@ -217,6 +217,265 @@
         color: red;
         font-size: 14px;
     }
+
+    .global-presence {
+        margin-top: 60px;
+
+        @media(max-width:767px) {
+            margin-top: 30px;
+        }
+
+        .global-presence-head {
+            max-width: 720px;
+            margin: 0 auto 50px;
+            text-align: center;
+
+            @media(max-width:991px) {
+                margin-bottom: 35px;
+            }
+
+            p {
+                margin: 0;
+                color: $lead-color;
+                font-size: 18px;
+                line-height: 160%;
+
+                @media(max-width:575px) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .global-presence-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            margin-bottom: 16px;
+            border-radius: 40px;
+            color: $theme-primary-color;
+            background: $card-bg-color;
+            border: 1px solid $brand-line-tint;
+            font-size: 14px;
+            font-weight: $fw-bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .global-presence-title {
+            color: $heading-color;
+            font-weight: $fw-bold;
+            font-size: 56px;
+            line-height: 110%;
+            letter-spacing: -1px;
+            margin: 0 0 16px;
+
+            @media(max-width:991px) {
+                font-size: 40px;
+            }
+
+            @media(max-width:575px) {
+                font-size: 30px;
+            }
+        }
+
+        .location-card {
+            position: relative;
+            overflow: hidden;
+            height: calc(100% - 30px);
+            margin-bottom: 30px;
+            padding: 36px 32px 34px;
+            border-radius: 16px;
+            background: $card-bg-color;
+            border: 1px solid transparent;
+            transition: background .4s ease, transform .4s ease, box-shadow .4s ease;
+
+            @media(max-width:767px) {
+                padding: 30px 24px;
+            }
+
+            // gradient accent bar that grows on hover
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 4px;
+                width: 100%;
+                background: linear-gradient(90deg, $brand-teal, $brand-sky, $brand-green);
+                transform: scaleX(0.18);
+                transform-origin: left;
+                transition: transform .5s ease;
+            }
+
+            // soft watermark circle
+            &:after {
+                content: "";
+                position: absolute;
+                right: -60px;
+                bottom: -60px;
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+                background: rgba($brand-teal, 0.06);
+                transition: background .4s ease, transform .5s ease;
+            }
+
+            .location-icon {
+                position: relative;
+                z-index: 1;
+                width: 56px;
+                height: 56px;
+                border-radius: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 40px;
+                color: #fff;
+                background: linear-gradient(135deg, $brand-teal, $brand-cyan);
+                box-shadow: 0 8px 20px rgba($brand-teal, 0.25);
+                transition: background .4s ease, color .4s ease;
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            &.location-card--factory .location-icon {
+                background: linear-gradient(135deg, $brand-green, darken($brand-green, 10%));
+                box-shadow: 0 8px 20px rgba($brand-green, 0.3);
+            }
+
+            .location-type,
+            h3,
+            address {
+                position: relative;
+                z-index: 1;
+                transition: color .4s ease;
+            }
+
+            .location-type {
+                display: block;
+                color: $heading-color;
+                font-size: 18px;
+                line-height: 110%;
+                letter-spacing: -0.32px;
+
+                @media(max-width:991px) {
+                    font-size: 16px;
+                }
+            }
+
+            h3 {
+                margin: 10px 0 16px;
+                color: $dark-gray;
+                font-weight: $fw-bold;
+                font-size: 26px;
+                line-height: 122%;
+                letter-spacing: -0.64px;
+
+                @media(max-width:1399px) {
+                    font-size: 22px;
+                }
+            }
+
+            address {
+                margin: 0;
+                padding-top: 16px;
+                border-top: 1px solid $brand-line-tint;
+                font-style: normal;
+                color: $lead-color;
+                font-size: 16px;
+                line-height: 170%;
+                transition: color .4s ease, border-color .4s ease;
+            }
+
+            .location-contact {
+                position: relative;
+                z-index: 1;
+                list-style: none;
+                margin: 18px 0 0;
+                padding: 0;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    svg {
+                        flex: 0 0 auto;
+                        width: 28px;
+                        height: 28px;
+                        padding: 6px;
+                        border-radius: 8px;
+                        color: $brand-teal;
+                        background: rgba($brand-teal, 0.1);
+                        transition: color .4s ease, background .4s ease;
+                    }
+
+                    a {
+                        color: $heading-color;
+                        font-size: 16px;
+                        font-weight: $fw-bold;
+                        word-break: break-word;
+                        transition: color .3s ease;
+                    }
+                }
+            }
+
+            &:hover {
+                transform: translateY(-6px);
+                background: linear-gradient(145deg, $brand-teal, $brand-navy);
+                box-shadow: 0 18px 40px rgba($brand-navy, 0.25);
+
+                &:before {
+                    transform: scaleX(1);
+                }
+
+                &:after {
+                    background: rgba(#fff, 0.08);
+                    transform: scale(1.3);
+                }
+
+                .location-icon {
+                    background: #fff;
+                    color: $brand-teal;
+                }
+
+                &.location-card--factory .location-icon {
+                    color: $brand-green;
+                }
+
+                .location-type {
+                    color: rgba(#fff, 0.8);
+                }
+
+                h3 {
+                    color: #fff;
+                }
+
+                address {
+                    color: rgba(#fff, 0.85);
+                    border-color: rgba(#fff, 0.2);
+                }
+
+                .location-contact {
+                    li svg {
+                        color: #fff;
+                        background: rgba(#fff, 0.15);
+                    }
+
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
 }
 
 

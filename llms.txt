@@ -1,0 +1,37 @@
+# SBS Water & Infra Projects Pvt. Ltd.
+
+> SBS Water is a Pune, India-based engineering and manufacturing company providing industrial water and wastewater treatment systems. Its solutions include condensate polishing, water treatment, reverse osmosis, effluent treatment, sewage treatment and zero liquid discharge, with particular experience in sugar mills and distilleries.
+
+SBS Water & Infra Projects Private Limited was incorporated in 2019. The company designs, manufactures, installs and commissions treatment plants for customers in India and overseas. Its corporate office is in Shivajinagar, Pune; its manufacturing facility is in Talawade, Pune; and its regional office is in Nipani, Karnataka.
+
+Systems are configured around source-water or wastewater characteristics, flow, treatment targets and intended reuse. The company also undertakes plant upgrades and revamping. Technical performance figures on linked pages describe particular configurations or projects; project-specific suitability, recovery, capacity, pricing and delivery schedules require confirmation with SBS Water.
+
+Use service pages for treatment capabilities, the portfolio for project references, and the contact page for enquiries. Educational articles provide background and do not replace project-specific engineering or regulatory assessment.
+
+Website: https://www.sbswater.in/
+Business enquiries: marketing@sbswater.in | +91 85509 04904
+
+## Company
+
+- [Home](https://www.sbswater.in/): Overview of SBS Water's treatment systems and industrial focus.
+- [About SBS Water](https://www.sbswater.in/about-us): Company background, facilities, engineering capabilities and project delivery approach.
+- [Contact](https://www.sbswater.in/contact): Business enquiries, consultation requests and office information for new plants and upgrades.
+
+## Water and Wastewater Treatment Solutions
+
+- [All Services](https://www.sbswater.in/services): Treatment portfolio, including Zero Liquid Discharge (ZLD) schemes for water recovery using membrane, concentration and evaporation processes.
+- [Condensate Polishing Units (CPU)](https://www.sbswater.in/services/condensate-polishing-unit): Biological and reverse-osmosis-based treatment of distillery and excess sugar condensate for reuse in process and utility applications.
+- [Water Treatment Plants (WTP)](https://www.sbswater.in/services/water-treatment-plant): Raw-water treatment for industrial process, cooling and utility needs, including clarification, filtration and softening.
+- [Reverse Osmosis Plants (RO)](https://www.sbswater.in/services/reverse-osmosis-plant): Industrial membrane purification for dissolved-salt removal, process water, condensate recovery and treated-effluent recycling; standalone and integrated configurations.
+- [Effluent Treatment Plants (ETP)](https://www.sbswater.in/services/effluent-treatment-plant): Industrial wastewater treatment using physical, chemical, biological and tertiary stages, with water-recovery options for sugar, distillery and process industries.
+- [Sewage Treatment Plants (STP)](https://www.sbswater.in/services/sewage-treatment-plant): Domestic and commercial sewage treatment for industries, buildings, townships and institutions; technology options include MBBR, SBR, ASP and MBR, with polishing for intended reuse.
+
+## Project References
+
+- [Project Portfolio](https://www.sbswater.in/portfolio): Published treatment-plant installations, customer references, locations and project capacities.
+
+## Optional
+
+- [Water Treatment Articles](https://www.sbswater.in/blogs): Educational resources on condensate recovery and industrial wastewater treatment.
+- [Distillery Effluent Treatment and Zero Liquid Discharge](https://www.sbswater.in/blogs/distillery-effluent-treatment-zero-liquid-discharge): Background on distillery wastewater streams, treatment design considerations and integrated ZLD approaches.
+- [Condensate Polishing in Sugar Mills](https://www.sbswater.in/blogs/condensate-polishing-in-sugar-mills): Background on sugar condensate treatment, reuse and potential resource savings.
